@@ -1,0 +1,450 @@
+<div class="ftc-manual" lang="tr" dir="ltr">
+<h1 id="sec-12">12 ROBOT Yapım Kuralları (R)</h1>
+<p id="ROBOT">Aşağıda listelenen kurallar yasal parçaları ve malzemeleri ve bu parçaların ve malzemelerin ROBOT üzerinde nasıl kullanılabileceğini açıkça ele alır. ROBOT, mevcut sezon oyununu oynamak için <em>FIRST</em> Tech Challenge takımı tarafından inşa edilen bir elektromekanik montajdır ve oyunda aktif bir katılımcı olmak için gereken tüm temel sistemleri içerir. Güç, iletişim, kontrol ve FIELD hakkında hareket.</p>
+<p>Kuralların yapısı, güvenlik, güvenilirlik, eşitlik, makul bir tasarım meydan okumasının yaratılması, profesyonel standartlara bağlılık ve rekabete etkisi de dahil olmak üzere birçok nedendir.</p>
+<p id="INSPECTOR">Bu kuralların bir diğer amacı, ROBOT'deki tüm enerji kaynaklarının ve aktif tahrik sistemlerinin (örneğin, piller, motorlar, servolar ve kontrolörleri) iyi tanımlanmış bir seçenek kümesinden çekilmesidir. Bu, tüm ekiplerin aynı çalıştırma kaynaklarına erişebilmelerini ve INSPECTORS'nin belirli bir parçanın yasallığını doğru ve verimli bir şekilde değerlendirebilmesini sağlamak içindir.</p>
+<div class="fm-box">
+<p>Bu bölümdeki ROBOT inşaat kuralları sadece kontrol edilebilecek ROBOT'nizin inşaatı için geçerlidir. MATCH oyun kuralları ve MATCH oyunu sırasında kuralları ihlal etmenin sonuçları Bölüm 11 Oyun Kuralları'nda (G) belirtilmiştir.</p>
+</div>
+<p>ROBOTS COMPONENTS ve MECHANISMS'ten oluşur.</p>
+<ul>
+<li id="COMPONENT">Bir COMPONENT, parçaya zarar vermeden veya parçayı yok etmeden veya temel işlevini değiştirmeden sökülmeyen en temel konfigürasyonundaki herhangi bir parçadır.</li>
+<li id="MECHANISM">Bir MECHANISM, ROBOT'te özel işlevsellik sağlayan COMPONENTS'nin bir montajıdır. Bir MECHANISM parçalara zarar vermeden bireysel COMPONENTS'e ayrılmış (ve sonra yeniden monte edilmiş) olabilir.</li>
+</ul>
+<p id="COTS">Bu bölümdeki birçok kural, Ticari Sertifikalı (COTS) ürünlere atıfta bulunur. Bir COTS öğesi, satın alınacak tüm takımlar için VENDOR'ten yaygın olarak mevcut olan standart (yani özel sipariş değil) bir parça olmalıdır. COTS ürünü olmak için, COMPONENT veya MECHANISM değişmemiş, değiştirilmemiş bir durumda olmalıdır (herhangi bir yazılımın kurulması veya değiştirilmesi hariç). Artık ticari olarak mevcut olmayan ancak VENDOR'den teslim edilen orijinal durumla işlevsel olarak eşdeğer olan ürünler COTS olarak kabul edilir.</p>
+<div class="fm-box">
+<p>Örnek 1: Bir ekip RoboPanels Corp.'dan 2 ROBOT panelleri sipariş eder ve her iki öğeyi de alır. 1'ü depolarına koydular ve daha sonra kullanmayı planlıyorlar. Diğeri ise ağırlığı azaltmak için açıklama delikleri kazıyor. İlk panel hala bir COTS öğesi olarak sınıflandırılmıştır, ancak ikinci panel artık değiştirildiği için bir FABRICATED ITEM'dır.</p>
+<p>Örnek 2: Bir ekip, Wheels-R-Us Inc.'den yaygın olarak bulunan bir tahrik modülünün açık olarak mevcut taslaklarını alır ve yerel makine dükkanına We-Make-It, Inc. parçaların bir kopyasını üretir. Üretilen parça bir COTS ürünü değildir, çünkü genellikle We-Make-It, Inc.'in standart stoklarının bir parçası olarak taşınmaz.</p>
+<p>Örnek 3: Bir ekip profesyonel bir yayından açık olarak erişilebilir tasarım çizimleri elde eder ve bunları ROBOT için bir vites kutusu üretmek için kullanır. Tasarım çizimleri bir COTS öğesi olarak kabul edilir ve vites kutusunun üretimi için hammaddesi olarak kullanılabilir. Bitmiş şanzımanın kendisi bir FABRICATED ITEM olurdu, bir COTS parçası değil.</p>
+<p>Örnek 4: Fonksiyonel olmayan etiket işaretleri eklenen bir COTS parçası hala bir COTS parçası olarak kabul edilir, ancak cihaz özel montaj delikleri eklenen bir COTS parçası bir FABRICATED ITEM'tir.</p>
+<p>Örnek 5: Bir takımın üretimi kesilmiş bir COTS vites kutusu var. Eğer COTS şanzıman kutusu fonksiyonel olarak orijinal durumuna eşdeğerse kullanılabilir.</p>
+</div>
+<p id="VENDOR">Bir VENDOR, aşağıdaki tüm kriterleri karşılayan COTS maddeleri için meşru bir iş kaynağıdır:</p>
+<p class="fm-item">A. Federal vergi kimliği numarası var. VENDOR'in Amerika Birleşik Devletleri dışında olduğu durumlarda, o ülkede faaliyet göstermek için lisanslı yasal bir işletme olarak durumlarını belirleyen ve doğrulayan kendi ülkesinin hükümetinde eşdeğer bir kayıt veya lisansa sahip olmalıdırlar.</p>
+<p class="fm-item">B. bir <em>FIRST</em> ekibinin veya takım koleksiyonunun tamamen sahip olduğu bir yan kuruluşu değildir. Hem bir takıma hem de VENDOR'ye bağlı bazı bireyler olabilirken, takımın ve VENDOR'ün işleri ve faaliyetleri tamamen ayrılabilir olmalıdır.</p>
+<p class="fm-item">C. Yeterli stok veya üretim kapasitesini korumalılar, böylece herhangi bir genel (yani, <em>FIRST</em> benzersiz olmayan) ürünü zamanında gönderebilirler. Bazı olağandışı koşulların (global bir tedarik zinciri kesintisi ve/veya aynı VENDOR'ten aynı parçayı aynı anda sipariş veren 1,000 <em>FIRST</em> takımları gibi) en büyük VENDORS için bile geri siparişler nedeniyle sevkiyatta tipik olmayan gecikmelere neden olabileceği kabul edilir. Normalden daha yüksek sipariş oranlarından kaynaklanan bu tür gecikmeler mazeretlidir. Bu kriter, hem bir VENDOR hem de bir üretici olan bir kaynaktan özel olarak üretilen ürünler için geçerli olmayabilir.</p>
+<div class="fm-box">
+<p>Örneğin, bir VENDOR, takımın sürücü sistemindeki battaniye olarak kullanmak için satın almak istediği esnek kemerleri satabilir. VENDOR, bantı tipik olarak mevcut olan standart raf stoklarından özel bir uzunluğa keser, bir döngü yapmak için bir döngü halinde kaynaklar ve bir takıma gönderir. Parçanın yapımı VENDOR 2 hafta sürer. Bu bir FABRICATED ITEM olarak kabul edilecek ve 2 haftalık gemi süresi kabul edilebilir. Alternatif olarak, ekip tekerlekleri kendileri üretmeye karar verebilir. Bu kriterin karşılanması için, VENDOR sadece 5 iş günü içinde raf stoklarından (yani COTS bir ürünü) bir kurdele uzunluğunu takıma göndermeli ve kesimlerin kaynaklanmasını takıma bırakmalıydı.</p>
+</div>
+<p class="fm-item">D. Ürünlerini tüm <em>FIRST</em> Tech Challenge takımlarına sunar. Bir VENDOR tedarikini sınırlamamalı veya bir ürünü yalnızca sınırlı sayıda <em>FIRST</em> Tech Challenge takımı için kullanılabilir kılmamalıdır.</p>
+<div class="fm-box">
+<p>Bu tanımın amacı, tüm meşru kaynaklara erişimi sağlamak için mümkün olduğunca kapsayıcı olmak, aynı zamanda özel amaçlı organizasyonların geçerli maliyet muhasebe kurallarını atlatmaya çalışarak sınırlı bir ekip alt kümesine özel amaçlı ürünler sunmasını engellemektir.</p>
+<p><em>FIRST</em>, ekiplere mümkün olan en geniş yasal kaynak seçeneğine sahip olmalarını ve COTS ürünlerini onlara mevcut en iyi fiyatları ve hizmet seviyesini sağlayan kaynaklardan elde etmelerini sağlamak istiyor. Takımların ayrıca ROBOT'lerini tamamlama yeteneklerini etkileyecek parçaların kullanılabilirliğinde uzun gecikmelere karşı korunmaları gerekir. Yapım sezonu kısa, bu yüzden VENDOR ürünlerini, özellikle de <em>FIRST</em> benzersiz eşyalarını zamanında bir takıma getirebilmelidir.</p>
+<p>İdeal olarak, seçilen VENDORS etkili dağıtım kanallarına sahip olmalıdır. Unutmayın, <em>FIRST</em> Tech Challenge etkinlikleri her zaman evin yakınında değildir parçalar bozulduğunda, yedek malzemelere yerel erişim genellikle kritiktir.</p>
+</div>
+<p id="FABRICATED_ITEM">Bir FABRICATED ITEM, değiştirilmiş, inşa edilmiş, dökülmüş, inşa edilmiş, uydurulmuş, yaratılmış, kesilmiş, ısı ile işlenmiş, işlenmiş, üretilmiş, değiştirilmiş, boyanmış, üretilmiş, yüzey kaplamalı veya kısmen veya tamamen ROBOT'te kullanılacağı nihai şekle dönüştürülmüş herhangi bir COMPONENT veya MECHANISM'tür.</p>
+<div class="fm-box">
+<p>Bir öğenin (genellikle hammadde) ne COTS ne de FABRICATED ITEM olması mümkün olduğunu unutmayın. Örneğin, depolama veya nakliye için ekip tarafından 5 ft (~152 cm) parçalara kesilen 20 ft (~610 cm) uzunluğundaki bir alüminyum ne COTS'dir (VENDOR'den alınan durumda değildir), ne de FABRICATED ITEM'dur (kesimler parçayı ROBOT'daki nihai şekline doğru ilerletmek için yapılmamıştır).</p>
+</div>
+<p>Takımlardan, yasal bir kısım için (örneğin, motorlar, servolar, akım sınırları, COTS elektronikleri) bir kural belirtiyorsa, denetim sırasında maddelerin yasallığını kanıtlayan belgeleri (örneğin, bu kılavuzdaki ilgili kurallara başvurmak) sunmaları istenebilir.</p>
+<p>Ekibinizin bir parçanın yasallığı hakkında bir sorusu varsa, lütfen sorunuzu resmi bir karar için <a href="mailto:customerservice@firstinspires.org">customerservice@firstinspires.org</a>'e e-posta ile gönderin. Bu süreç, gelecek <em>FIRST</em> Tech Challenge sezonlarına dahil edilecek alternatif parçalar/cihazlar için onay almak için de kullanılmalıdır.</p>
+<h2 id="sec-12-1">12.1 Genel ROBOT Tasarımı</h2>
+<p class="fm-quote">FIRST Tech Challenge, yüksek temaslı bir rekabet olabilir ve sıkı bir oyun içerebilir. Kurallar, ROBOTS'ye kasıtlı hasarı sınırlamayı amaçlarken, ROBOTS arasındaki etkileşime izin verilir ve beklenir. Takımlar ROBOTS'lerini sağlam olacak şekilde tasarlamalı.</p>
+<p id="R101" class="fm-rule"><strong>R101 *Bu senin takımın ROBOT.</strong> ROBOT ve MAJOR MECHANISMS'ü, etkinliğe kaydolmuş ve ROBOT'i MATCHES'ya katılmak veya yargılanan ödüllerin bir parçası olarak kullanmak isteyen <em>FIRST</em> Tech Challenge ekibi tarafından inşa edilmelidir.</p>
+<p id="MAJOR_MECHANISM">Bir MAJOR MECHANISM, en az 1 oyun meydan okumasını çözmek için bir araya getirilen bir grup COMPONENTS ve/veya MECHANISMS'tür: ROBOT hareketi, SCORING ELEMENT manipülasyonu, FIELD eleman manipülasyonu veya başka bir ROBOT'in yardımı olmadan puan alabilecek bir görevin gerçekleştirilmesi.</p>
+<div class="fm-box">
+<p>Bu kural, ROBOT'in ve onun MAJOR MECHANISMS'sinin ekibi tarafından inşa edilmesini gerektirir, ancak diğer takımların yardımını yasaklamak veya caydırmak için tasarlanmamıştır (örneğin, öğeler üretmek, inşaatı desteklemek, yazılım yazmak, oyun stratejisini geliştirmek, COMPONENTS ve / veya MECHANISMS'e katkıda bulunmak).</p>
+<p>Genellikle MAJOR MECHANISMS olarak kabul edilmeyen ve bu nedenle bu kurallara tabi olmayan örnekler şunlardır, ancak bunlarla sınırlı değildir:</p>
+<p class="fm-item">A. bir vites kutusu bileşeni,</p>
+<p class="fm-item">B. Bir MAJOR MECHANISM'ün bir parçası olan bir COMPONENT veya MECHANISM veya</p>
+<p class="fm-item">C. COTS eşyalar.</p>
+<p>Bu kuralın amacı, bir ekibin ROBOT'inin mevcut ekip üyelerinin deneyimini temsil eden bir ürün olması ve tamamen dış kuruluşlar veya şirketler tarafından sağlanan tam çözümleri cesaretlendirmemek içindir. Ayrıca R301 ve R303'e bakın.</p>
+</div>
+<p id="R102" class="fm-rule"><strong>R102 * STARTING CONFIGURATION bir 18 inçlik küp ile sınırlıdır. </strong> STARTING CONFIGURATION'de (ROBOT'ün MATCH'e başladığı fiziksel yapılandırmada), ROBOT'in tüm parçaları tamamen hareketsiz olmalıdır ve ROBOT'nın 18 inç (45.70 cm) genişliğinde, 18 inç (45.70 cm) uzunluğunda, 18 inç (45.70 cm) yüksek hacimde tamamen bağımsız olması gerekir.</p>
+<div class="fm-box">
+<p id="Ref148106742">Eğer bir ROBOT, 3.3 MATCH Uygunluk Kuralları'na göre değiştirilebilir MECHANISMS kullanıyorsa, takımlar bu kuralı ve R105'i tüm konfigürasyonlarda yerine getirmeye hazır olmalıdır.</p>
+<p>Herhangi bir önceden yüklenmiş SCORING ELEMENTS, başlangıç boyutu sınırının dışına çıkabilir.</p>
+</div>
+<p id="R103" class="fm-rule"><strong>R103 * ROBOTS, STARTING CONFIGURATION'ü tutmada yardımcı olabilir. </strong> STARTING CONFIGURATION'de, ROBOTS tamamen kendi kendine dayanmalıdır (yani boyutlandırma aracının yanlarına veya üst kısmına güç kullanmaz). ROBOTS bunu aşağıdakilerin herhangi bir kombinasyonunu kullanarak gerçekleştirebilir:</p>
+<p class="fm-item">A. Elektrik kapalıyken mekanik araçlar ve/veya</p>
+<p class="fm-item">B. Servo'ları ve motorları istenen durgun konuma getiren bir OpMode'i başlatmak. OpMode, STARTING CONFIGURATION'ü korumak için pozisyonlarını tutmak için motorları ve servoları kontrol edebilir.</p>
+<div class="fm-box">
+<p>ROBOTS denetim sırasında STARTING CONFIGURATION'yi tutarken veya bir MATCH'ün çalışmasını beklerken bunu birkaç dakika yapmak zorunda kalabilir ve termal arıza olasılığını sınırlamalıdır (örneğin, motorların sert bir duruma karşı durmaması). Takımlar kontrol sırasında çalışan bir ROBOT'ü kullanırken özellikle dikkatli olmalıdır. Lütfen INSPECTOR'e ROBOT'nın çalışıyor olduğunu bildirin.</p>
+</div>
+<p id="R104" class="fm-rule"><strong>R104 *ROBOT ağırlık sınırı yoktur. </strong> <em>FIRST</em> Teknoloji Zorluğu ROBOTS BIOBUZZ oynamak için açık bir ağırlık sınırı yoktur.</p>
+<div class="fm-box">
+<p>Resmi bir ağırlık limiti olmasa da, takımlar hala ROBOT’S ağırlığının aşağıdakiler de dahil olmak üzere çeşitli faktörlere etkisini göz önünde bulundurmalıdır:</p>
+<ul>
+<li>FIELD TILE hasarı</li>
+<li>Pil tüketimi</li>
+<li>ROBOT nakliye</li>
+<li id="Ref175613674"></strong> genel performans ROBOT</li>
+</ul>
+</div>
+<p id="R105" class="fm-rule"><strong>R105 A ROBOT bir montaj olarak kalmalı ve ne kadar genişleyebileceği konusunda sınırlar vardır.</strong> MATCH başladıktan sonra, ROBOTS STARTING CONFIGURATION'ün ötesine genişleyebilir, ancak yine de başlangıç STARTING CONFIGURATION'ya dayanan ROBOT'e göre boyut kısıtlamalarına tabidir. Boyutlandırma kısıtlamaları şunlardır:</p>
+<p id="Ref239863775" class="fm-item">A. MATCH başladıktan sonra, ROBOTS STARTING CONFIGURATION'ün ötesine genişleyebilir, ancak her zaman 18 in. (45.70 cm) 24 in. (61.0 cm) 29 in. (73.65 cm) boyutunda kalmalıdır. G416</p>
+<p id="Ref239863797" class="fm-item">B. ROBOTS, yazılım kullanmadan bu sınırlara uymak için fiziksel olarak kısıtlanmış olmalı ve</p>
+<p id="Ref239255872" class="fm-item">C. ROBOTS, kasıtlı olarak COMPONENTS'yi ayırmak için tasarlanmamalıdır.</p>
+<p>Boyutlandırma sınır hacmi FIELD yüzeyine göre tanımlanır ve 29 in (73.65 cm) boyutu her zaman FIELD yüzeyinin üzerindeki dikey yüksekliğin olduğu şekilde yönelir.</p>
+<p class="fm-caption">Şekil 12 - 1: Genişleme Sınırı Üst Görünüm</p>
+<p class="fm-caption"><img src="../../images/image053.jpg" alt="Genişleme Sınırı görünümünü gösteren diyagram." width="633" loading="lazy"></p>
+<p class="fm-caption">Şekil 12 - 2: Genişleme Sınırı Yan Görünüm</p>
+<p class="fm-caption"><img src="../../images/image054.jpg" alt="Genişleme Sınırını Gösteren Diyagram - Yan Görünüm" width="437" loading="lazy"></p>
+<div class="fm-box">
+<p>Boyutlandırma hacmi FIELD yüzeyine göre tanımlanır ve 29 in (73.65 cm) boyutunun her zaman FIELD yüzeyinin üzerindeki dikey yüksekliği olması gibi yönlendirilir.</p>
+<p>ROBOTS'ler, FIELD'deki normal oyun sırasında kullanacakları stabil yapılandırmalarda ölçülür (yani tekerleklerinin hepsi TILES'e dokunurken). Bir ROBOT, FIELD'teki etkileşimler nedeniyle hafifçe eğilmişse, bu, ROBOT'nın istikrarlı bir konfigürasyona döndüğünde hala boyutlandırma hacmi içinde olması durumunda bu kuralı ihlal etmez.</p>
+<p>Takımlar, INSPECTORS'e boyutlandırma hacminin dışında olduğu yerde ROBOT'lerinin yapılandırılmadığını göstermeye hazır olmalıdır. ROBOTS denetim sürecinde maksimum mekanik uzatmalarını göstermelidir. Mekanik olarak boyut sınırını aşan bir ROBOT, ROBOT'in MATCH sırasında uzantının konumunu sınırlayan bir yazılımı olsa bile ihlal olacaktır. (Şekil 12 ‐ 3)</p>
+<p id="Ref239415589" class="fm-caption">Şekil 12 - 3: Genişleme sınırı Boyut sınırı ihlali</p>
+<p><img src="../../images/image055.png" alt="Genişleme Sınırı boyutlama ihlalini gösteren diyagram" width="309" loading="lazy"></p>
+<p>ROBOT'ün her iki tarafından da uzanabilen tek bir MECHANISM'ye sahip olan bir ROBOT, maksimum mekanik uzantıda toplam boyutu boyut sınırını geçmediği sürece izin verilir. (Şekil 12 - 4)</p>
+<p id="Ref239415558" class="fm-caption">Şekil 12 - 4: Genişleme Sınırı İzin Verilen Genişleme</p>
+<p><img src="../../images/image056.png" alt="İzin verilen genişlemeyi gösteren diyagram" width="501" loading="lazy"></p>
+<p>Mekanik olarak birbirine bağlı olmayan ve aynı anda ROBOT'ün her iki tarafından da uzanabilen çoklu MECHANISMS'si olan bir ROBOT, maksimum mekanik uzantıdaki genel yatay boyutu boyut sınırını aştığında NOT'e izin verilir (Şekil 12 ‐ 5).</p>
+<p id="Ref239415512"><em>Şekil 12 - 5: Genişleme Sınırı Eşzamanlı Genişleme</em></p>
+<p><img src="../../images/image057.png" alt="İzin verilen ve izin verilmeyen eşzamanlı uzatmaları gösteren diagramlar." width="521" loading="lazy"></p>
+<p>Yatay düzlemde dönen bir pivot üzerinde bir uzantısı olan bir ROBOT, genel boyutu yolculuğunun herhangi bir noktasında boyut sınırını geçmediği sürece izin verilir (Şekil 12 ‐ 6).</p>
+<p id="Ref239415475"><em>Şekil 12 - 6: Genişleme Sınırı Döner Genişleme</em></p>
+<p><img src="../../images/image058.png" alt="İzin verilen dönüş örneğini gösteren diyagram." width="465" loading="lazy"></p>
+</div>
+<h2 id="sec-12-2">12.2 Adil Oyun ve Hasarın Önlenmesi</h2>
+<p id="R201" class="fm-rule"><strong>R201 </strong> * <strong>ROBOTS'in, hiçbir şeye zarar vermemesi ya da ARENA'de bir karışıklık yaratmaması için tasarlanması gerekir.</strong> ROBOT bir karışıklık yaratma riskini oluşturmamalı veya ARENA'teki herhangi bir şey için bir tehlike oluşturmamalıdır.</p>
+<div class="fm-box">
+<p>Bu kuralın amacı <strong> ROBOTS'lerini ARENA'ye zarar vermemek ve ROBOTS'ün temizleme gerektirecek ve hasar ve/veya MATCH gecikmelerine neden olabilecek malzemeleri salma riskini en aza indirmek için tasarlamalıdır.</strong> takımlarının</p>
+<p>SCORING ELEMENTS'in ROBOTS ile işlenirken, çizik veya işaretleme gibi makul miktarda aşınmaya maruz kalması beklenir. Çırpmak, parçaları yırtmak veya SCORING ELEMENTS'ü rutin ve tekrar tekrar işaretlemek bu kuralı ve G406'ü ihlal etmektir.</p>
+<p><strong>Zarar riski ROBOT özelliklerinin örnekleri şunlardır, ancak bunlarla sınırlı değildir:</strong></p>
+<p class="fm-item">A. TILE zemininin zarar gördüğü bilinen özelliklere sahip çekiş cihazları,</p>
+<p class="fm-item">B. Açık keskin kenarları veya keskin çıkıntıları olan COMPONENTS ve</p>
+<p class="fm-item">C. Yüzeyleri aşındırıcı olan ve üzerlerine sürtünen nesneleri kazıyan özellikler.</p>
+<p><strong>ROBOT özelliklerinin örnekleri bir karışıklık yaratma riski şunları içerir, ancak bunlarla sınırlı değildir:</strong></p>
+<p class="fm-item">D. ROBOT çalışması sırasında fırlayabilecek veya damlayabilecek yağların aşırı kullanımı,</p>
+<p class="fm-item">E. Yeterince sabitlenmemiş herhangi bir COMPONENT, kum, kahve çekirdekleri, kedi çöpü, parlaklık veya top rulmanları gibi gevşek balast da dahil olmak üzere, MATCH sırasında FIELD'ye serbest bırakılabileceği gibi,</p>
+<p class="fm-item">F. sıvı veya jel malzemeler,</p>
+<p class="fm-item">G. lastik mühürleyici, ve</p>
+<p class="fm-item">H. Grafit tozu da dahil olmak üzere diğer yağlayıcılar.</p>
+</div>
+<p id="R202" class="fm-rule"><strong>R202 *Güvenlik ve adil oyun için ROBOTS ve OPERATOR CONSOLES tasarlayın.</strong> ROBOT ve OPERATOR CONSOLE parçaları tehlikeli malzemelerden yapılmamalı, güvensiz olmamalı, güvensiz bir duruma neden olmamalı veya diğer ROBOTS veya FIELD STAFF'lerin çalışmalarına müdahale etmemelidir.</p>
+<div class="fm-box">
+<p>Bu kuralı ihlal edebilecek maddelere şunlar dahildir, ancak bunlarla sınırlı değildir:</p>
+<p class="fm-item">A. kalkanlar, perdeler veya sadece DRIVE TEAM üyelerinin görüşünü kısıtlamak için tasarlanmış veya kullanılan diğer cihazlar,</p>
+<p class="fm-item">B. dikkat dağıtan veya MATCH seslerini taklit edecek kadar yüksek düzeyde ses üreten ses cihazları,</p>
+<p class="fm-item">C. Başka bir ROBOT'in uzaktan algılama yeteneklerine müdahale etmek için özel olarak tasarlanmış herhangi bir cihaz veya dekorasyon, görme sistemleri, akustik menzil bulma cihazları, sonarlar, kızılötesi yakınlık dedektörleri vb. dahil olmak üzere. Bu, ROBOT'nizdeki 36 h 11 AprilTags'i kullanan veya yakından taklit eden görüntüleri içerir.</p>
+<p class="fm-item">D. yanıcı gazlar veya alev veya piroteknik üretmek için tasarlanmış herhangi bir cihaz,</p>
+<p class="fm-item">E. Sıvı cıva veya kurşun gibi tehlikeli maddeler,</p>
+<p class="fm-item">F. ROBOT'de kullanılan yüksek yoğunluklu ışık kaynakları, hedefleme sırasında sadece kısa bir süre aydınlatılmalıdır ve ek inceleme gerektirebilir ve ekiplerden aydınlatmalarını devre dışı bırakmaları veya değiştirmeleri talep edilebilir. REFEREE LRI</p>
+<p class="fm-item">G. Hayvan kaynaklı malzemeler,</p>
+<p class="fm-item">H. Rekabetçi ROBOTS'e zarar vermek ya da ters çevirmek için tasarlanmış herhangi bir cihaz,</p>
+<p class="fm-item">I. Gereksiz bir sıkışma riski oluşturan cihazlar veya koşullar,</p>
+<p class="fm-item">J. 5 Hz'den daha yüksek bir hızda yanıp sönen dekoratif veya işlevsel aydınlatma ek inceleme gerektirecek ve ekiplerden aydınlatmalarını kapatmaları veya değiştirmeleri talep edilebilir. REFEREE LRI</p>
+<p class="fm-item">K. Güvenli ve adil oyuna ilişkin kuralın ruhunu ihlal eden listede yer almayan diğer maddeler.</p>
+</div>
+<p id="R203" class="fm-rule"><strong>R203 * ROBOTS, güç gerektirmeden FIELD'ten hızlı bir şekilde çıkarılabilmesi için tasarlanmalıdır.</strong> ROBOTS, SCORING ELEMENTS'ün ROBOT'ten ve ROBOT'in FIELD elemanlarından güç kapalıyken çıkarılmasına izin vermelidir.</p>
+<div class="fm-box">
+<p>Bazı olaylar, ekiplerin FIELD sıfırlaması sırasında ROBOT gücünü kullanmalarına izin verebilir (örneğin, ROBOT'ü FIELD'ün kenarına sürmek), ancak ROBOTS'in buna gerek olmadığı şekilde tasarlanması gerekir.</p>
+</div>
+<p id="R204" class="fm-rule"><strong>Yere yakalanma. R204</strong> ROBOTS, FIELD yüzeylerini yakalayarak veya aşağı doğru emici sağlamak için üretilen hava akışının bir formunu kullanarak aşağıya doğru yük kuvvetini arttırmak için tasarlanmış herhangi bir MECHANISM kullanamaz.</p>
+<h2 id="sec-12-3">12.3 İmalat</h2>
+<p id="R301" class="fm-rule">Bir oyun görevini tamamlamak için tasarlanmış <strong>R301 * COTS MECHANISMS yasal ama sınırları var.</strong> COTS MAJOR MECHANISMS'ler yasaktır. Bu kurallara izin verilen istisnalar şunlardır:</p>
+<p class="fm-item">A. COTS sürücü CHASSIS, tekil parçaların hiçbirinin diğer kuralları ihlal etmediği şartla ve</p>
+<p class="fm-item">B. COTS MAJOR MECHANISMS resmi <a href="https://ftc-resources.firstinspires.org/ftc/team"><em>FIRST</em> Teknoloji Zorluğu StarterBots</a> <em>.</em> programının bir parçası olarak oluşturuldu</p>
+<div class="fm-box">
+<p>COTS parçaları, takımların oyun görevlerini tamamlamak ve zorlukları çözmek için ROBOT MECHANISMS'yi tasarlamalarına ve inşa etmelerine yardımcı olmak için tasarlanmıştır, ancak oyun hedeflerini tamamlamak için özel olarak inşa edilmiş çözümler olmak için tasarlanmamıştır.</p>
+<p>Halka açık, amaçlı olarak inşa edilmiş çözümlerin üretimini yapıdan baskıya satan bir satıcı, bu kuralın ruhuna aykırıdır.</p>
+</div>
+<p id="R302" class="fm-rule"><strong>R302 *Yasal COTS parçaları ve hammaddeler değiştirilebilir.</strong> İzin verilen hammaddeler ve yasal COTS parçaları, diğer kuralların ihlal edilmediği sürece değiştirilebilir (çukurlanmış, kesilmiş, boyanmış, vb.).</p>
+<div class="fm-box">
+<p><strong>Hammaddeler, aşağıdakiler dahil olmak üzere, ancak bunlarla sınırlı olmayan bitmemiş inşaat malzemelerine atıfta bulunur:</strong></p>
+<p class="fm-item"><strong>A. Yaprak stokları,</strong></p>
+<p class="fm-item"><strong>B. Ekstrüde şekiller,</strong></p>
+<p class="fm-item"><strong>C. metaller, plastikler, kauçuklar ve ahşaplar ve</strong></p>
+<p class="fm-item"><strong>D. Mıknatıslar.</strong></p>
+</div>
+<p id="R303" class="fm-rule"><strong>R303 * COTS tek DoF olmalıdır.</strong> COTS COMPONENTS ve MECHANISMS tek bir mekanik özgürlük derecesini (DoF) geçmemelidir. İzin verilen COTS tek özgürlük derecesi MECHANISMS ve COMPONENTS örnekleri şunlardır:</p>
+<p class="fm-item">A. doğrusal kaydırma seti,</p>
+<p class="fm-item">B. doğrusal aktüatör seti,</p>
+<p class="fm-item">C. Tek vitesli (değişimsiz) vites kutuları,</p>
+<p class="fm-item">D. katran,</p>
+<p class="fm-item">E. Dönüştürme masası,</p>
+<p class="fm-item">F. kurşun vida, ve</p>
+<p class="fm-item">G. Tek DoF tutkalı.</p>
+<p>Bu kurallara izin verilen istisnalar şunlardır:</p>
+<p class="fm-item">H. Çatlaklama cihazları (kilitler, rulmanlar vb.),</p>
+<p class="fm-item">I. Holonomik tekerlekler (omni veya mecanum),</p>
+<p class="fm-item">J. ölü tekerlekli kilometre ölçüm kitleri,</p>
+<p class="fm-item">K. yanlış hizalı COMPONENTS arasındaki hareketi aktaran eşyalar (örneğin evrensel eklemler, esnek çubuk bağlayıcıları ve benzeri eşyalar) ve</p>
+<p class="fm-item">L. Çeşitli açılarda yapıları birbirine bağlayan eşyalar (örneğin toplu eklem bağlantıları, çubuk uçları ve benzeri eşyalar).</p>
+<div class="fm-box">
+<p>Bu kuralın amacı, yalnızca çoklu DoF COTS COMPONENT'ye monte edilecek şekilde tasarlanmış son derece uzmanlaşmış bireysel COMPONENTS'e izin vermemek için de uzanır.</p>
+<p>Tek bir özgürlük derecesi MECHANISM için genel test, MECHANISM'teki her COMPONENT'nin yönelimi ve konumunun, sistemin tek bir COMPONENT'ünün ( Giriş gibi) yönelimi ve konumuna dayanarak genel olarak tahmin edilebilir olup olmadığıdır.</p>
+<p>Örnek 1: Bir mekanum tahrik sistemi 4 bağımsız tahrik modüllerinden oluşur, her biri tek bir DoF ile (bu kural tarafından izin verilen mekanum tekerleklerinin DoF'sini göz ardı ederek) ortak bir yapıya (örneğin, CHASSIS) takılır. Toplam MECHANISM hala tek bir DoF.</p>
+<p>Örnek 2: Bu kural tarafından izin verilen ölü tekerlek odometri modülleri, tipik olarak ileri / geri hareket sağlayan bir 1 DoF tekerleğinden (holonomik tekerleğin etkisini görmezden gelerek) ve ek benzersiz bir dönme veya dikey hareket sağlayan bir yay kuvvetinden oluşur ve bir 2 DoF sistemi oluşturur.</p>
+<p>Örnek 3: Tek bir aktüatörden oluşan ve aynı anda 2 gripper çenesini hareket ettiren veya her biri bağımsız bir gripper çenesini kontrol eden çift aktüatörden oluşan basit gripper pençeleri, genel olarak tek bir DoF'dir. Bununla birlikte, ek bükme ve/veya bükme eylemleri sağlayan ek aktüatörleri içeren tutaklar (bilek gibi) COTS MECHANISMS'te yasaklanan özgürlük derecelerini ekler.</p>
+</div>
+<p id="R304" class="fm-rule"><strong>R304 *Kustom yazılım, tasarım ve parçalar yıldan yıla yeniden kullanılabilir.</strong> ROBOT yazılımı, tasarımları ve Kickoff'ten önce oluşturulan FABRICATED ITEMS'ler izinlidir.</p>
+<p id="R305" class="fm-rule"><strong>R305 * SCORING ELEMENTS ROBOT yapımı için izin verilmez.</strong> Şimdiki sezon SCORING ELEMENTS veya SCORING ELEMENTS'ün kopyalarının ROBOT yapısının bir parçası olarak kullanılmasına izin verilmez.</p>
+<h2 id="sec-12-4">12.4 ROBOT SIGN Kuralları</h2>
+<p id="ROBOT_SIGN1">Bir ROBOT SIGN, ROBOT'ye bağlanan gerekli bir montaj. ROBOT SIGN aynı anda ROBOT’S takım numarasını ve FIELD STAFF için ALLIANCE üyesini tanımlar. Bu kuralların yazılı olarak kullanıldığı kriterler şunları içerir:</p>
+<ul>
+<li>Takım sayısını ve ROBOT'ün ALLIANCE'sini belirlemek için FIELD STAFF’S yeteneğini en üst düzeye çıkarın.</li>
+<li>ROBOT SIGNS oluştururken tasarım zorluğunun miktarını en aza indirmek ve</li>
+<li>ROBOT kimliğinin gösterilmesinde tutarlılığı artırmak.</li>
+</ul>
+<p>ROBOT SIGN şablonu <a href="https://ftc-resources.firstinspires.org/ftc/archive/2027/team/robotsign-us">US Mektup</a> ve <a href="https://ftc-resources.firstinspires.org/ftc/archive/2027/team/robotsign-a4">A4</a> boyutlarında indirilebilir.</p>
+<p id="R401" class="fm-rule"><strong>R401 * Her ROBOT için en az iki ROBOT SIGNS. ROBOT SIGNS </strong> ROBOT üzerinde en az 2 ayrı yerlere yerleştirilmelidir. Bu yerler ROBOT, ≥90 derece uzaklıkta olan yüzeylere karşı veya bitişik olmalıdır. FIELD STAFF'nin görebileceği tüm ROBOT yüzeyleri, ROBOT'un üst kısmı da dahil olmak üzere ROBOT SIGNS'i yerleştirmek için kullanılabilir. ROBOT SIGNS aşağıdaki kriterleri karşılamalıdır:</p>
+<p class="fm-item">A. sağlam bir malzemeden yapılmalıdır,</p>
+<p class="fm-item">B. en az 6.5 inç (16.5 cm) genişliğinde,</p>
+<p class="fm-item">C. En az 2.5 inç (6.4 cm) uzunluğunda olmalıdır (Şekil 12 ‐ 7), ve</p>
+<p class="fm-item">D. ROBOT'in yapısı/çerçevesi tarafından desteklenmelidir.</p>
+<div class="fm-box">
+<p>Bu kuralın amacı, FIELD STAFF'in MATCH'ten önce, sırasında ve sonra en az 12 feet (3.65 metre) uzaklıktan ROBOT SIGNS'yi kolayca görmesidir.</p>
+<p>ROBOT SIGNS, MATCH oyununun zorluklarına dayanacak kadar sağlam olmalıdır, ancak neyin yeterince sağlam olduğu konusunda özel bir rehberlik yoktur. Takımlar ellerindeki her şeyle iyi niyetle çaba göstermeli.</p>
+</div>
+<p id="Ref173312557" class="fm-caption">Şekil 12 - 7: Takım Numarası ROBOT SIGN Boyutlandırma</p>
+<p><strong><img src="../../images/image059.jpg" alt="Diagram showing ROBOT SIGN sizing." width="579" loading="lazy"></strong></p>
+<p id="R402" class="fm-rule"><strong>R402 çarpı ROBOT SIGNS, sizin ALLIANCE'ünüzü gösterir. </strong> Her ROBOT SIGN, etkinlikte MATCH programında belirtildiği gibi ALLIANCE rengini (Şekil 12 - 7) göstermek için en az 6.5 in. by 2.5 in. (16.50 cm x 6.35 cm) boyutunda katı kırmızı veya mavi şeffaf olmayan bir arka planı olan bir dikdörtgen içermelidir. ROBOT'ye monte edildiğinde ROBOT SIGNS'de aşağıdakiler dışında görünür işaretler yasaktır:</p>
+<p class="fm-item">A. R403 için gerekli olanlar,</p>
+<p class="fm-item">B. küçük miktarlarda kanca ve döngü bantı, sert bağlayıcılar veya fonksiyonel eşdeğerler,</p>
+<p class="fm-item">C. Köşelerde, kıvrımlarda veya kesimlerde farklı renklerde dar alanlar,</p>
+<p class="fm-item">D. Sadece şablon amaçlı arka planda dar işaretler ve</p>
+<p class="fm-item">E. Işıklandırmak/ALLIANCE rengini ortaya çıkarmak için herhangi bir kaynaktan güç alınamaz veya herhangi bir kaynaktan güç alınamaz.</p>
+<div class="fm-box">
+<p>Dönüştürülebilir veya yapılandırılabilir olan ROBOT SIGNS, bu kural tarafından izin verilmedikçe, FIELD STAFF'ün karşıt ALLIANCE rengini görmesine izin vermemelidir.</p>
+</div>
+<p id="Ref173306222" class="fm-caption">Şekil 12 - 8: Minimum boyut ALLIANCE dikdörtgen</p>
+<p class="fm-caption"><img src="../../images/image060.png" alt="En az boyut ALLIANCE dikdörtgeni gösteren diyagram" width="627" loading="lazy"></p>
+<p id="R403" class="fm-rule"><strong>R403 * ROBOT SIGNS'deki takım numarası.</strong> Takım numaraları, Şekil 12 ‐ 7, Şekil 12 ‐ 9 ve Şekil 12 ‐ 10'de gösterildiği gibi ROBOT SIGN üzerinde görüntülenmeli ve yerleştirilmelidir ve aşağıdaki ek kriterleri karşılamalıdır:</p>
+<p class="fm-item">A. Yaklaşık 2.25 inç (5.70 cm) uzunluğundaki katı şeffaf olmayan beyaz Arap rakamlarından (örneğin, 1,2,3,4) oluşur,</p>
+<p class="fm-item">B. Sayıları çevreleyen arka planın en az yaklaşık 0.25 inç (0.60 cm) olması gerekir.</p>
+<p class="fm-item">C. Sayılar dikey olarak yığılmamalıdır (Şekil 12 ‐ 10),</p>
+<p class="fm-item">D. Güçlü malzemelerden yapılmalıdır ve</p>
+<p class="fm-item">E. Numaraları aydınlatmak/açıklamak için herhangi bir kaynaktan güç alınamaz.</p>
+<p id="Ref175171215" class="fm-caption">Şekil 12 - 9: Mavi ALLIANCE üzerinde oynayan takım 21001 için yasal numara</p>
+<p class="fm-caption"><img src="../../images/image061.png" alt="Mavi ALLIANCE için yasal numara gösterimi diyagramı" width="323" loading="lazy"></p>
+<p id="Ref175171223" class="fm-caption">Şekil 12 - 10: Mavi ALLIANCE'te oynayan 1355 takımı için takım numarası yönelimi örnekleri</p>
+<p class="fm-caption"><img src="../../images/image062.png" alt="Robotun işaret yönünü gösteren diyagram." width="619" loading="lazy"></p>
+<div class="fm-box">
+<p>Bir etkinlikte bir takımın tamamen yasal bir ROBOT SIGNS'i yoksa ve etkinlikte yasal bir ROBOT SIGN oluşturmak için renk yazıcısı veya başka bir araç mevcut değilse, Baş REFEREE etkinlikte kullanılmak üzere alternatif bir yedek onaylayabilir.</p>
+<p>Takım numaraları MATCH oyununun zorluklarına dayanacak kadar sağlam olmalıdır, ancak neyin yeterince sağlam olduğu konusunda özel bir rehberlik yoktur. Takımlar ellerindeki her şeyle iyi niyetle çaba göstermeli. Bir etkinlikte sınırlı sayıda malzeme varsa, yedek ROBOT SIGNS basit bir kağıda el yazısıyla yazılabilir.</p>
+<p>Küçük dekoratif elemanlar ve sayıdaki boşluklar, takım numarası 12 feet (3.65 metre) uzaklıkta okunur ve hızlı bir bakışta ayırt edilebilir olduğu sürece sorun değildir.</p>
+<p><strong>ROBOT SIGNS'de yasaklanmış takım numaralarının örnekleri şunlardır, ancak bunlarla sınırlı değildir:</strong></p>
+<ul>
+<li>Takım numaraları sadece kenar aydınlatılmış gravürlü plastikle görünür </strong></li>
+<li id="Toc172868213">LED Ekran numaraları </strong></li>
+</ul>
+</div>
+<h2 id="sec-12-5">12.5 Motorlar ve Aktüatörler</h2>
+<p id="R501" class="fm-rule"><strong>R501 *Sadece belirli motorlara izin verilir.</strong> Tek izin verilen motor aktüatörleri şunlardır:</p>
+<p id="Ref151715654" class="fm-caption">Tablo 12 - 1: Motor hakları</p>
+<div class="fm-table"><table> <tr><th><strong>Motor Adı</strong></th><th><strong>Bölüm numaraları mevcut</strong></th><th><strong>Notlar</strong></th></tr> <tr><td><strong>AndyMark</strong> NeveRest 12 V DC</td><td>am- 3104, am- 3104 b</td><td></td></tr> <tr><td><strong>AndyMark </strong> NeveRest Hex 12 V DC</td><td>am- 3104 c</td><td></td></tr> <tr><td><strong>goBILDA</strong> Sarı Ceket 520 x Serisi 12 V DC</td><td>5201-0002-0026, vb.</td><td>5201, 5202, 5203 ve 5204 serileri</td></tr> <tr><td><strong>goBILDA 5000 Serisi 12 V DC</strong></td><td>5000-0002-4008, vb.</td><td></td></tr> <tr><td><strong>Modern Robotik</strong> / MATRIX 12 V DC</td><td>5000-0002-0001</td><td>Çıkartıldı</td></tr> <tr><td><strong>NFR Ürünler </strong> Yuksel 12 V DC</td><td>NFR-600-100-000</td><td></td></tr> <tr><td><strong>REV Robotics</strong> HD Hex 12 V DC</td><td>REV - 41-1291</td><td></td></tr> <tr><td><strong>REV Robotics</strong> Core Hex 12 V DC</td><td>REV - 41-1300</td><td></td></tr> <tr><td><strong>Studica Robotik </strong> Maverick 12 V DC</td><td>75001</td><td></td></tr> <tr><td><strong>SWYFT Robotik</strong> SWYFT Spike Motoru</td><td>SR-MOTOR-DC-01</td><td></td></tr> <tr><td><strong>TETRIX MAX</strong> 12 V DC</td><td>739530, 39530</td><td>Çıkartıldı</td></tr> <tr><td><strong>TETRIX MAX</strong> TorqueNADO 12 V DC</td><td>W44260</td><td></td></tr> <tr><td><strong>WATTOS </strong> Stingray 12 V DC</td><td>WDM12</td><td></td></tr> <tr><td colspan="3"><strong>Fabrika kurulu COTS bilgisayar cihazlarında bulunan titreşim ve otomatik odaklama motorları (örneğin akıllı telefonlardaki gürültü motoru); yalnızca cihazın bir parçası olarak kullanılabilir ve çıkarılamaz ve/veya yeniden kullanılamaz. Bu motorlar sınır için sayılmaz. </strong> R503 <strong>.</strong></td></tr> <tr><td colspan="3"><strong>Bir COTS sensörüne (örneğin, LIDAR, tarama sonarı) entegre olan motorlar, cihazın montajını kolaylaştırmak dışında değiştirilmediği sürece. Bu motorlar sınır için sayılmaz. </strong> R503 <strong>.</strong></td></tr> </table></div>
+<div class="fm-box">
+<p>Yarışma Kılavuzunun gelecekteki güncellemelerinde yasal motor listesine ek motorlar eklenebilir.</p>
+<p>Birçok yasal dişli motoru, tüm montajına dayalı etiketleme ile satılır. Bu motorlar sağlanan vites kutusuyla ve/veya diğer uyumlu vites kutusuyla birlikte veya olmadan kullanılabilir.</p>
+</div>
+<p id="R502" class="fm-rule"><strong>R502 * Servo kullanımı sınırlıdır.</strong> Servo aktüatörler aşağıdaki gereklilikleri karşılamalıdır. Servolar, nihayetinde kullanılacakları güç düzenleme cihazlarıyla uyumlu olmalıdır (R505 için) ve ek servo pozisyon çıkış arayüzleri içerebilir (örneğin, 4'ün Kablo Pozisyon Geri bildirimi).</p>
+<p class="fm-caption">Tablo 12 - 2: Servo Gereksinimleri 6 V</p>
+<div class="fm-table"><table> <tr><th><strong>Etkinleştirici Sınıfı</strong></th><th><strong>Mekanik çıkış gücü</strong></th><th><strong>Durma akımı </strong></th><th><strong>Örnek Servolar (örneğin, ancak bunlarla sınırlı değil)</strong></th></tr> <tr><td rowspan="7"><strong>Servo</strong></td><td rowspan="7">≤ 8 watt @ 6 V</td><td rowspan="7">≤ 4 amp @ 6 V</td><td>AndyMark Yüksek torklu servisler (am-4954)</td></tr> <tr><td>Axon MAX + Servo (Axon MAX +)</td></tr> <tr><td>DSSERVO 35 KG Coreless (DS3235MG)</td></tr> <tr><td>FEETECH Dijital Servo (FT5335M-FB)</td></tr> <tr><td>goBILDA Çift Modlu Servo (2000-0025-0003)</td></tr> <tr><td>REV Robotics Akıllı Servo (REV - 41-1097)</td></tr> <tr><td>Studica Çok Modlu Akıllı Servo (75002)</td></tr> <tr><td rowspan="3"><strong>Doğrusal Servo</strong></td><td rowspan="3">N/A</td><td rowspan="3">≤ 1 amp @ 6 V</td><td>Actuonix Mikro Doğrusal Servo (P8-100-252-12-R)</td></tr> <tr><td>Hitec Lineer Servo (HLS12-3050-6V)</td></tr> <tr><td>Studica Doğrusal Servo RC Aktüatör (75014)</td></tr> <tr><td colspan="4"><a href="https://ftc-docs.firstinspires.org/en/latest/tech_tips/tech-tips.html#calculatepower">Servo mekanik çıkış gücü</a> aşağıdaki formül ile yaklaştırılır (üretici tarafından bildirilen 6 V verileri kullanılarak): <br> · <strong>Mekanik çıkış gücü</strong> = <strong>0.25</strong> x (<strong>Durma tork</strong> in <em>N-m</em>) x (<strong>Yükleme Hızı Yok</strong> in <em>Rad/s</em>)</td></tr> </table></div>
+<div class="fm-box">
+<p>Servo'lar kullanım için yasal olmak için her iki gerekliliği de karşılamalıdır. Ön onaylı servoların bir listesini almak için <a href="https://ftc-resources.firstinspires.org/ftc/event/inspection-reference">Denetim Hızlı Referans</a> belgesine bakın, aksi takdirde ekipler servo özelliklerini doğrulayan belgeleri sağlayabilmelidir. Çıktı gücünün uygunluğunu kontrol etmek için <a href="https://ftc-docs.firstinspires.org/en/latest/tech_tips/tech-tips/tech-tip-motor-servo-power/tech-tip-motor-servo-power.html#servo-mechanical-power-calculator">Çevrimiçi hesap makinesi</a>'yi kullanın.</p>
+<p>Bir üreticinin 6 V özellikleri sağlamadığı takdirde, 6 V'yi aşan gerilimler için herhangi bir özellik kullanılabilir.</p>
+<p>Servo içinde kullanılabilir olan herhangi bir kullanıcı veya VENDOR ayarlanabilir yazılım sınırına bakılmaksızın, belirtilen voltajda cihaz için mümkün olan maksimum durma akımı durma akımıdır.</p>
+<p>Belirlenmiş güç düzenleme aygıtı tarafından sağlanan voltajın istenen servonun çalışma voltaj aralığı içinde olduğundan emin olmak önemlidir. REV Control Hub ve REV Expansion Hub servolara 5 V sağlarken, goBILDA Servo Güç Enjektörü, REV Servo Güç Modülü, Studica Servo Güç Bloku ve REV Servo Hub servolara 6 V sağlar. Neredeyse tüm servolar 6 V ile uyumlu olsa da, örneğin 6-8.4 DCV çalışma voltaj aralığındaki servolar sadece 5 V sağlandığında düzgün çalışmayabilir.</p>
+</div>
+<p id="R503" class="fm-rule"><strong>R503 * ROBOTS toplamda 8 motorları ve 8 servoları ile sınırlıdır.</strong> A ROBOT, tüm konfigürasyonlarda kullanılan tüm MECHANISMS'ler için R501 ve R502'ya göre izin verilen aktüatör listelerinden en fazla 8 motor ve 8 servodan oluşabilir.</p>
+<div class="fm-box">
+<p>Eğer bir ROBOT farklı MECHANISMS kullanan tek bir etkinlikte kullanılan birden fazla konfigürasyona sahipse, tüm motorların ve servoların toplamı bu kuralda belirtilen sınırdan küçük veya eşit olmalıdır.</p>
+</div>
+<p id="R504" class="fm-rule"><strong>R504 * Açıkça izin verilmediği sürece aktüatörleri değiştirmeyin.</strong> Herhangi bir motorun veya servo'nun bütünleşik mekanik ve elektrik sisteminde değişiklik yapılmamalıdır. ROBOT'de kullanılan motorlar ve servolar aşağıdakiler hariç hiçbir şekilde değiştirilmemelidir:</p>
+<p id="Ref239863738" class="fm-item">A. Montaj kolları ve/veya çıkış ocağı/ara yüzü (pinion dişlileri dahil) motorun ROBOT'e ve tahrik edilen parçaya fiziksel olarak bağlanmasını kolaylaştırmak için değiştirilebilir.</p>
+<p class="fm-item">B. Elektrikli kablolar gerektiği ölçüde uzunluğa kesilebilir ve ek kablolama için konektörler veya bağlantılar eklenebilir (R609 başına) ve tamamen elektrikli kablolar işlevsel olarak eşdeğer yedeklerle değiştirilebilir.</p>
+<p class="fm-item">C. Servolar üreticinin belirttiği şekilde değiştirilebilir (örneğin yumuşak sınırları belirlemek veya sürekli dönüş için değişiklik yapmak),</p>
+<p class="fm-item">D. Takım tarafından uygulanan etiket, cihazı tanımlamak için kullanılan işaretleri engellemediği sürece cihazın amacını, bağlantılılığını, işlevsel performansını vb. belirtmek için etiketleme uygulanabilir.</p>
+<p class="fm-item">E. elektrik terminallerine yalıtım uygulanabilir,</p>
+<p class="fm-item">F. Temel performans ve özellikler değişmediği sürece onarımlar, ve</p>
+<p class="fm-item">G. Üretici tarafından tavsiye edilen bakım.</p>
+<p id="R505" class="fm-rule"><strong>R505 *Tüm aktüatörler onaylı cihazlar aracılığıyla kontrol edilmeli ve güçlendirilmelidir.</strong> R501'te izin verilen COTS bilgisayar aygıtlarının sensörlerine entegre olan servolar, fanlar veya motorlar hariç, bir <strong>Tüm aktüatör kontrol sinyalleri bir güç düzenleyici cihazından gelmelidir. </strong>'de ROBOT'te izin verilen aktüatörler için sadece güç düzenleyici aygıtlar şunlardır:</p>
+<p class="fm-caption">Tablo 12 - 3: Güç Düzenleyicileri ve Sınırları</p>
+<div class="fm-table"><table> <tr><th><strong>Güç Düzenleyicisi</strong></th><th><strong>Bölüm Numarası</strong></th><th><strong>Cihaz başına yük sınırı</strong></th></tr> <tr><td><strong>goBILDA 6 V Servo Güç Enjektörü</strong></td><td>3125-0001-0001</td><td>Liman başına 2 Servo</td></tr> <tr><td><strong>REV Control Hub veya Expansion Hub Motor Portları</strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>Liman başına 2 motor</td></tr> <tr><td><strong>REV Control Hub veya Expansion Hub Servo Portları</strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>Liman başına 2 Servo</td></tr> <tr><td><strong>REV Servo Güç Modülü</strong></td><td>REV - 11-1144</td><td>Liman başına 2 Servo</td></tr> <tr><td><strong>REV Robotics Servo Hub</strong></td><td>REV - 11-1855</td><td>Liman başına 2 Servo</td></tr> <tr><td><strong>REV SPARKmini</strong></td><td>REV - 31-1230</td><td>Cihaz başına 2 motorlar</td></tr> <tr><td><strong>Studica Servo Güç Bloku</strong></td><td>75005</td><td>Liman başına 2 Servo</td></tr> </table></div>
+<p id="R506" class="fm-rule"><strong>R506 *Rele, elektromanyetik ve elektrikli solenoid aktüatörlerinin kullanımı yasaktır.</strong> Ek röleler, elektromanyetikler, elektrikli solenoid aktüatörleri veya ilgili sistemlerin kullanımı yoluyla elektromekanik çalıştırmanın uygulanması yasaktır. Buna ek olarak, röle ve elektromanyetiklerin kullanımı da yasaktır.</p>
+<h2 id="sec-12-6">12.6 Güç Dağıtımı</h2>
+<p id="R601" class="fm-rule"><strong>R601 * ROBOTS sadece 1 ana pil içerebilir.</strong> ROBOTS'de 1 ve sadece 1 onaylı 12 V NiMH ana bataryası bulunmalıdır. Bu batarya sadece yarış sırasında ROBOT kontrol sistemi ve çalıştırma için yasal bir elektrik enerjisi kaynağıdır ve aşağıdakiler hariç, batarya üreticisi tarafından değiştirilmemiş olmalıdır:</p>
+<p class="fm-item">A. Sigorta, R610'e monte edilmiş COTS eşdeğer bir 20 A ATM mini bıçaklı sıralı sigorta ile değiştirilebilir ve</p>
+<p class="fm-item">B. kurulu konektörler, Anderson Powerpole, XT30 gibi diğer popüler konektörlerle veya benzer bir güç derecesine sahip herhangi bir konektörle değiştirilebilir.</p>
+<p>Tek izin verilen ROBOT ana güç batarya paketleri şunlardır:</p>
+<p class="fm-caption">Tablo 12 - 4: Yasal ROBOT Ana Güç Pil Paketleri</p>
+<div class="fm-table"><table> <tr><th><strong>Pil Paketi</strong></th><th><strong>Bölüm Numarası</strong></th><th><strong>Notlar</strong></th></tr> <tr><td><strong>AndyMark Flat Pack Bataryası DC 12 V</strong></td><td>am- 5290</td><td></td></tr> <tr><td><strong>goBILDA 12 V NiMH içi batarya </strong></td><td>3100-0012-0020</td><td></td></tr> <tr><td><strong>Matrix 12 V 3000 mAh NiMH</strong></td><td>14-0014</td><td>Modern Robotik olarak etiketlenebilir</td></tr> <tr><td><strong>REV 12 V Slim Pil</strong></td><td>REV - 31-1302</td><td></td></tr> <tr><td><strong>Studica 12 V 3000 mAh NiMH</strong></td><td>70025</td><td></td></tr> <tr><td><strong>TETRIX MAX 12V 3000mAh NiMH</strong></td><td>W39057</td><td>Eski adı 739023</td></tr> <tr><td><strong>WATTOS 12 V pil</strong></td><td>WT-NMH1230</td><td></td></tr> </table></div>
+<div class="fm-box">
+<p>Çoklu VENDORS'den birçok benzer stil pil mevcuttur, ancak yalnızca listelenen üreticiler ve parça numaraları <em>FIRST</em> Tech Challenge Etkinliklerinde kullanım için yasaldır.</p>
+<p>R602'de listelenen bağımsız cihazlar için diğer piller de kullanılabilir.</p>
+</div>
+<p id="R602" class="fm-rule">100 Wh veya daha az kapasiteye sahip <strong>R602 *Başka bataryalara sadece bağımsız çevresel cihazlar ve sadece LEDs için izin verilir. </strong> COTS USB pil paketleri (3.7 V' de 27,000 mAh), 5 V/ 5 A maksimum çıkışı veya 12 V/ 5 A maksimum çıkışı ile port başına USB - PD kullanan ve kamera (örneğin, GoPro tarzı kamera) gibi bağımsız cihazlara entegre piller kullanılabilir.</p>
+<p class="fm-item">A. ROBOT aktüatörlerinin hiçbirine güç vermiyor ve</p>
+<p class="fm-item">B. ROBOT kontrol sisteminden kontrol sinyalleri alan herhangi bir cihaz tarafından kullanılmamalıdır (yani COTS USB pil paketleri ROBOT güç sistemlerinden elektrik açısından izole kalmalıdır). Bu kuralın B bölümüne istisnalar şunlardır:</p>
+<p class="fm-subitem">i. motorlu USB Hub'lar, ve</p>
+<p class="fm-subitem">ii. ROBOT CONTROLLER akıllı telefonlar.</p>
+<div class="fm-box">
+<p>Bir REV Kontrol veya Expansion Hub'den sinyal alan herhangi bir cihaz, ana ROBOT pilinden güçlendirilmelidir.</p>
+</div>
+<p id="R603" class="fm-rule"><strong>R603 * Ana güç anahtarı üzerinden ROBOT pilini bağlayın.</strong> Tam olarak bir ana güç anahtarı, ROBOT'teki tüm güç düzenleyici cihazlara ROBOT pil paketinden sağlanan tüm gücü kontrol etmelidir (R602'te belirtildiği hariç), böylece aşağıdaki tüm koşullar yerine getirilmelidir:</p>
+<p class="fm-item">A. aşağıdaki onaylı güç anahtarlarından biri olmalıdır:</p>
+<p class="fm-caption">Tablo 12 - 5: Yasal Güç Değiştiricileri</p>
+<div class="fm-table"><table> <tr><th><strong>Güç Değiştiricisi</strong></th><th><strong>Bölüm Numarası</strong></th></tr> <tr><td><strong>AndyMark FTC Güç Değiştiricisi</strong></td><td>am- 4969</td></tr> <tr><td><strong>goBILDA Tufan Kapısı Güç Değiştiricisi</strong></td><td>3103-0005-0001</td></tr> <tr><td><strong>REV Değiştirme Kablosu ve Destek</strong></td><td>REV - 31-1387</td></tr> <tr><td><strong>Studica Güç Açma/Kapatma Değiştiricisi Kiti</strong></td><td>70182</td></tr> <tr><td><strong>TETRIX R/C Değiştirme Kiti</strong></td><td>W39129</td></tr> <tr><td><strong>WATTOS Güç Değiştiricisi</strong></td><td>WTS-SW1220</td></tr> </table></div>
+<p class="fm-item">B. Yüksek hızlı hareket eden parçalardan ve sıkışma tehlikelerinden uzak, ekibin erişebileceği bir yere monte edilmeli veya yerleştirilmelidir ve</p>
+<p class="fm-item">C. İkincil güç anahtarları ana güç anahtarının aşağısında 12 V hattında kullanılabilir.</p>
+<div class="fm-box">
+<p>Ana güç anahtarı için özel bir konum gerekçesi yoktur, ancak yüksek hızlı hareket eden parçalardan ve sıkışma tehlikelerinden uzak olmalıdır. Ekiplerin ana güç anahtarını çıkarılabilir panellerin arkasına yerleştirmelerine izin verilir.</p>
+<p>Ana güç anahtarı, yanlışlıkla çalıştırılmasını veya hasar görmesini önlemek için ROBOT-ROBOT-ROBOT temasından korunması için 'e monte edilmelidir.</p>
+</div>
+<p id="R604" class="fm-rule"><strong>R604 *Füzyonlar talimatlara göre kullanılmalı ve değiştirilmemelidir.</strong>. Bu kuralın amacı, takımların bir cihaz üreticisinin yönlendirmesiyle sigortaları kullanması ve sigortaları değiştirerek, sigortaları daha yüksek bir çıkış noktasına sahip olanlarla değiştirerek veya kendilerini sıfırlayan sigortalarla değiştirerek rekabet avantajı elde etmeye çalışmamak.</p>
+<p id="R605" class="fm-rule"><strong>R605 *ROBOT çerçevesi mevcut bir yol olarak kullanılamaz.</strong> Tüm kablolamalar ve elektrikli cihazlar ROBOT çerçevesinden elektrikli olarak izole edilmelidir. ROBOT çerçevesi elektrik akımı taşımak için kullanılmamalıdır. Kontrol sistemi elektroniklerinin ROBOT'ün çerçevesine elektrikle bağlanmasına ancak aşağıdaki koşulların tamamının yerine getirilmesi halinde izin verilir:</p>
+<p class="fm-item">A. Kullanılan kayışlar/kablolar aşağıdaki onaylı parçalardan yapılmalıdır:</p>
+<p class="fm-caption">Tablo 12 - 6: Yasal ROBOT Yerleştirme Kemerleri</p>
+<div class="fm-table"><table> <tr><th><strong>Yerleştirici kemer</strong></th><th><strong>Bölüm Numarası</strong></th></tr> <tr><td><strong>AndyMark Dirençli topraklama kemeri</strong></td><td>am- 4648 a</td></tr> <tr><td><strong>REV Dirençli topraklama kemeri</strong></td><td>REV - 31-1269</td></tr> <tr><td><strong>Swyft topraklama kablosu</strong></td><td>SR -Yeryüzü- 01</td></tr> </table></div>
+<p class="fm-item">B. Kemer/kablo doğrudan bir XT30 konektörü ile tamamen COTS COMPONENT'e bağlanmalı ve ayrıca doğrudan ROBOT'ün çerçevesine (resistif terminal üzerinden) bağlanmalıdır ve</p>
+<p class="fm-item">C. Hiçbir ROBOT COMPONENTS veya MECHANISMS ROBOT çerçevesini FIELD'e elektrikle bağlamak için tasarlanmamıştır.</p>
+<div class="fm-box">
+<p>Yerleştirme kemerinin montajı hakkında daha fazla bilgi için lütfen <a href="https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html">ROBOT Kablolama Kılavuzu</a>'e bakın.</p>
+</div>
+<p id="R606" class="fm-rule"><strong>R606 * ROBOT CONTROLLER ve ROBOT elektrik sistemleri kontrol edilebilir olmalıdır.</strong> ROBOT elektrikli COMPONENTS aşağıdaki şekilde erişilebilirliği göz önünde bulundurarak monte edilmelidir:</p>
+<p class="fm-item">A. Tüm güç düzenleme cihazları (R505 başına), bağlantılı kablolama ve tüm sigortalar denetim için görünür hale getirilmelidir ve</p>
+<p class="fm-item">B. ROBOT CONTROLLER cihazı, ROBOT cihazına, teşhis lambalarının veya cihaz ekranının kontrol için görülebilmesi için monte edilmelidir.</p>
+<div class="fm-box">
+<p>Görülebilir denetim için ROBOT'in STARTING CONFIGURATION'de olduğu zaman veya normalde MATCH'te olduğu zaman eşyaların görülebilir olması gerekmez, ancak ekip gerekirse eşyaları denetim sürecinde görülebilir hale getirebilir.</p>
+<p>Takımlar, normal MATCH oyunu sırasında kullanılan tüm ROBOT konfigürasyonlarında teşhis lambalarını görünür kılmaları şiddetle teşvik edilir. Diagnostik LEDs'ler bir MATCH sırasında görünmezse, FIELD STAFF ekibe kapsamlı destek veremeyebilir.</p>
+</div>
+<p id="R607" class="fm-rule"><strong>R607 *Kustom devreler, yalnızca LEDs'ü güçlendirmedikleri sürece 5 V'den fazla düzenlenmiş güç sağlamamalılar.</strong> Bir aktüatör (R501'de belirtilen) veya güç düzenleme cihazı (R505'te belirtilen) olmayan herhangi bir aktif elektrikli öğe, bir CUSTOM CIRCUIT olarak kabul edilir. CUSTOM CIRCUITS, yalnızca LEDs'yi güçlendirmek için kullanılmadığı sürece, 5 V'yi aşan düzenlenmiş çıkış voltajları sağlamaz. CUSTOM CIRCUITS, düzenlenmemiş pil voltajından geçebilir.</p>
+<p id="R608" class="fm-rule"><strong>R608 * Tüm Güç düzenleyici cihazlar onaylı bağlantılar üzerinden bağlanmalı ve güçlendirilmelidir.</strong> Tüm güç düzenleyici cihazlar (R505) üreticinin talimatlarına göre güçlendirilmelidir ve aşağıdaki tablo doğru olmalıdır:</p>
+<p class="fm-caption">Tablo 12 - 7: Güç düzenleme cihazının güç gereksinimleri</p>
+<div class="fm-table"><table> <tr><th><strong>Güç Düzenleyicisi</strong></th><th><strong>Bölüm Numarası</strong></th><th><strong>Güçlendirme yöntemi</strong></th></tr> <tr><td><strong>goBILDA 6 V Servo Güç Enjektörü</strong></td><td>3125-0001-0001</td><td>Sadece cihazdaki XT30 konektörlerini kullanarak ROBOT ana bataryasından güçlendirilir.</td></tr> <tr><td><strong>REV Control Hub / </strong> <br> <strong>REV Expansion Hub </strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>Sadece cihazdaki XT30 konektörlerini kullanarak ROBOT ana bataryasından güçlendirilir.</td></tr> <tr><td><strong>REV Servo Güç Modülü</strong></td><td>REV - 11-1144</td><td>Sadece vida uçları kullanılarak güçlendirilir ve yalnızca ROBOT ana bataryasından güçlendirilmelidir.</td></tr> <tr><td><strong>REV Robotics Servo Hub</strong></td><td>REV - 11-1855</td><td>Sadece güç terminallerini kullanarak güçlendirilir ve yalnızca ROBOT ana bataryasından güçlendirilmelidir.</td></tr> <tr><td><strong>REV SPARKmini</strong></td><td>REV - 31-1230</td><td>Sadece Güç girişi ile beslenir ve yalnızca ROBOT ana bataryasıyla beslenmelidir.</td></tr> <tr><td><strong>Studica Servo Güç Bloku</strong></td><td>75005</td><td>Sadece JST-VH güç konektörü ile güçlendirilir ve yalnızca ROBOT ana bataryasıyla güçlendirilmelidir.</td></tr> </table></div>
+<p id="R609" class="fm-rule"><strong>R609 * Uygun büyüklükte tel kullanın.</strong> Tüm devreler uygun boyutlarda yalıtımlı tel ile kablolanmış olmalıdır:</p>
+<p class="fm-caption">Tablo 12 - 8: Tel boyutlandırma gereksinimleri</p>
+<div class="fm-table"><table id="SIGNAL_LEVEL"> <tr><th><strong>Uygulama</strong></th><th><strong>En Az Kablo Boyutu</strong></th></tr> <tr><td><strong>12 V Ana Pil Gücü</strong></td><td rowspan="3">18 AWG <br> (19 SWG veya 1 mm <sup>2</sup>)</td></tr> <tr><td><strong>Motor Gücü (başka şekilde belirtilmediği sürece)</strong></td></tr> <tr><td><strong>11-20 Bir sigorta korumalı devre</strong></td></tr> <tr><td><strong>Motor Gücü - TETRIX MAX 12 V DC Motorlar, REV Robotics Core Hex (REV - 14-1300)</strong></td><td rowspan="4">22 AWG <br> (22 SWG veya 0.5 mm <sup>2</sup>)</td></tr> <tr><td><strong>PWM / Servo</strong></td></tr> <tr><td><strong>LEDs (5V / 12V)</strong></td></tr> <tr><td><strong>≤10 Bir sigorta korumalı devre</strong></td></tr> <tr><td><strong>Sinyal düzeyi devreleri (yani, ≤1 A sürekli çizilen ve &gt; 1 A'yı sağlayamayan bir kaynağa sahip olan devreler, bunlarla sınırlı olmamak üzere şunları içerir: I2C, DIO, Analog, kodlayıcı ve RS485 bağlantıları)</strong></td><td>28 AWG <br> (29 SWG veya. 08 mm <sup>2</sup>)</td></tr> </table></div>
+<p>Aslen yasal COTS cihazlarına bağlanan bütünleşik kablolar veya üreticinin eklediği/sattığı kablolar cihazın bir parçası olarak kabul edilir ve varsayılan olarak yasaldır. Bu tür kablolar bu kuraldan muaf tutulur.</p>
+<div class="fm-box">
+<p>Bu kurallara uygunluğunu göstermek için, ekipler mümkünse açık bir şekilde etiketlenmiş boyutlara sahip tel kullanmalıdır. Etiketlenmemiş kablo kullanılırsa, ekipler kullanılan kablonun bu kuralın gereksinimlerini karşıladığını göstermeye hazır olmalıdır (örneğin, kablo örnekleri ve gerekli boyutta olduklarına dair kanıt).</p>
+<p>Birden fazla küçük telin paralel olarak birleştirilmesi, minimum tel kesimi gereksinimlerini karşılayan eşdeğer daha büyük bir tel oluşturmak için kullanılamaz.</p>
+</div>
+<p id="R610" class="fm-rule"><strong>R610 * Belirli otobüsler için belirtilen tel renklerini kullanın. </strong> 12 V ana güç otobüsü ve + 5 V yardımcı otobüs kabloları tüm uzunlukları boyunca renk kodlu olmalıdır. Aşağıdaki renkler kullanılmalıdır:</p>
+<p class="fm-item">A. pozitif (örneğin, + 12 VDC / + 5 V Aux): kırmızı, sarı, beyaz, kahverengi veya siyah çizgili ve</p>
+<p class="fm-item">B. negatif (örneğin, ortak/ GND): siyah veya mavi.</p>
+<div class="fm-box">
+<p>Not: Bu kural, motor kabloları, sinyal seviyesi kabloları (örneğin kodlayıcı ve sensör kabloları), servo kablolar ve uzantılar veya üreticileri tarafından yasal cihazlara orijinal olarak takılan kablolar dahil olmak üzere diğer kablo türlerine uygulanmaz.</p>
+</div>
+<p id="R611" class="fm-rule"><strong>R611 * Güçlü USB merkezleri onaylı kaynaklardan enerji almalıdır. ROBOT'te kullanılan güçlendirilmiş USB merkezleri sadece aşağıdaki yollardan biriyle güçlendirilebilir: </strong></p>
+<p class="fm-item">A. R602 başına onaylı bir COTS USB pil paketi veya</p>
+<p class="fm-item">B. REV Expansion Hub veya REV Control Hub'teki 5 V yardımcı güç bağlantı noktası.</p>
+<p id="R612" class="fm-rule"><strong>R612 *Kritik güç yollarını değiştirmeyin.</strong> CUSTOM CIRCUITS, aşağıdakiler arasındaki güç veya kontrol yollarını doğrudan değiştirmemelidir:</p>
+<p class="fm-item">A. ROBOT pil ve ana güç anahtarı,</p>
+<p class="fm-item">B. Ana güç anahtarı ve güç düzenleme cihazı (R603 başına),</p>
+<p class="fm-item">C. herhangi iki güç düzenleyici cihaz (R607 başına), veya</p>
+<p class="fm-item">D. Güç düzenleyici cihazlar ve aktüatörler.</p>
+<div class="fm-box">
+<p>ROBOT’S elektrik sistemine bağlı özel yüksek impedanslı voltaj izleme veya düşük impedanslı akım izleme devreleri, güç yollarına etkisi önemsizse kabul edilebilir.</p>
+<p>Bir güç yolunun değiştirilmesi, güç yolunun voltajını bir güçlendirici (DC voltaj aşaması) veya buck (DC voltaj aşaması) dönüştürücü kullanarak değiştirmeyi veya ROBOT bataryası tarafından sağlanan doğal değişken DC voltajını sabit bir DC voltajı oluşturmak için değiştirmeyi içerir, ancak bunlarla sınırlı değildir.</p>
+<p><strong>Etkinleştiricinin kontrol sinyallerini veya gücünü değiştiren cihazlar (açıklamada izin verilenler hariç) </strong> R505 <strong>) yasaklanmıştır, örneğin goBILDA Servo Travel Tuner.</strong></p>
+</div>
+<p id="R613" class="fm-rule"><strong>R613 * Güç düzenleyici cihazlardaki veya aralarındaki güçleri karıştırmayın ve eşleştirmeyin.</strong> Herhangi bir güç düzenleyici aygıtında (R505 başına) güç kullanılırken aşağıdaki kurallara uyulmalıdır:</p>
+<p class="fm-item">A. Sensörler, kodlayıcılar ve diğer cihazlar, yalnızca bağlı oldukları güç düzenleme cihazından güçlendirilmelidir. Onları güçlendirmek için dış güç kaynaklarını (örneğin özel devreler veya ikinci bir merkezi) kullanmayın.</p>
+<p class="fm-item">B. Belirli bir bağlantı noktasından güç sadece o bağlantıya bağlı cihazlara verilebilir. Diğer bağlantı noktalarına güç aktarmayın ve birden fazla bağlantı noktasından tek bir güç hattına güç birleştirmeyin.</p>
+<p class="fm-item">C. Onaylanmış Servo Power modülleri/injektörlerinden gelen 6 V güç sadece servoları güçlendirmek için kullanılabilir ve</p>
+<p class="fm-item">D. Bir REV nöbü üzerindeki + 5 V Aux portu, diğer güç düzenleme cihazlarına USB üzerinden bağlanmayan cihazları güçlendirmek için kullanılabilir.</p>
+<h2 id="sec-12-7">12.7 Kontrol, Komut ve Sinyal Sistemi</h2>
+<p id="R701" class="fm-rule"><strong>R701 * Tek bir ROBOT CONTROLLER ile ROBOT'yi kontrol edin.</strong> ROBOTS 1 programlanabilir ROBOT CONTROLLER aracılığıyla kontrol edilmelidir. ROBOT CONTROLLER, ROBOT aktüatörleri için tek kontrol kaynağıdır ve aşağıdakilerden oluşmalıdır:</p>
+<p id="ROBOT_CONTROLLER1" class="fm-item">A. REV Control Hub (REV - 31-1595) veya</p>
+<p id="ROBOT_CONTROLLER2" class="fm-item">B. Bir akıllı telefon Android cihazı, bir REV Expansion Hub (REV - 31-1153) cihazına bağlıdır.</p>
+<p>A veya B'ye ek olarak, bir ROBOT ayrıca şunları içerebilir:</p>
+<p class="fm-item">C. En fazla bir ek REV Expansion Hub (REV - 31-1153).</p>
+<div class="fm-box">
+<p>Takımlara her zaman tüm kontrol sistemi yazılımlarını güncel tutmalarını tavsiye ederiz. Serbest bırakma duyuruları ve en son yazılım sürümleri için <a href="https://ftc-docs.firstinspires.org/en/latest/ftc_sdk/updating/index.html"><em>FIRST</em> Tech Challenge Firmware Güncelleme Sayfası</a>'i kontrol edin.</p>
+<p>Farklı üreticiler ve güncellemeler arasında Android yazılımında öngörülemeyen değişiklikler nedeniyle, REV Control Hub resmi olarak desteklenen tek ROBOT CONTROLLER cihazıdır. Başka herhangi bir desteklenmeyen cihazı (örneğin akıllı telefonlar) kullanmayı seçen ekipler, uyumluluğunu, işlevselliğini ve performansını test etmek ve doğrulamak için sorumludur.</p>
+</div>
+<p id="R702" class="fm-rule">Tablo 12 ‐ 9'te <strong>R702 * Takımlar eşişlemci yazılımını değiştiremez. Bu kuralda açıkça izin verilmediği sürece, ekipler tarafından koprosesörlerdeki yazılımı değiştirmeye izin verilmez. Üretici tarafından sağlanan ikili biçimdeki sabit yazılım güncellemeleri, üreticinin talimatlarına göre uygulanabilir. FTC SDK tarafından yerel olarak desteklenen programlanabilir görme eşişlemcileri, bu kuraldaki bir istisnadır ve onların yeniden programlanmasına izin verilir. Programlanabilir görme eşişlemcilerinin bir listesi bulunmaktadır </strong>.</p>
+<p id="Ref235387571" class="fm-caption">Tablo 12 - 9: Desteklenen programlanabilir görüntü eşişlemcileri</p>
+<div class="fm-table"><table> <tr><th><strong>Aygıt</strong></th><th><strong>Bölüm Numarası</strong></th></tr> <tr><td><strong>Limelight Vision Limelight 3 A</strong></td><td><strong>LL_3A</strong></td></tr> </table></div>
+<div class="fm-box">
+<p id="Ref172836607"><strong>Aşağıda izin verilen ve izin verilmeyen cihazlara örnekler verilmiştir:</strong></p>
+<p><strong>Örnek 1: Adafruit BNO055 Absolute Orientation Sensor, sensör verilerini karıştırmak ve kompozite çıkış üretmek için yerleşik bir ARM Cortex- M0 tabanlı koprosesörlü bir IMU paketidir. Koprosesörü, üreticinin kullanıcılar tarafından değiştirilmesini amaçlamadığı yazılım içerir. Bu cihaz izinlidir.</strong></p>
+<p><strong>Örnek 2: SparkFun Optical Tracking Odometry Sensor, karmaşık hesaplamalar yapmak ve basitleştirilmiş sonuçlar elde etmek için yerleşik bir mikro denetleyici kullanan bir lazer ve IMU izleme cihazıdır. SparkFun, bu kural tarafından izin verilmeyen yazılımı değiştirmek / güncellemek için gelişmiş kullanıcılar için kaynak kodu ve araç zincirini sağlar. SparkFun tarafından sağlanan sabit yazılım güncellemelerinin cihaza uygulanmasına izin verilir. Bu cihaz izinlidir.</strong></p>
+<p><strong>Örnek 3: Dijital Tavuk Laboratuvarları OctoQuad FTC Edition, bir Raspberry Pi Pico koprosesörü kullanan bir 8 kanallı kodlayıcı / PWM arayüzüdür. Takımların, aygıtta çalışan yazılımı değiştirmesine izin verilmez. Üretici tarafından ikili formda sağlanan güncelleştirmeler (Dijital Tavuk Laboratuvarları) ürüne uygulanabilir. Bu cihaz izinlidir.</strong></p>
+<p><strong>Örnek 4: Optik akış sensörleri, diğer koprosesörlerden farklı bir şekilde tedavi edilmeyen bir görme koprosesörü kullanan bir sensör örneğidir. </strong> R702 <strong>. Bu cihazlara izin veriliyor.</strong></p>
+<p><strong>Örnek 5: DFRobot HuskyLens ve Charmed Labs Pixy2, yapılandırılabilir ancak programlanabilir olmayan ve diğer koprosesörlerden farklı davranılmayan görme eşişlemcilerinin örnekleridir. </strong> R702 <strong>. Bu cihazlara izin veriliyor.</strong></p>
+<p><strong>Örnek 6: OpenMV Cam, Luxonis OAK-1 ve LimeLight Vision Limelight 3 G, yasaklanan programlanabilir görme eşişlemcilerinin örnekleridir. </strong></p>
+</div>
+<p id="R703" class="fm-rule"><strong>R703 *ROBOT CONTROLLER olarak kullanılan akıllı telefon Android cihazları, USB kullanarak REV Expansion Hub'e bağlanmalıdır. </strong> ROBOT CONTROLLER olarak kullanılırsa akıllı telefon Android cihazı, entegre USB bağlantı noktası üzerinden REV Expansion Hub'ya USB kablolarının (USB OTG kabloları da dahil olmak üzere) ve/veya USB merkezlerinin herhangi bir kombinasyonuyla (güçlü veya güçsüz, merkeze entegre OTG ile veya olmadan) bağlanmalıdır.</p>
+<p id="R704" class="fm-rule"><strong>R704 * Şebekeleri ve bant genişliğini talimatlara göre kullanın. </strong> Takımları ve ROBOTS Takımları, Wi-Fi ağlarını ve bant genişliğini adil oynamayı sağlayan ve diğer takımlara veya ARENA operasyonlarına müdahale etmeyen bir şekilde kullanmalıdır. Takımlar aşağıdaki talimatlara uymalı:</p>
+<p class="fm-item">A. Takımlar, ROBOT'e, oradan veya içinde iletişim kurmak için, sağlanan resmi araçlar tarafından sunulanlar hariç, diğer hiçbir kablosuz iletişim biçimini kullanamazlar.</p>
+<p class="fm-item">B. Takımlar ROBOT ağlarına müdahale edemez. Tüm iletişim sinyalleri yalnızca ROBOT CONTROLLER cihazından veya ROBOT CONTROLLER Wi-Fi ağını kullanan DRIVER STATION cihazından gelmelidir. Başka hiçbir cihaz ROBOT CONTROLLER Wi-Fi ağına bağlanmaya, müdahale etmeye veya değiştirmeye çalışamaz.</p>
+<p class="fm-item">C. Tüm programlama dizüstü bilgisayarlarının ve diğer cihazların (DRIVER STATION cihazı hariç) MATCH oyunu sırasında ROBOT CONTROLLER Wi-Fi ağından kesildiğinden emin olun.</p>
+<p class="fm-item">D. ROBOT CONTROLLER Wi-Fi ağına erişimi olan yazılım, Wi-Fi üzerinden aktarılan veri miktarını (yani, sürekli veri aktarımı) sınırlamalıdır. Yazılım yalnızca robot kontrol verilerini, hata ayıklama verilerini ve telemetriyi ROBOT'e ve FTC Sürücü İstasyonu Uygulama'sını kullanarak aktarabilir. FTC Dashboard, FTControl Panel ve diğerleri gibi üçüncü taraf eklentiler ve araçlar tarafından barındırılan ek kayıt/akış hizmetleri yasaktır. Sürekli video akışına izin verilmiyor.</p>
+<p class="fm-item">E. Bazı olaylar takımlara Wi-Fi bantlarını ve/veya kanallarını atayabilir. Yarışma personeli tarafından istenirse, takımlar yarış günü belirli frekans bandını veya kanalı kullanmalıdır.</p>
+<p id="R705" class="fm-rule"><strong>R705 * Takım numaranız için cihazları yapılandırın. </strong> ROBOT CONTROLLER, DRIVER STATION ve kullanılan yedek parçalar, doğru ekip numarasına uygun şekilde yapılandırılmalı/adlandırılmalıdır:</p>
+<p class="fm-item">A. ROBOT CONTROLLER'in adı &lt;takım numarası&gt;- RC olmalıdır (örneğin, 12345 - RC),</p>
+<p class="fm-item">B. DRIVER STATION, &lt;takım numarası&gt;- DS olarak adlandırılmalıdır (örneğin, 12345 - DS), ve</p>
+<p class="fm-item">C. Bir yedek ROBOT CONTROLLER veya DRIVER STATION yapılandırılmışsa, bir harf belirleyicisi eklenebilir &lt; takım numarası&gt;-&lt; harf&gt;- RC/DS (örneğin, 12345 - A-DS, 12345 - B-DS)</p>
+<div class="fm-box">
+<p id="Hlt173213789">DRIVER STATION ve ROBOT CONTROLLER adlarının güncellenmesi için ayrıntılı bir prosedür için <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_smartphone_ds/Managing-a-Smartphone-Driver-Station.html?highlight=12345-DS#changing-the-name-of-a-driver-station-instructions">DRIVER STATION Talimatlar</a> ve <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_control_hub/Managing-a-Control-Hub.html#changing-the-name-of-a-control-hub">ROBOT CONTROLLER Talimatlar</a>'ye bakın.</p>
+</div>
+<p id="R706" class="fm-rule"><strong>R706 *Sadece çekirdek kontrol sistemi cihazlarına belirli değişiklikler yapılmasına izin verilir.</strong> DRIVER STATION cihazı ve yazılımı, Android tabanlı ROBOT CONTROLLER cihazı, ana ve ikincil güç anahtarları, güç düzenleme cihazları, sigortalar ve piller herhangi bir şekilde değiştirilmez, değiştirilmez veya ayarlanamaz (değiştirme, sondaj, kesme, işleme, yeniden kablolama, sökme, boyamak, kabloları çıkarmak ve özel kablolarla değiştirmek vb.) aşağıdaki istisnalar dışında:</p>
+<p class="fm-item">A. Kablolar, kablolar ve sinyal hatları cihazlarda bulunan standart bağlantı noktaları üzerinden bağlanabilir.</p>
+<p class="fm-item">B. Bağlayıcılar (yapıştırıcılar dahil) cihazları OPERATOR CONSOLE veya ROBOT'ye bağlamak veya cihazlara kabloları bağlamak için kullanılabilir.</p>
+<p class="fm-item">C. ısı iletkenliğini iyileştirmek için termal arayüz malzemesi kullanılabilir,</p>
+<p class="fm-item">D. Etiketleme, ürünü tanımlamak için kullanılan etiketleri veya işaretleri kapsamadığı sürece ürünün kimliğini, amacını, bağlantılılığını, işlevsel performansını vb. belirtmek için uygulanabilir.</p>
+<p class="fm-item">E. Jumpers veya anahtarlar, üretici kılavuzuna göre cihazları yapılandırmak için hareket ettirilebilir.</p>
+<p class="fm-item">F. Aygıt yazılım yazılımı, üreticinin sağladığı yazılım yazılımı ile güncelleştirilebilir.</p>
+<p class="fm-item">G. Motor denetleyici ve pillerdeki bütünleşik teller kesilebilir, çıkarılabilir ve/veya bağlantılı olabilir,</p>
+<p class="fm-item">H. Batarya hariç cihazlar tamir edilebilir, ancak tamirden sonra cihazın performansı ve özellikleri tamirden öncekiyle aynıdır.</p>
+<p class="fm-item">I. açık iletkenlere yalıtım malzemesi eklenebilir,</p>
+<p class="fm-item">J. enkaz koruması için bant uygulanabilir ve</p>
+<p class="fm-item">K. Güç anahtarı montaj kolları değiştirilebilir veya değiştirilebilir.</p>
+<div class="fm-box">
+<p>Lütfen, onarımlara izin verildiği halde, tazminatın herhangi bir üreticinin garantisinden bağımsız olduğunu unutmayın. Takımlar onarımları kendi riskleri üzerine yaparlar ve herhangi bir garantinin veya iade seçeneklerinin kaybedildiğini varsaymalıdırlar. Onarımlar, cihazın orijinal durumuna işlevsel olarak eşdeğer olmalıdır.</p>
+<p>Bu tür COMPONENTS'lerin teşhis edilmesi ve onarılmasının zor olabileceğinden haberdar olun.</p>
+<p>Örneğin, konektör türlerini değiştiren, cihaz izini değiştiren veya mekanik geliştirmeler sağlayan onarımlar yasaktır.</p>
+</div>
+<p id="R707" class="fm-rule"><strong>R707 çarpı USB görme için.</strong> Sadece aşağıdaki cihazlar USB kullanılarak ROBOT kontrol sistemine bağlanabilir:</p>
+<p class="fm-item">A. Web kameraları ve optik görme sensörleri R708 başına,</p>
+<p class="fm-item">B. USB merkezi veya USB anahtarı ve</p>
+<p class="fm-item">C. a REV Expansion Hub.</p>
+<p id="R708" class="fm-rule"><strong>R708 * Sadece desteklenen USB görüşünü kullanın.</strong> Sadece ROBOT CONTROLLER uygulaması tarafından yerel olarak desteklenen tek görüntü sensörü vizyon cihazlarının USB'e bağlanmasına izin verilir (stereoskopik kameralara izin verilmez). Bunlar şunları içerir:</p>
+<p class="fm-item">A. tüm UVC uyumlu USB web kameraları (Logitech C270 ve ilgili) ve</p>
+<p class="fm-item">B. Görme işlemcileri R702'e izin verildi.</p>
+<div class="fm-box">
+<p>UVC uyumlu USB web kameraları sadece UVC tarafından sağlanan akışı / verileri kullanabilir. Web kameranın sağladığı diğer arayüzler veya veriler kullanılamaz.</p>
+<p>Gelecekteki <em>FIRST</em> Tech Challenge sezonlarına dahil edilecek alternatif USB görme cihazları için destek istemek (veya örnek sürücüler sağlamak için) lütfen aşağıdaki ayrıntılarla <a href="mailto:customerservice@firstinspires.org">customerservice@firstinspires.org</a>'ye bir e-posta gönderin:</p>
+<ul>
+<li>E-posta konusu şunlar olmalı: USB Vision Gelecekteki Destek İsteği</li>
+<li>Geri bildirim veya açıklama sağlamak için iletişim bilgileri</li>
+<li>Destek talebinde bulunan cihazla ilgili ayrıntılar</li>
+</ul>
+</div>
+<p id="R709" class="fm-rule"><strong>Kayıt cihazları iyi. R709</strong> Yalnızca işlevsel olmayan MATCH sonrası görüntüleme için kullanıldıkları ve kablosuz yeteneği kapalı olduğu sürece bağımsız video kayıt cihazları (GoPro veya benzeri) izin verilir.</p>
+<p id="R710" class="fm-rule"><strong>R710 *Lazerler yalnızca bir sensörün bir parçası, düşük enerjili ve görünmezse izin verilir.</strong> Aşağıdaki tüm kriterleri karşılamadıkları sürece lazerlere izin verilmez:</p>
+<p class="fm-item">A. Bir sensörün bir parçası olmalıdır.</p>
+<p class="fm-item">B. IEC/EN 60825-1 Sınıf I veya IEC/EN 62471 Müsaade olarak sınıflandırılmalıdır ve</p>
+<p class="fm-item">C. Görünmez spektrum kullanmak zorundasın.</p>
+<p id="R711" class="fm-rule"><strong>R711 *Android cihazlarını uygun şekilde yapılandırın.</strong> ROBOT CONTROLLER ve DRIVER STATION Android cihazları (akıllı telefonlar, REV Control Hub, REV Driver Hub) ek olarak aşağıdaki şekilde yapılandırılmalıdır:</p>
+<p class="fm-item">A. REV Control Hub kullanıcıları standart olmayan bir şifreye <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_control_hub/Managing-a-Control-Hub.html#changing-the-password">Wi-Fi şifresini değiştir</a> koymalı,</p>
+<p class="fm-item">B. akıllı telefon kullanıcıları Uçak Modu'nu etkinleştirmelidir.</p>
+<p class="fm-item">C. ROBOT CONTROLLER ve DRIVER STATION Android cihazlarında, Wi-Fi etkinleştirilmeli ve Bluetooth devre dışı bırakılmalıdır ve</p>
+<p class="fm-item">D. DRIVER STATION Android cihazlarında, tüm hatırlanan Wi-Fi Direct Grupları ve Wi-Fi bağlantılarını kaldırın ve sadece ROBOT CONTROLLER Wi-Fi bağlantısını bırakın.</p>
+<h2 id="sec-12-8">12.8 Pnömatik Sistemler ve Hava Akışı Cihazları</h2>
+<p id="R801" class="fm-rule"><strong>R801 *Pneumatik aktüatörler, yüksek hızlı üfleyiciler veya vakumlar yok.</strong> ROBOTS hava kullanımını aşağıdaki şekilde kısıtlıyor:</p>
+<p class="fm-item"><strong>A. ROBOTS sadece üreticiden önceden şarj edilen (gaz şokları gibi) mühürlü, COTS kapalı hava sistemlerini kullanabilir.</strong></p>
+<p class="fm-item"><strong>B. ROBOTS, bir solenoid gibi bir cihazla çalıştırılan ve/veya sabit durumlarını değiştirebilen herhangi bir depolanan basınç kullanamaz. COMPONENTS</strong></p>
+<p class="fm-item"><strong>C. ROBOTS basınç veya vakum oluşturamaz. </strong></p>
+<p class="fm-item"><strong>D. ROBOTS, hava dolu (pneumatik) COTS tekerlekleri hariç, kullanıcı tarafından ayarlanabilir gaz depolama kaplarını kullanamaz ve</strong></p>
+<p class="fm-item"><strong>E. ROBOTS, COTS bilgisayar cihazlarına entegre soğutma fanları hariç, yüksek hızlı hava akışı yaratan herhangi bir cihaz kullanamaz.</strong></p>
+<div class="fm-box">
+<p>Bu kuralın amacı, ROBOTS'in pnömatik aktüatörler, basınç veya vakum depolama cihazları, kompresörler, vakum jeneratörleri veya hava üfleyicileri kullanmaması, ancak üreticileri tarafından mühürlenmiş kapalı hava sistemleri kullanabilmeleridir. Bu, gaz yayları ve amortisörler gibi eşyaları içerir.</p>
+<p>Yüksek hızlı hava akışı yaratan bir cihazın örnekleri arasında SCORING ELEMENTS'yi FIELD'te hareket ettirmek için tasarlanmış bir fan vardır. <br> SCORING ELEMENTS'ü manipüle etmek için kullanılan yüksek hızlı uçuş tekerlekleri veya rulolar kendi başlarına yüksek hızlı hava akışı cihazı olarak kabul edilmez.</p>
+</div>
+<h2 id="sec-12-9">12.9 OPERATOR CONSOLE</h2>
+<p id="R901" class="fm-rule"><strong>R901 * Sadece belirtilen DRIVER STATION cihazını kullanın.</strong> OPERATOR CONSOLE'de sadece bir tane onaylı Android tabanlı DRIVER STATION cihazı bağlanabilir ve çalıştırılabilir. OPERATOR CONSOLE, aşağıdakilerden en az birine sahip olmalıdır:</p>
+<p class="fm-item">A. REV Driver Hub (REV - 31-1596) veya</p>
+<p class="fm-item">B. USB kabloları (USB OTG kabloları da dahil olmak üzere) ve/veya USB hubları (güçlü veya güçsüz, hub'a entegre OTG ile veya olmadan) bir veya daha fazla gamepad'ı bağlamak için herhangi bir kombinasyonlu veya olmayan herhangi bir Android Cihazı.</p>
+<div class="fm-box">
+<p>Farklı üreticiler ve güncellemeler arasında Android yazılımında öngörülemeyen değişiklikler nedeniyle, REV Driver Hub resmi olarak desteklenen tek DRIVER STATION cihazıdır. Başka herhangi bir desteklenmeyen cihazı (örneğin akıllı telefonlar) kullanmayı seçen ekipler, uyumluluğunu, işlevselliğini ve performansını test etmek ve doğrulamak için sorumludur.</p>
+<p>OPERATOR CONSOLE'lerinin bir parçası olarak yedek bir DRIVER STATION cihazına sahip olmak isteyen takımlar, bir seferde sadece bir DRIVER STATION cihazının bağlandığı ve çalıştırıldığı sürece bunu yapabilirler.</p>
+</div>
+<p id="R902" class="fm-rule"><strong>R902 *OPERATOR CONSOLE dokunmatik ekrana erişilebilir olmalıdır.</strong> OPERATOR CONSOLE, DRIVE TEAM tarafından ROBOT'ya komutları iletmek için kullanılan COMPONENTS ve MECHANISMS kümesi, DRIVER STATION cihazının dokunmatik ekranını erişilebilir hale getirmelidir. DRIVER STATION cihazı, OPERATOR CONSOLE cihazının içinde, ekran ekranı kontrol sırasında ve MATCH cihazında açıkça görülebilmesi için yerleştirilmelidir. DRIVER STATION cihazının dokunmatik ekranı, kullanımı için ek yardımcılara (örneğin fareye) gerek kalmadan işlevsel olmalıdır.</p>
+<p id="R903" class="fm-rule"><strong>R903 * OPERATOR CONSOLE Fiziksel gereksinimler.</strong> Tüm güç kaynaklarını (örneğin güç bankaları) içeren OPERATOR CONSOLE, 3 ft genişliğinde, 1 ft derinliğinde ve 2 ft yüksekliğinde (91.4 cm x 45.7 cm x 61.0 cm), MATCH sırasında DRIVERS tarafından tutulan veya giydiği eşyaları hariç, ft genişliğinde, ft 6 derinliğinde ve ft uzunluğunda bir hacmi geçmemelidir.</p>
+<div class="fm-box">
+<p>OPERATOR CONSOLES'yi adil oyun ve ARENA güvenliği için tasarlama kısıtlamaları için R203'e de başvurun.</p>
+<p>Lütfen, 20 lbs. (~9 kg.) 'den fazla ağırlıkta olan OPERATOR CONSOLES'lerin, normal ARENA operasyonlarını bozabilecekleri için ekstra denetim gerektireceğini unutmayın.</p>
+<p>OPERATOR CONSOLE'nin bir parçası olarak yedek bir dış USB merkezine sahip olmak isteyen ekipler, herhangi bir zamanda yalnızca bir USB merkezine bağlı olduğu sürece bunu yapabilirler.</p>
+<p>Bu kuralın amacı, ekiplerin DRIVER STATION cihazını ve destek elektroniklerini depolamak, düzenlemek ve taşımak için bir konteyner kullanmasına izin vermektir. OPERATOR CONSOLE kuralları, ROBOT arabası olarak işlev gören veya yarışma sağlanan bir OPERATOR CONSOLE standını, masasını vb. değiştiren sistemlere izin vermek için tasarlanmamıştır.</p>
+</div>
+<p id="R904" class="fm-rule"><strong>Sadece kablosuz iletişim için R904 * ROBOT uygulaması.</strong> ROBOT'te çalışan ROBOT CONTROLLER uygulaması ve DRIVER STATION cihazında çalışan DRIVER STATION uygulaması tarafından kontrol edilen bağlantıdan başka hiçbir kablosuz iletişim formu, MATCH sırasında OPERATOR CONSOLE'ya, ondan veya içinde iletişim kurmak için kullanılmamalıdır.</p>
+<div class="fm-box">
+<p>Yasaklanmış kablosuz sistemlere örnektir, ancak bunlarla sınırlı değildir, aktif kablosuz ağ kartları, kablosuz gamepad iletişim ve Bluetooth cihazları.</p>
+</div>
+<p><img src="../../images/image063.jpg" alt="" width="235" loading="lazy"></p>
+</div>

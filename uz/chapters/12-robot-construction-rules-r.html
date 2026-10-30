@@ -1,0 +1,450 @@
+<div class="ftc-manual" lang="uz" dir="ltr">
+<h1 id="sec-12">12 ROBOT konstruksiyasi qoidalari (R)</h1>
+<p id="ROBOT">Quyida keltirilgan qoidalarda qonuniy qismlar va materiallar va ushbu qismlar va materiallar ROBOTda qanday ishlatilishi mumkinligi to'g'risida aniq aytilgan. ROBOT - bu joriy mavsum o'yinini o'ynash uchun <em>FIRST</em> Tech Challenge jamoasi tomonidan qurilgan elektromexanik yig'ilish bo'lib, u o'yinda faol ishtirokchi bo'lish uchun zarur bo'lgan barcha asosiy tizimlarni o'z ichiga oladi. FIELD</p>
+<p>Qoidalarning tuzilishi uchun ko'plab sabablar mavjud, jumladan xavfsizlik, ishonchlilik, tenglik, oqilona dizayn muammolarini yaratish, professional standartlarga rioya qilish va raqobatga ta'sir ko'rsatish.</p>
+<p id="INSPECTOR">Ushbu qoidalarning yana bir maqsadi ROBOT-dagi barcha energiya manbalari va faol harakatlanish tizimlarini (masalan, batareyalar, motorlar, servo va ularning boshqaruvchilari) yaxshi belgilangan variantlar to'plamidan olishdir. Bu barcha guruhlarning bir xil faollashtirish resurslariga kirishini ta'minlash va INSPECTORS ma'lum bir qismning qonuniyligini aniq va samarali baholashi mumkinligini ta'minlash uchun.</p>
+<div class="fm-box">
+<p>Ushbu bo'limdagi ROBOT qurilishi qoidalari faqat sizning ROBOT qurilishiga tegishli bo'lib, uni tekshirish mumkin. MATCH oʻyin qoidalari va MATCH oʻyin paytida qoidalarni buzish oqibatlari 11 oʻyin qoidalari (G) boʻlimida keltirilgan.</p>
+</div>
+<p>ROBOTS COMPONENTS va MECHANISMS-dan iborat.</p>
+<ul>
+<li id="COMPONENT">COMPONENT - bu uning eng asosiy konfiguratsiyasidagi har qanday qism bo'lib, u qismga zarar etkazmasdan yoki uni yo'q qilmasdan yoki uning asosiy funktsiyasini o'zgartirmasdan ajratib bo'lmaydi.</li>
+<li id="MECHANISM">MECHANISM - bu COMPONENTS-ning yig'ilishi bo'lib, u ROBOT-da maxsus funktsiyalarni ta'minlaydi. MECHANISM qismlari shikastlanmasdan alohida COMPONENTS qismlariga ajratilishi (va keyin qayta yig'ilishi) mumkin.</li>
+</ul>
+<p id="COTS">Ushbu bo'limdagi ko'plab qoidalar savdo-sotiqdan tayyor (COTS) bo'lgan mahsulotlarga ishora qiladi. COTS elementi barcha jamoalar uchun xarid qilish uchun VENDOR-dan odatda mavjud bo'lgan standart (ya'ni maxsus buyurtma emas) qism bo'lishi kerak. COTS bo'lishi uchun COMPONENT yoki MECHANISM o'zgartirilmagan, o'zgartirilmagan holatda bo'lishi kerak (har qanday dasturiy ta'minotni o'rnatish yoki o'zgartirishdan tashqari). Endi tijoratda mavjud bo'lmagan, ammo VENDOR dan yetkazib berilgan asl holatga funksional jihatdan teng bo'lgan buyumlar COTS deb hisoblanadi.</p>
+<div class="fm-box">
+<p>1 misoli: Bir guruh RoboPanels Corp-dan 2 ROBOT panellarini buyurtma qiladi va ikkala elementni ham oladi. Ular 1-ni omborxonaga qo'yib, undan keyinroq foydalanishni rejalashtirmoqdalar. Ikkinchisida esa, og'irlikni kamaytirish uchun "yoritish teshiklarini" qazishadi. Birinchi panel hali ham COTS mahsulot sifatida tasniflangan, ammo ikkinchi panel endi FABRICATED ITEM hisoblanadi, chunki u o'zgartirilgan.</p>
+<p>2 misoli: Bir jamoa Wheels-R-Us Inc. kompaniyasidan keng tarqalgan harakatlantiruvchi modulning ochiq nusxalarini oladi va mahalliy mashina do'konida We-Make-It, Inc. ular uchun qismning nusxasini ishlab chiqaradi. Ishlab chiqarilgan qism COTS buyumidir, chunki u odatda We-Make-It, Inc. standart zaxirasining bir qismi sifatida olib ketilmaydi.</p>
+<p>3 misoli: Bir guruh professional nashrdan ochiq ravishda mavjud bo'lgan dizayn chizmalarini oladi va ulardan o'zlarining ROBOT uchun tezlik qutisini ishlab chiqarish uchun foydalanadi. Loyiha chizmalari COTS bo'lib hisoblanadi va to'lqin qutisini ishlab chiqarish uchun xomashyo sifatida ishlatilishi mumkin. To'liq o'zgaruvchaning o'zi FABRICATED ITEM bo'lib, COTS bo'lishi mumkin emas.</p>
+<p>4 misoli: Funksional bo'lmagan yorliq belgilari qo'shilgan COTS qismi hali ham COTS qismi deb hisoblanadi, ammo qurilmaga xos o'rnatish teshiklari qo'shilgan COTS qismi FABRICATED ITEM hisoblanadi.</p>
+<p>5 misoli: Bir jamoada ishlab chiqarilishi to'xtatilgan COTS o'zgaruv qutisi bor. Agar COTS o'zgaruvchan quti funksional jihatdan asl holatiga teng bo'lsa, uni ishlatish mumkin.</p>
+</div>
+<p id="VENDOR">VENDOR - quyidagi barcha mezonlarga javob beradigan COTS elementlari uchun qonuniy biznes manbai:</p>
+<p class="fm-item">A. Federal soliq identifikatsiya raqamiga ega. VENDOR AQShdan tashqarida bo'lgan hollarda, ular o'z mamlakatining hukumati bilan ularning qonuniy biznes sifatida ushbu mamlakatda faoliyat ko'rsatishga litsenziyalanganligini tasdiqlaydigan va tasdiqlaydigan ekvivalent ro'yxatdan o'tish yoki litsenziyaga ega bo'lishlari kerak.</p>
+<p class="fm-item">B. <em>FIRST</em> jamoasi yoki jamoalar to'plamining to'liq mulki bo'lgan sho'ba korxonasi emas. Garchi jamoa va VENDOR bilan bog'liq bo'lgan ba'zi shaxslar bo'lishi mumkin bo'lsa-da, jamoa va VENDOR ning faoliyati va faoliyati to'liq ajralib turishi kerak.</p>
+<p class="fm-item">C. Ular har qanday umumiy (ya'ni <em>FIRST</em>ga xos bo'lmagan) mahsulotni o'z vaqtida yetkazib berishlari uchun yetarli miqdorda zaxira yoki ishlab chiqarish qobiliyatini saqlab qolishlari kerak. Ma'lumki, ba'zi g'ayrioddiy holatlar (masalan, global ta'minot zanjiri buzilishi va / yoki 1,000 <em>FIRST</em> guruhlari bir vaqtning o'zida bir xil qismni bir xil VENDOR dan buyurtma qilish) hatto eng katta VENDORS uchun ham orqa buyurtmalar tufayli etkazib berishda g'ayrioddiy kechikishlarga olib kelishi mumkin. Odatdagidan yuqori buyurtma miqdorlari tufayli bunday kechikishlar uzrlidir. Ushbu mezon VENDOR va ishlab chiqaruvchi bo'lgan manbadan maxsus tayyorlangan buyumlarga nisbatan qo'llanilmasligi mumkin.</p>
+<div class="fm-box">
+<p>Masalan, VENDOR o'zining harakatlanish tizimidagi tekisliklar sifatida foydalanish uchun jamoa sotib olmoqchi bo'lgan moslashuvchan kamarlarni sotishi mumkin. VENDOR chiziqni odatda mavjud bo'lgan standart shelf zaxirasidan maxsus uzunlikka kesib tashlaydi, uni halqa qilish uchun halqaga payvandlaydi va uni jamoaga jo'natadi. Prezervativni ishlab chiqarish VENDOR 2 hafta davom etadi. Bu FABRICATED ITEM deb hisoblanadi va 2 haftalik kema vaqti qabul qilinadi. Buning oʻrniga, jamoa oʻz-oʻzidan ishlov berish toʻgʻrisida qaror qabul qilishi mumkin. Ushbu mezonni qondirish uchun VENDOR faqat 5 ish kuni ichida shelf zaxirasidan (ya'ni COTS buyumidan) shimning uzunligini jamoaga jo'natishi va kesimlarning payvandlanishini jamoaga qoldirishi kerak edi.</p>
+</div>
+<p class="fm-item">D. o'z mahsulotlarini barcha <em>FIRST</em> Tech Challenge jamoalariga taqdim etadi. VENDOR ta'minotini cheklamasligi yoki mahsulotni faqat cheklangan miqdordagi <em>FIRST</em> Tech Challenge jamoalariga taqdim etmasligi kerak.</p>
+<div class="fm-box">
+<p>Ushbu ta'rifning maqsadi barcha qonuniy manbalarga kirishga ruxsat berish uchun iloji boricha keng qamrovli bo'lish, ayni paytda maxsus tashkilotlarga tegishli xarajatlarni hisobga olish qoidalarini chetlab o'tish uchun maxsus maqsadli mahsulotlarni cheklangan guruhlarga taqdim etishdan to'sqinlik qilishdir.</p>
+<p><em>FIRST</em> jamoalariga iloji boricha kengroq qonuniy manbalarni tanlash imkonini berishni va COTS mahsulotlarini ularga eng yaxshi narxlarni va mavjud xizmat darajasini taqdim etadigan manbalardan olishni xohlaydi. Shuningdek, jamoalar o'zlarining ROBOT-sinovlarini yakunlash qobiliyatiga ta'sir qiladigan qismlarning mavjudligi bo'yicha uzoq kechikishlardan himoyalanishlari kerak. Qurilish mavsumi qisqa, shuning uchun VENDOR o'z mahsulotini, ayniqsa <em>FIRST</em> noyob buyumlarini o'z vaqtida jamoaga etkazib berishga qodir bo'lishi kerak.</p>
+<p>Yaxshiyamki, tanlangan VENDORS samarali tarqatish kanallariga ega bo'lishi kerak. Esingizda bo'lsin, <em>FIRST</em> Tech Challenge tadbirlari har doim ham uyga yaqin bo'lmaydi qismlar buzilganda, almashtirish materiallariga mahalliy kirish ko'pincha juda muhimdir.</p>
+</div>
+<p id="FABRICATED_ITEM">FABRICATED ITEM - bu har qanday COMPONENT yoki MECHANISM bo'lib, u o'zgartirilgan, qurilgan, quyilgan, qurilgan, tayyorlangan, yaratilgan, kesilgan, issiqlik bilan ishlov berilgan, ishlov berilgan, ishlab chiqarilgan, o'zgartirilgan, bo'yalgan, ishlab chiqarilgan, sirt bilan qoplangan yoki qisman yoki to'liq ROBOT-da ishlatiladigan yakuniy shaklga aylantirilgan.</p>
+<div class="fm-box">
+<p>Shuni ta'kidlash kerakki, mahsulot (odatda xomashyo) COTS yoki FABRICATED ITEM bo'lishi mumkin emas. Masalan, 20 fut (~610 sm) uzunlikda 5 fut (~152 sm) ga bo'lib kesilgan alyuminiy COTS emas (u VENDOR-dan olingan holatda emas), FABRICATED ITEM ham emas (qisishlar qismni ROBOT-da yakuniy shakliga olib borish uchun qilinmagan).</p>
+</div>
+<p>Tekshiruv paytida, agar qoida qonuniy qism uchun cheklovlarni belgilagan bo'lsa (masalan, dvigatellar, servo, oqim cheklovlari, COTS elektronikasi) guruhlardan mahsulotlarning qonuniyligini isbotlovchi hujjatlarni taqdim etish so'ralishi mumkin (ya'ni ushbu qo'llanmada tegishli qoidaga murojaat qilish).</p>
+<p>Agar sizning guruhingizda qismning qonuniyligi to'g'risida savol bo'lsa, iltimos, rasmiy qaror olish uchun savolingizni <a href="mailto:customerservice@firstinspires.org">customerservice@firstinspires.org</a>-ga elektron pochta orqali yuboring. <em>FIRST</em> Tech Challenge musobaqasining bo'lajak mavsumlarida qo'shilishi uchun muqobil qismlar / qurilmalar uchun ruxsat olish uchun ham ushbu jarayonni qo'llash kerak.</p>
+<h2 id="sec-12-1">12.1 ROBOT konstruksiyasiga umumiy talablar</h2>
+<p class="fm-quote">FIRST Tech Challenge yuqori kontaktli musobaqa bo'lishi mumkin va qat'iy o'yinni o'z ichiga olishi mumkin. Qoidalar ROBOTS-ga qasddan yetkazilgan zararni cheklashga qaratilgan bo'lsa-da, ROBOTS-ning o'zaro ta'siriga yo'l qo'yiladi va kutiladi. Jamoalar o'zlarining ROBOTS-larini mustahkam bo'lishi uchun loyihalashtirishlari kerak.</p>
+<p id="R101" class="fm-rule"><strong>R101 * Bu sizning jamoangizning ROBOT *</strong> ROBOT va uning MAJOR MECHANISMS-ini tadbirga ro'yxatdan o'tgan va ROBOT-dan MATCHES-da ishtirok etish yoki sudlangan mukofotlarning bir qismi sifatida foydalanish niyatida bo'lgan <em>FIRST</em> Tech Challenge jamoasi qurishi kerak.</p>
+<p id="MAJOR_MECHANISM">MAJOR MECHANISM - bu kamida 1 o'yin qiyinchiligini hal qilish uchun yig'ilgan COMPONENTS va / yoki MECHANISMS guruhidir: ROBOT harakati, SCORING ELEMENT manipulyatsiyasi, FIELD elementini manipulyatsiya qilish yoki boshqa ROBOT yordamisiz o'lchash mumkin bo'lgan vazifani bajarish.</p>
+<div class="fm-box">
+<p>Ushbu qoida ROBOT va uning MAJOR MECHANISMS o'z jamoasi tomonidan qurilganligini talab qiladi, ammo boshqa jamoalarning yordamini taqiqlash yoki rag'batlantirishni nazarda tutmaydi (masalan, elementlarni ishlab chiqarish, qurilishni qo'llab-quvvatlash, dasturiy ta'minotni yozish, o'yin strategiyasini ishlab chiqish, COMPONENTS va / yoki MECHANISMS ga hissa qo'shish).</p>
+<p>Umuman olganda MAJOR MECHANISMS deb hisoblanmaydigan va shu sababli ushbu qoidadan foydalanilmaydigan misollarga quyidagilar kiradi, ammo ular shular bilan cheklanmaydi:</p>
+<p class="fm-item">A. o'zgaruvchan quti yig'indisi,</p>
+<p class="fm-item">B. MAJOR MECHANISM ning bir qismi bo'lgan COMPONENT yoki MECHANISM yoki</p>
+<p class="fm-item">C. COTS elementlari.</p>
+<p>Ushbu qoidaga ko'ra, jamoaning ROBOT turi jamoa a'zolarining hozirgi tajribasini aks ettiruvchi mahsulot bo'lib, butunlay tashqi tashkilotlar yoki kompaniyalar tomonidan taqdim etiladigan to'liq echimlarni rad etishga mo'ljallangan. Shuningdek, R301 va R303-ga qarang.</p>
+</div>
+<p id="R102" class="fm-rule"><strong>R102 * STARTING CONFIGURATION 18 dyuymli kubga cheklangan. </strong> STARTING CONFIGURATION-da (ROBOT MATCH-ni boshlaydigan jismoniy konfiguratsiyada) ROBOT-ning barcha qismlari to'liq turg'un bo'lishi kerak va ROBOT 18 dyuym (45.70 sm) kengligi, 18 dyuym (45.70 sm) uzunligi, 18 dyuym (45.70 sm) balandligi doirasida to'liq o'z-o'zidan iborat bo'lishi kerak.</p>
+<div class="fm-box">
+<p id="Ref148106742">Agar ROBOT o'zaro almashtiriladigan MECHANISMS-ni 3.3 MATCH-qoidalari bo'yicha qo'llasa, jamoalar ushbu qoidani va R105-ni barcha konfiguratsiyalarda bajarishga tayyor bo'lishlari kerak.</p>
+<p>Har qanday oldindan yuklangan SCORING ELEMENTS boshlang'ich o'lcham cheklovidan tashqarida kengayishi mumkin.</p>
+</div>
+<p id="R103" class="fm-rule"><strong>R103 * ROBOTS STARTING CONFIGURATION-ni ushlab turishda yordam berishi mumkin. </strong> STARTING CONFIGURATION-da ROBOTS to'liq o'zini o'zi ushlab turishi kerak (ya'ni o'lchash vositasining yon tomonlariga yoki yuqori qismiga kuch o'tkazmasligi kerak). ROBOTS quyidagilarning har qanday kombinatsiyasidan foydalangan holda buni amalga oshirishi mumkin:</p>
+<p class="fm-item">A. elektr quvvati o'chirilgan holda mexanik vositalar; va/yoki</p>
+<p class="fm-item">B. Servo va dvigatellarni kerakli turg'un joyga joylashtiradigan OpMode-ni ishga tushirish. OpMode STARTING CONFIGURATION-ni ushlab turish uchun o'z pozitsiyasini ushlab turish uchun motorlar va servolarni boshqarishi mumkin.</p>
+<div class="fm-box">
+<p>ROBOTS tekshiruv paytida STARTING CONFIGURATION-ni ushlab turishi yoki MATCH-ning ishga tushishini kutishi bir necha daqiqa davom etishi mumkin va bu issiqlik ishlamasligining imkoniyatini cheklashi kerak (masalan, motorlar qattiq to'xtashga qarshi to'xtab qolmasligi). Tekshiruv paytida ishlayotgan ROBOT-ni ishlatishda jamoalar ayniqsa ehtiyot bo'lishlari kerak, iltimos INSPECTOR-ga ROBOT-ning ishlayotganini bildiring.</p>
+</div>
+<p id="R104" class="fm-rule"><strong>R104 *ROBOT og'irligi chegarasi yo'q. </strong> <em>FIRST</em> Tech Challenge ROBOTS BIOBUZZ o'ynash uchun aniq og'irlik chegarasi yo'q.</p>
+<div class="fm-box">
+<p>Rasmiy vazn chegarasi bo'lmasa-da, jamoalar ROBOT’S vaznining turli omillarga ta'sirini ko'rib chiqishlari kerak, shu jumladan:</p>
+<ul>
+<li>FIELD TILE shikastlanishi</li>
+<li>batareya sarfi</li>
+<li>ROBOT tashish</li>
+<li id="Ref175613674"></strong> umumiy ROBOT ishlashi</li>
+</ul>
+</div>
+<p id="R105" class="fm-rule"><strong>R105 A ROBOT bitta yig'ilish sifatida qolishi kerak va u qancha kengayishi mumkinligi cheklangan.</strong> MATCH ishga tushirilgandan so'ng, ROBOTS STARTING CONFIGURATION-dan tashqariga kengayishi mumkin, ammo ular hali ham boshlang'ich STARTING CONFIGURATION-ga asoslangan ROBOT-ga nisbatan o'lchash cheklovlariga bog'liq. Oʻlchash cheklovlari quyidagicha:</p>
+<p id="Ref239863775" class="fm-item">A. MATCH boshlangandan so'ng, ROBOTS STARTING CONFIGURATION-dan tashqariga kengayishi mumkin, ammo har doim 18 in. (45.70 cm) x 24 in. (61.0 cm) x 29 in. (73.65 cm) baland hajmda bo'lishi kerak. G416</p>
+<p id="Ref239863797" class="fm-item">B. ROBOTS dasturiy ta'minotdan foydalanmasdan ushbu chegaralarga moslash uchun jismoniy ravishda cheklangan bo'lishi kerak va</p>
+<p id="Ref239255872" class="fm-item">C. ROBOTS COMPONENTS-ni qasddan ajratib olish uchun mo'ljallanmagan bo'lishi mumkin.</p>
+<p>O'lchashning cheklangan hajmi FIELD sirtga nisbatan aniqlanadi va 29 in (73.65 sm) o'lchami har doim FIELD sirt ustidagi vertikal balandlik bo'lishi uchun yo'naltiriladi.</p>
+<p class="fm-caption">Rasm 12 - 1: Kengaytirish chegarasi Yuqori koʻrinish</p>
+<p class="fm-caption"><img src="../../images/image053.jpg" alt="Kattalashtirish chegarasi yuqori koʻrinishini koʻrsatuvchi diagramma." width="633" loading="lazy"></p>
+<p class="fm-caption">Rasm 12 - 2: Kengaytirish chegarasi Yon tomondan koʻrish</p>
+<p class="fm-caption"><img src="../../images/image054.jpg" alt="Kattalashtirish chegarasini koʻrsatuvchi diagramma - yon tomondan koʻrish" width="437" loading="lazy"></p>
+<div class="fm-box">
+<p>O'lchash hajmi FIELD yuziga nisbatan aniqlanadi va 29 in (73.65 sm) o'lchami har doim FIELD yuzasidan yuqori vertikal balandlik bo'lishi uchun yo'naltiriladi.</p>
+<p>ROBOTSlar FIELD-da normal o'yin davomida ishlatadigan barqaror konfiguratsiyalarda o'lchanadi (ya'ni ularning g'ildiraklari hammasi TILES-ga tegadi). Agar ROBOT FIELD-dagi o'zaro ta'sir tufayli biroz burilgan bo'lsa, bu ROBOT barqaror konfiguratsiyaga qaytarilganda hali ham o'lchash hajmida bo'lsa, bu qoida buzilmaydi.</p>
+<p>Jamoalar INSPECTORS-ga o'zlarining ROBOT-lari o'lchash hajmidan tashqarida bo'lganda konfiguratsiyaga ega emasligini ko'rsatishga tayyor bo'lishlari kerak. ROBOTS tekshiruv jarayonida ularning maksimal mexanik kengayishlarini ko'rsatishi kerak. O'lchash chegarasidan mexanik ravishda oshib ketishi mumkin bo'lgan ROBOT ROBOT MATCH paytida kengaytmaning joylashuvini cheklaydigan dasturiy ta'minotga ega bo'lsa ham, bu qoidaga zid bo'ladi. (12-3-rasm)</p>
+<p id="Ref239415589" class="fm-caption">Rasm 12 - 3: Kengaytirish chegarasi Oʻlchamlar chegarasi buzilishi</p>
+<p><img src="../../images/image055.png" alt="Kengaytirish chegarasi oʻlchami buzilishini koʻrsatuvchi diagramma" width="309" loading="lazy"></p>
+<p>Maksimal mexanik kengayishdagi umumiy o'lcham kattalik chegarasidan oshmaguncha, ROBOT ning har ikki tomonidan o'tishi mumkin bo'lgan bitta MECHANISM bo'lgan ROBOT ruxsat etiladi. (12-4-rasm)</p>
+<p id="Ref239415558" class="fm-caption">Rasm 12 - 4: Kengaytirish chegarasi Yo'l qo'yiladigan kengaytirish</p>
+<p><img src="../../images/image056.png" alt="Yo&#x27;l qo&#x27;yilishi mumkin bo&#x27;lgan kengaytmani ko&#x27;rsatadigan diagramma" width="501" loading="lazy"></p>
+<p>ROBOT ning ikkala tomonidan bir vaqtning oʻzida oʻtishi mumkin boʻlgan mexanik jihatdan bogʻlanmagan koʻp MECHANISMS boʻlgan ROBOT ga NOT ruxsat etiladi , agar maksimal mexanik kengaytmada umumiy gorizontal oʻlcham oʻlcham oʻlchash chegarasidan oshsa (rasm 12 ‐ 5).</p>
+<p id="Ref239415512"><em>Rasm 12 - 5: Kengaytirish chegarasi Bir vaqtning oʻzida uzaytirish</em></p>
+<p><img src="../../images/image057.png" alt="Qo&#x27;llanilgan va qo&#x27;llanilmagan bir vaqtning o&#x27;zida uzatishlarni ko&#x27;rsatadigan diagrammalar." width="521" loading="lazy"></p>
+<p>Gorizontal tekislikda aylanadigan oʻzgaruvchi ustida kengaytirilgan ROBOT ga umumiy oʻlchami uning har qanday nuqtasida oʻlchash chegarasidan oshmaguncha ruxsat etiladi (rasm 12 ‐ 6).</p>
+<p id="Ref239415475"><em>Rasm 12 - 6: Kengaytirish chegarasi aylanma kengayish</em></p>
+<p><img src="../../images/image058.png" alt="Yo&#x27;l qo&#x27;yiladigan aylanish namunasini ko&#x27;rsatuvchi diagramma." width="465" loading="lazy"></p>
+</div>
+<h2 id="sec-12-2">12.2 Halol oʻyin va shikastlanishning oldini olish</h2>
+<p id="R201" class="fm-rule"><strong>R201 </strong> * <strong>ROBOTS hech narsaga ziyon yetkazmasligi yoki ARENA-da tartibsizlikka yo'l qo'ymasligi uchun loyihalashtirilishi kerak.</strong> ROBOT buzuqlik qilish xavfini tug'dirmasligi yoki ARENAdagi biron bir narsa uchun xavf tug'dirmasligi kerak.</p>
+<div class="fm-box">
+<p>Ushbu qoida maqsadi <strong> ROBOTS-ni ARENA-ga zarar yetkazmaslik va ROBOTS-dan tozalash kerak bo'lgan materiallar chiqishi va bu MATCH-ning shikastlanishi va/yoki kechikishiga olib kelishi mumkin bo'lgan xatarni minimallashtirish uchun loyihalashtirish kerak.</strong> jamoalari</p>
+<p>SCORING ELEMENTS ROBOTS tomonidan qo'llanilayotganda oqilona darajada eskiradi, masalan, xaroblanadi yoki belgilab qo'yiladi. SCORING ELEMENTS ni kesish, qismlarni yirtib tashlash yoki muntazam ravishda va takror-takror belgilash ushbu qoida va G406 ning buzilishidir.</p>
+<p><strong>zarar xavfi ROBOT xususiyatlarining misollariga quyidagilar kiradi, ammo ular shular bilan cheklanmaydi:</strong></p>
+<p class="fm-item">A. TILE qavatini shikastlashi ma'lum bo'lgan xususiyatlarga ega tirnoq qurilmalari,</p>
+<p class="fm-item">B. COMPONENTS ko'rinadigan o'tkir chekkada yoki o'tkir ko'rinishlarda; va</p>
+<p class="fm-item">C. o'zlariga tekkan ob'ektlarni qirib tashlaydigan o'g'irlama sirtli qismlarga ega.</p>
+<p><strong>ROBOT xususiyatlarining buzg'unchilik qilish xavfiga misollari quyidagilarni o'z ichiga oladi, ammo ular shular bilan cheklanmaydi:</strong></p>
+<p class="fm-item">D. ROBOT ishlayotganda aylanishi yoki tomishi mumkin bo'lgan moy vositalarining haddan tashqari ishlatilishi,</p>
+<p class="fm-item">E. har qanday COMPONENT yetarlicha o'rnatilmagan, shu jumladan qum, qahva donlari, mushuk qo'lqoplari, porloqlik yoki to'g'rilagichlar kabi bo'sh ballast, MATCH davomida FIELD-ga chiqarilishi mumkin bo'lgan,</p>
+<p class="fm-item">F. suyuq yoki jel materiallari,</p>
+<p class="fm-item">G. g'ildiraklarni muhrlash vositasi va</p>
+<p class="fm-item">H. grafit kukunini o'z ichiga olgan boshqa moylovchi moddalar.</p>
+</div>
+<p id="R202" class="fm-rule"><strong>R202 * ROBOTS va OPERATOR CONSOLES-ni xavfsizlik va adolatli o'yin uchun loyihalashtiring.</strong> ROBOT va OPERATOR CONSOLE qismlari xavfli materiallardan tayyorlanmasligi, xavfli bo'lmasligi, xavfli holatga olib kelmasligi yoki boshqa ROBOTS yoki FIELD STAFF qismlarining ishlashiga xalaqit bermasligi kerak.</p>
+<div class="fm-box">
+<p>Ushbu qoidani buzishi mumkin bo'lgan elementlarga quyidagilar kiradi, ammo ular shular bilan cheklanmaydi:</p>
+<p class="fm-item">A. har qanday DRIVE TEAM a'zolarining ko'rish qobiliyatini cheklash uchun mo'ljallangan yoki ishlatiladigan qalqonlar, pardalar yoki har qanday boshqa qurilmalar;</p>
+<p class="fm-item">B. chalg'itish yoki MATCH tovushlarini takrorlash uchun yetarli darajada ovoz chiqaradigan audio qurilmalar,</p>
+<p class="fm-item">C. boshqa ROBOT-ning masofadan kuzatish qobiliyatiga xalaqit berish uchun maxsus mo'ljallangan har qanday qurilmalar yoki bezaklar, shu jumladan ko'rish tizimlari, akustik masofa qidiruvchilari, sonarlar, infraqizil yaqinlik detektorlari va boshqalar. Bunga ROBOT-dagi 36 h 11 AprilTags-dan foydalanadigan yoki unga taqlid qiladigan tasvirlar kiradi;</p>
+<p class="fm-item">D. yonuvchi gazlar yoki olov yoki pirotexnika hosil qilish uchun mo'ljallangan har qanday qurilmalar,</p>
+<p class="fm-item">E. suyuq kumush yoki qo'rg'oshin kabi xavfli materiallar,</p>
+<p class="fm-item">F. ROBOT ustida ishlatiladigan yuqori kuchlanishli yorug'lik manbalari nishonlash paytida faqat qisqa vaqt davomida yoritilishi kerak va qo'shimcha tekshiruvni talab qilishi mumkin va guruhlardan REFEREE va/yoki LRI boshliqlarining ixtiyoriga ko'ra o'zlarining yoritishlarini o'chirib qo'yish yoki o'zgartirish so'ralishi mumkin;</p>
+<p class="fm-item">G. hayvonotga asoslangan materiallar,</p>
+<p class="fm-item">H. raqobatdosh ROBOTS-ni shikastlash yoki burib yuborish uchun mo'ljallangan har qanday qurilma;</p>
+<p class="fm-item">I. bog'lanish xavfini keltirib chiqaradigan qurilmalar yoki sharoitlar;</p>
+<p class="fm-item">J. dekorativ yoki funksional yoritishning 5 Hz dan yuqori chiroq chiroqlari qo'shimcha tekshiruvlarga sabab bo'ladi va jamoalardan REFEREE va/yoki LRI boshlig'ining ixtiyoriga ko'ra o'z yoritishlarini o'chirib qo'yish yoki o'zgartirish so'ralishi mumkin; va</p>
+<p class="fm-item">K. xavfsiz va halol o'yin haqidagi qoida ruhini buzadigan ro'yxatga kiritilmagan boshqa narsalar.</p>
+</div>
+<p id="R203" class="fm-rule"><strong>R203 * ROBOTS FIELD-dan quvvat talab qilmasdan tezda olib tashlanishi uchun mo'ljallangan bo'lishi kerak.</strong> ROBOTS o'chirilgan vaqtda SCORING ELEMENTS-ni ROBOT-dan va ROBOT-ni FIELD-dan olib tashlashga imkon berishi kerak.</p>
+<div class="fm-box">
+<p>Ba'zi hodisalar jamoalarga ROBOT quvvatini FIELD qayta o'rnatish paytida ishlatishga imkon berishi mumkin (masalan, ROBOT-ni FIELD-ning chetiga olib borish), ammo ROBOTS-ni bunday talab qilinmaydigan tarzda loyihalashtirish kerak.</p>
+</div>
+<p id="R204" class="fm-rule"><strong>R204 *Yerni ushlab turish taqiqlanadi.</strong> ROBOTS FIELD sirtlarini ushlab turish yoki pastga sug'orishni ta'minlash uchun hosil bo'lgan havo oqimini ishlatish orqali pastki kuchni oshirish uchun mo'ljallangan har qanday MECHANISM-dan foydalanishi mumkin emas.</p>
+<h2 id="sec-12-3">12.3 Tayyorlash</h2>
+<p id="R301" class="fm-rule"><strong>R301 * COTS MECHANISMS qonuniy, ammo cheklovlari bor.</strong> COTS MAJOR MECHANISMS o'yin vazifasini bajarish uchun mo'ljallangan o'yinlar taqiqlanadi. Ushbu qoidaga quyidagi istisnolar kiritilishi mumkin:</p>
+<p class="fm-item">A. COTS haydovchi CHASSIS, agar alohida qismlarning hech biri boshqa qoidalarga zid bo'lmasa; va</p>
+<p class="fm-item">B. COTS MAJOR MECHANISMS rasmiy <a href="https://ftc-resources.firstinspires.org/ftc/team"><em>FIRST</em> Texnikaviy qiyinchilik StarterBots</a> <em>.</em> dasturining bir qismi sifatida yaratilgan</p>
+<div class="fm-box">
+<p>COTS qismlari jamoalarga o'yin vazifalarini bajarish va muammolarni hal qilish uchun ROBOT MECHANISMS ni loyihalash va qurish uchun yordam berish uchun mo'ljallangan, ammo o'yin maqsadlarini bajarish uchun maxsus yaratilgan echimlar bo'lish uchun mo'ljallanmagan.</p>
+<p>Bu qoidaga zid bo'lib, build to print ishlab chiqarishni ommaviy ravishda mavjud bo'lgan, maxsus qurilgan echimlarni sotadigan sotuvchi.</p>
+</div>
+<p id="R302" class="fm-rule"><strong>R302 *COTS qismlari va xomashyolarini o'zgartirish mumkin.</strong> Ruxsat etilgan xomashyolar va qonuniy COTS qismlari boshqa qoidalarga zid bo'lmaguncha o'zgartirilishi mumkin (bo'rilgan, kesilgan, bo'yalgan va boshqalar).</p>
+<div class="fm-box">
+<p><strong>xomashyo tugallanmagan qurilish zaxirasini anglatadi, shu jumladan quyidagilar bilan cheklanmagan holda:</strong></p>
+<p class="fm-item"><strong>A. plastinka zaxiralari,</strong></p>
+<p class="fm-item"><strong>B. ekstrudatsiya qilingan shakllar,</strong></p>
+<p class="fm-item"><strong>C. metalllar, plastik, kauchuk va yog'och; va</strong></p>
+<p class="fm-item"><strong>D. magnitlar.</strong></p>
+</div>
+<p id="R303" class="fm-rule"><strong>R303 * COTS bitta DoF boʻlishi kerak .</strong> COTS COMPONENTS va MECHANISMS mexanik erkinlik darajasidan (DoF) oshmasligi kerak. Ruxsat etilgan COTS MECHANISMS va COMPONENTS erkinlik darajasining misollari quyidagicha:</p>
+<p class="fm-item">A. chiziqli slayd to'plami,</p>
+<p class="fm-item">B. chiziqli aktuator to'plami,</p>
+<p class="fm-item">C. bir tezlikdagi (o'zgaruvchan bo'lmagan) uzatish qutilari,</p>
+<p class="fm-item">D. ko'targich,</p>
+<p class="fm-item">E. aylantirgich,</p>
+<p class="fm-item">F. qo'rg'oshin shrub, va</p>
+<p class="fm-item">G. bitta DoF tutqich.</p>
+<p>Ushbu qoidaga quyidagi istisnolar kiritilishi mumkin:</p>
+<p class="fm-item">H. ratcheting qurilmalari (kirpiklar, rulmanlar va boshqalar),</p>
+<p class="fm-item">I. holonomik g'ildiraklar (omni yoki mecanum),</p>
+<p class="fm-item">J. o'lik g'ildirak o'lchash to'plamlari,</p>
+<p class="fm-item">K. noto'g'ri joylashtirilgan COMPONENTS o'rtasidagi harakatni o'tkazadigan buyumlar (masalan, universal birikmalar, moslashuvchan o'rnatish asboblari va shunga o'xshash buyumlar) va</p>
+<p class="fm-item">L. o'zgaruvchan burchaklarda tuzilmalarni bog'laydigan buyumlar (masalan, to'pli bo'g'inlarni bog'lash, ustunlarning uchlari va shunga o'xshash buyumlar).</p>
+<div class="fm-box">
+<p>Ushbu qoidaning maqsadi, shuningdek, faqat DoF COTS COMPONENT koʻpligiga yigʻish uchun moʻljallangan yuqori ixtisoslashgan individual COMPONENTS-ga ruxsat bermaslik uchun ham tatbiq etiladi.</p>
+<p>Bitta erkinlik darajasi MECHANISM uchun umumiy test MECHANISM-dagi har bir COMPONENT-ning yo'nalishi va joylashuvini tizimning bitta COMPONENT-ning (masalan, kirish) yo'nalishi va joylashuvi asosida bashorat qilish mumkinmi.</p>
+<p>1 misoli: Mecanumli haydovchi tizim 4 mustaqil haydovchi modullardan iborat bo'lib, ularning har biri bitta DoFga ega (bu qoidaga ko'ra Mecanum g'ildiraklarining DoFga e'tibor berilmaydi), ular umumiy tuzilmaga (masalan, CHASSIS) biriktirilgan. Umumiy MECHANISM hali ham bitta DOF hisoblanadi.</p>
+<p>2 misoli: Ushbu qoidaga ko'ra ruxsat etilgan o'lik g'ildirak o'lchov modullari odatda 1 DoF g'ildirakidan (holonomik g'ildirakning ta'sirini e'tiborga olmasdan) iborat bo'lib, oldinga / orqaga harakatni ta'minlaydi va qo'shimcha noyob aylanish yoki vertikal harakatni ta'minlaydigan ko'prik kuchidan iborat bo'lib, 2 DoF tizimini yaratadi.</p>
+<p>3 misoli: Bir vaqtning o'zida 2 gripper chakkalarini harakatlantiruvchi bitta aktuatordan yoki har biri mustaqil gripper chakkalarini boshqaradigan ikkita aktuatordan iborat bo'lgan oddiy gripper tirnoqlari, asosan bitta DoF hisoblanadi. Biroq qo'shimcha harakatlantiruvchilarni o'z ichiga olgan tutqichlar qo'shimcha burilish va/yoki egilish harakatlarini ta'minlaydi (masalan, biqinch) COTS MECHANISMS-da taqiqlangan erkinlik darajalarini qo'shadi.</p>
+</div>
+<p id="R304" class="fm-rule"><strong>R304 *O'ziga xos dasturiy ta'minot, dizaynlar va qismlar yildan-yilga qayta ishlatilishi mumkin.</strong> ROBOT dasturiy ta'minot, dizaynlar va Kickoff dan oldin yaratilgan FABRICATED ITEMS ruxsat etiladi.</p>
+<p id="R305" class="fm-rule"><strong>R305 * SCORING ELEMENTS ROBOT qurilishi uchun ruxsat etilmaydi.</strong> ROBOT qurilishining bir qismi sifatida joriy mavsumdagi SCORING ELEMENTS yoki SCORING ELEMENTS ning nusxalarini ishlatishga ruxsat berilmaydi.</p>
+<h2 id="sec-12-4">12.4 ROBOT SIGN qoidalari</h2>
+<p id="ROBOT_SIGN1">ROBOT SIGN - bu ROBOT-ga biriktirilgan zarur yig'ilma. ROBOT SIGN bir vaqtning o'zida ROBOT’S jamoasining raqamini, shuningdek FIELD STAFF uchun uning ALLIANCE a'zoligini aniqlaydi. Ushbu qoidalarning yozma shaklida qoʻllanilgan mezonlar quyidagilarni oʻz ichiga oladi:</p>
+<ul>
+<li>Jamoa sonini aniqlash uchun FIELD STAFF’S va ROBOT ning ALLIANCE qobiliyatini maksimal darajada oshirish,</li>
+<li>ROBOT SIGNS-ni yaratishda dizayn qiyinchiliklarini minimallashtirish va</li>
+<li>ROBOT identifikatsiyasini ko'rsatishda izchillikni oshirish.</li>
+</ul>
+<p>ROBOT SIGN namunasini <a href="https://ftc-resources.firstinspires.org/ftc/archive/2027/team/robotsign-us">US xat</a> va <a href="https://ftc-resources.firstinspires.org/ftc/archive/2027/team/robotsign-a4">A4</a> oʻlchamida yuklab olish mumkin.</p>
+<p id="R401" class="fm-rule"><strong>R401 * har ROBOT uchun kamida ikkita ROBOT SIGNS ROBOT SIGNS </strong> ROBOT-da kamida 2-ning alohida joylariga joylashtirilishi kerak. Ushbu joylar ROBOT, ≥90 darajasiga qarama-qarshi yoki qo'shni yuzalarda bo'lishi kerak. FIELD STAFF uchun ko'rinadigan barcha ROBOT yuzalari ROBOT SIGNSni, shu jumladan ROBOT-ning yuqori qismini joylashtirish uchun ishlatilishi mumkin. ROBOT SIGNS quyidagi mezonlarga javob berishi kerak:</p>
+<p class="fm-item">A. mustahkam materialdan tayyorlanishi,</p>
+<p class="fm-item">B. kengligi kamida 6.5 dyuym (16.5 sm) bo'lishi kerak,</p>
+<p class="fm-item">C. kamida 2.5 dyuym (6.4 sm) balandlikda bo'lishi kerak (rasm 12 ‐ 7), va</p>
+<p class="fm-item">D. ROBOT-ning tuzilishi / ramkasi tomonidan qo'llab-quvvatlanadi.</p>
+<div class="fm-box">
+<p>Ushbu qoidaning maqsadi FIELD STAFF MATCH-dan oldin, davomida va keyin ROBOT SIGNS-ni kamida 12 fut (3.65 metr) masofadan osongina koʻrishdir.</p>
+<p>ROBOT SIGNS MATCH o'yinining qiyinchiliklariga dosh berish uchun etarlicha mustahkam bo'lishi kerak, ammo nima etarlicha mustahkamligi haqida aniq yo'l-yo'riq yo'q. Jamoalar o'z ixtiyorida bo'lgan barcha narsalar bilan yaxshi niyat bilan harakat qilishlari kerak.</p>
+</div>
+<p id="Ref173312557" class="fm-caption">Rasm 12 - 7: Jamoa raqami ROBOT SIGN Oʻlchami</p>
+<p><strong><img src="../../images/image059.jpg" alt="Diagram showing ROBOT SIGN sizing." width="579" loading="lazy"></strong></p>
+<p id="R402" class="fm-rule"><strong>R402 * ROBOT SIGNS sizning ALLIANCE-ni koʻrsatadi. </strong> Har bir ROBOT SIGN-da ALLIANCE rangini (rasm 12 - 7) ko'rsatish uchun tadbirda MATCH jadvalida belgilangan bo'yicha kamida 6.5 in. x 2.5 in. (16.50 cm x 6.35 cm) kattalikda qattiq qizil yoki ko'k ko'rinmas fonli to'g'ri to'rtburchak bo'lishi kerak. ROBOT SIGNS ustiga ROBOT ustiga o'rnatilganda quyidagilardan boshqa ko'rinadigan belgilar qo'yish taqiqlanadi:</p>
+<p class="fm-item">A. R403 uchun talab qilinadiganlar;</p>
+<p class="fm-item">B. kichik miqdordagi karnayli tasma, qattiq biriktirgichlar yoki funksional ekvivalentlar,</p>
+<p class="fm-item">C. burchaklarda, katlamlarda yoki kesimlarda ko'rinadigan turli rangdagi tor maydonlar,</p>
+<p class="fm-item">D. faqat namuna uchun fondagi tor belgilar; va</p>
+<p class="fm-item">E. ALLIANCE rangini yoritish / oshkor qilish uchun energiya bilan ta'minlanolmaydi yoki har qanday manbalardan quvvatga tayanishi mumkin emas.</p>
+<div class="fm-box">
+<p>ROBOT SIGNS o'zgaruvchan yoki sozlanadigan bo'lsa, ushbu qoidaga ko'ra ruxsat etilgan holatlar bundan mustasno, FIELD STAFF tomonidan ALLIANCE ning qarama-qarshi rangi ko'rinishiga yo'l qo'ymasligi kerak.</p>
+</div>
+<p id="Ref173306222" class="fm-caption">Rasm 12 - 8: ALLIANCE toʻgʻri toʻrtburchakning minimal oʻlchami</p>
+<p class="fm-caption"><img src="../../images/image060.png" alt="ALLIANCE toʻgʻri toʻrtburchakning minimal oʻlchamini koʻrsatuvchi diagramma" width="627" loading="lazy"></p>
+<p id="R403" class="fm-rule"><strong>R403 * ROBOT SIGNS-dagi jamoa raqami.</strong> 12 ‐ 7 , 12 ‐ 9 va 12 ‐ 10 rasmlarida koʻrsatilganidek guruh raqamlari koʻrsatiladi va ROBOT SIGN ustida joylashtiriladi hamda quyidagi qoʻshimcha mezonlarga javob beradi:</p>
+<p class="fm-item">A. deyarli 2.25 dyuym (5.70 sm) balandlikda bo'lgan qattiq shaffof bo'lmagan oq arab raqamlaridan (masalan, 1,2,3,4) iborat,</p>
+<p class="fm-item">B. raqamlar atrofida kamida taxminan 0.25 in. (0.60 cm) orqa fon bo'lishi kerak,</p>
+<p class="fm-item">C. raqamlar vertikal ravishda toʻplangan boʻlmasligi mumkin (rasm 12 ‐ 10),</p>
+<p class="fm-item">D. mustahkam materiallardan tayyorlangan bo'lishi va</p>
+<p class="fm-item">E. raqamlarni yoritish / oshkor qilish uchun energiya bilan ta'minlanishi mumkin emas yoki har qanday manbalardan quvvatga tayanishi mumkin emas.</p>
+<p id="Ref175171215" class="fm-caption">Rasm 12 - 9: Koʻk ALLIANCEda oʻynaydigan 21001 jamoasining qonuniy raqami</p>
+<p class="fm-caption"><img src="../../images/image061.png" alt="Koʻk ALLIANCE uchun qonuniy raqamni koʻrsatish diagrammasi" width="323" loading="lazy"></p>
+<p id="Ref175171223" class="fm-caption">Rasm 12 - 10: Moviy ALLIANCEda oʻynaydigan 1355 jamoasi uchun jamoa raqamiga yoʻnaltirish misollari</p>
+<p class="fm-caption"><img src="../../images/image062.png" alt="Ro&#x27;yxatda robotning yo&#x27;nalishi ko&#x27;rsatilgan belgilar ko&#x27;rsatilgan." width="619" loading="lazy"></p>
+<div class="fm-box">
+<p>Agar musobaqada ishtirok etayotgan jamoada to'liq qonuniy ROBOT SIGNS mavjud bo'lmasa va musobaqada qonuniy ROBOT SIGN yaratish uchun rangli printer yoki boshqa vositalar mavjud bo'lmasa, REFEREE boshlig'i musobaqada foydalanish uchun muqobil o'rnini bosishni tasdiqlashi mumkin.</p>
+<p>Jamoalar soni MATCH o'yinining qiyinchiliklariga dosh berish uchun etarlicha mustahkam bo'lishi kerak, ammo nima etarlicha mustahkamligi haqida aniq yo'l-yo'riq yo'q. Jamoalar o'z ixtiyorida bo'lgan barcha narsalar bilan yaxshi niyat bilan harakat qilishlari kerak. Agar tadbirda materiallar cheklangan bo'lsa, ROBOT SIGNS o'rnini bosuvchi oddiy qog'ozga qo'lda yozilgan bo'lishi mumkin.</p>
+<p>Kichik dekorativ elementlar va raqamlardagi bo'shliqlar, jamoaning raqami 12 fut (3.65 metr) masofadan o'qilishi mumkin bo'lgan va tezda ko'rinadigan bo'lsa, yaxshi.</p>
+<p><strong>ROBOT SIGNS-da taqiqlangan jamoa raqamlariga quyidagilar kiradi, ammo ular shular bilan cheklanmaydi:</strong></p>
+<ul>
+<li>Guruh raqamlari faqat chekkada yoritilgan plastmassa </strong> bilan koʻrinadi</li>
+<li id="Toc172868213">LED Koʻrsatuv raqamlari </strong></li>
+</ul>
+</div>
+<h2 id="sec-12-5">12.5 Motorlar va aktuatorlar</h2>
+<p id="R501" class="fm-rule"><strong>R501 *Faqat muayyan dvigatellarga ruxsat beriladi.</strong> Yolg'iz ruxsat etilgan motor harakatlantirgichlari:</p>
+<p id="Ref151715654" class="fm-caption">12-1-jadval: Motorlar uchun ruxsatnomalar</p>
+<div class="fm-table"><table> <tr><th><strong>Dvigatelning nomi</strong></th><th><strong>Turli qismlar soni</strong></th><th><strong>Izohlar</strong></th></tr> <tr><td><strong>AndyMark</strong> NeveRest 12 V DC</td><td>am- 3104, am- 3104 b</td><td></td></tr> <tr><td><strong>AndyMark </strong> NeveRest Hex 12 V DC</td><td>am- 3104 c</td><td></td></tr> <tr><td><strong>goBILDA</strong> sariq jaket 520 x seriya 12 V DC</td><td>5201-0002-0026 va boshqalar.</td><td>5201, 5202, 5203 va 5204 seriyalari</td></tr> <tr><td><strong>goBILDA 5000 seriyasi 12 V DC</strong></td><td>5000-0002-4008 va boshqalar.</td><td></td></tr> <tr><td><strong>Zamonaviy robotlar</strong> / MATRIX 12 V DC</td><td>5000-0002-0001</td><td>Ishdan chiqarilmadi</td></tr> <tr><td><strong>NFR Mahsulotlar </strong> Yuksel 12 V DC</td><td>NFR-600-100-000</td><td></td></tr> <tr><td><strong>REV Robotics</strong> HD Hex 12 V DC</td><td>REV - 41-1291</td><td></td></tr> <tr><td><strong>REV Robotics</strong> Core Hex 12 V DC</td><td>REV - 41-1300</td><td></td></tr> <tr><td><strong>Studica Robotika </strong> Maverik 12 V DC</td><td>75001</td><td></td></tr> <tr><td><strong>SWYFT Robotika</strong> SWYFT Spike motori</td><td>SR-MOTOR-DC-01</td><td></td></tr> <tr><td><strong>TETRIX MAX</strong> 12 V DC</td><td>739530, 39530</td><td>Ishdan chiqarilmadi</td></tr> <tr><td><strong>TETRIX MAX</strong> TorqueNADO 12 V DC</td><td>W44260</td><td></td></tr> <tr><td><strong>WATTOS </strong> Stingray 12 V DC</td><td>WDM12</td><td></td></tr> <tr><td colspan="3"><strong>COTS kompyuter qurilmalarida ishlab chiqarilgan vibratsiya va avtomatik fokuslash motorlari (masalan, smartfondagi shovqinli motor); faqat qurilmaning bir qismi sifatida ishlatilishi mumkin va ularni olib tashlab/yoki qayta ishlatish mumkin emas. Ushbu dvigatellar </strong> R503 <strong>.</strong></td></tr> <tr><td colspan="3"><strong>COTS sensoriga integratsiyalashgan motorlar (masalan, LIDAR skanerli sonar), agar moslama faqat o'rnatishni osonlashtirish uchun o'zgartirilgan bo'lsa. Ushbu dvigatellar </strong> R503 <strong>.</strong></td></tr> </table></div>
+<div class="fm-box">
+<p>Raqobat qo'llanmasining kelajakdagi yangilanishlarida qonuniy motorlar ro'yxatiga qo'shimcha motorlar qo'shilishi mumkin.</p>
+<p>Ko'plab qonuniy g'ildirakli dvigatellar butun yig'ilishga asoslangan yorliq bilan sotiladi. Ushbu dvigatellarni taqdim etilgan uzatish quti bilan va/yoki boshqa har qanday mos keladigan uzatish quti bilan ishlatish mumkin.</p>
+</div>
+<p id="R502" class="fm-rule"><strong>R502 * Servodan foydalanish cheklangan.</strong> Servo harakatlantirgichlar quyida keltirilgan talablarga javob berishi kerak. Servoslar ular oxir-oqibat ishlatiladigan quvvatni tartibga solish qurilmalari bilan mos bo'lishi kerak (R505 uchun) va qo'shimcha servo joylashuvi chiqish interfeyslarini o'z ichiga olishi mumkin (masalan, 4 ta sim joylashuvi to'g'risida fikr bildirish).</p>
+<p class="fm-caption">12-2-jadval: Servo talablari 6 V</p>
+<div class="fm-table"><table> <tr><th><strong>Qo'zg'atuvchilar sinfi</strong></th><th><strong>Mexanik ishlab chiqarish quvvati</strong></th><th><strong>Toʻxtash oqimi </strong></th><th><strong>Namunaviy servoslar (shu jumladan, lekin ular bilan cheklanmagan holda)</strong></th></tr> <tr><td rowspan="7"><strong>Servo</strong></td><td rowspan="7">≤ 8 Vatt @ 6 Vatt</td><td rowspan="7">≤ 4 amper @ 6 V</td><td>AndyMark Yuqori torsli servoslar (am- 4954)</td></tr> <tr><td>Axon MAX + Servo (Axon MAX +)</td></tr> <tr><td>DSSERVO 35 KG Korsiz (DS3235MG)</td></tr> <tr><td>FEETECH raqamli servo (FT5335M-FB)</td></tr> <tr><td>goBILDA Ikki xil rejimli servo (2000-0025-0003)</td></tr> <tr><td>REV Robotics aqlli servo (REV - 41-1097)</td></tr> <tr><td>Studica koʻp rejimli aqlli servo (75002)</td></tr> <tr><td rowspan="3"><strong>Chiziqli servo</strong></td><td rowspan="3">N/A</td><td rowspan="3">≤ 1 amp @ 6 V</td><td>Actuonix Mikro liniyaviy servo (P8-100-252-12-R)</td></tr> <tr><td>Hitec liniyaviy servo (HLS12-3050-6V)</td></tr> <tr><td>Studica chiziqli servo RC aktuator (75014)</td></tr> <tr><td colspan="4"><a href="https://ftc-docs.firstinspires.org/en/latest/tech_tips/tech-tips.html#calculatepower">Servo mexanik chiqish quvvati</a> quyidagi formula bilan taxmin qilinadi (ishlab chiqaruvchi tomonidan ma'lum qilingan 6 V ma'lumotlaridan foydalangan holda): <br> · <strong>Mexanik ishlab chiqarish quvvati</strong> = <strong>0.25</strong> x (<strong>Toʻxtab turish davomiyligi</strong>-da <em>N-m</em>) x (<strong>Yuklanish tezligi yoʻq</strong>-da <em>rad/s</em>)</td></tr> </table></div>
+<div class="fm-box">
+<p>Foydalanilishi qonuniy bo'lishi uchun servoslar ikkala talabga ham javob berishi kerak. Oldindan tasdiqlangan servolarning ro'yxati uchun <a href="https://ftc-resources.firstinspires.org/ftc/event/inspection-reference">Tekshiruv tezkor maʼlumotnomasi</a> hujjatiga qarang, aks holda guruhlar servo xususiyatlarini tasdiqlovchi hujjatlarni taqdim etishlari kerak. Chiqish quvvatiga rioya etilishini tekshirish uchun <a href="https://ftc-docs.firstinspires.org/en/latest/tech_tips/tech-tips/tech-tip-motor-servo-power/tech-tip-motor-servo-power.html#servo-mechanical-power-calculator">onlayn kalkulyator</a>-dan foydalaning.</p>
+<p>Agar ishlab chiqaruvchi 6 V ko'rsatkichlarini taqdim etmasa, 6 V dan ortiq kuchlanmalar uchun har qanday ko'rsatkichlardan foydalanish mumkin.</p>
+<p>To'xtovchanlik oqimi - bu moslama uchun belgilangan kuchlanishda bo'lishi mumkin bo'lgan maksimal to'xtovchanlik oqimi, servo ichida mavjud bo'lishi mumkin bo'lgan har qanday foydalanuvchi yoki VENDOR sozlanishi mumkin bo'lgan dasturiy ta'minot chegarasidan qat'i nazar.</p>
+<p>Mo'ljallangan quvvatni tartibga solish qurilmasi tomonidan berilgan kuchlanishni istalgan servoning ishlash kuchlanmasi oralig'ida bo'lishini ta'minlash muhimdir. REV Control Hub va REV Expansion Hub servoslarga 5 V, goBILDA Servo Power Injector, REV Servo Power Module, Studica Servo Power Block va REV Servo Hub servoslarga 6 V quvvat beradi. Deyarli barcha servoslar 6 V bilan mos kelsa-da, masalan, 6-8.4 DCV operatsion kuchlanish oralig'iga ega servoslar faqat 5 V bilan ta'minlanganida to'g'ri ishlamasligi mumkin.</p>
+</div>
+<p id="R503" class="fm-rule"><strong>R503 * ROBOTS umumiy 8 motorlari va 8 servolari bilan cheklangan.</strong> A ROBOT-da barcha konfiguratsiyalarda ishlatiladigan barcha MECHANISMS-lar uchun R501 va R502-ning ruxsat etilgan harakatlantiruvchilar ro'yxatidan 8-dan ko'p bo'lmagan motorlar va 8-dan ko'p bo'lmagan servolar bo'lishi mumkin.</p>
+<div class="fm-box">
+<p>Agar ROBOT-ning bitta musobaqada ishlatiladigan bir nechta konfiguratsiyalari bo'lsa va ular har xil MECHANISMS-dan foydalansa, barcha dvigatellar va servolarning umumiy yig'indisi ushbu qoidada belgilangan chegaradan kichik yoki teng bo'lishi kerak.</p>
+</div>
+<p id="R504" class="fm-rule"><strong>R504 *Agar aniq ruxsat etilmagan bo'lsa, harakatlantirgichlarni o'zgartirmang.</strong> Har qanday dvigatellari yoki servolarining integral mexanik va elektr tizimi o'zgartirilmasligi kerak. ROBOT-da ishlatiladigan motorlar va servolar hech qanday tarzda o'zgartirilmasligi kerak, quyidagilar bundan mustasno:</p>
+<p id="Ref239863738" class="fm-item">A. o'rnatish tutqichlari va/yoki chiqish o'qi/interfeysini (shu jumladan tirnoq tirnoqlarini) ROBOT va harakatlantiruvchi qismga dvigatelning jismoniy ulanishini osonlashtirish uchun o'zgartirish mumkin,</p>
+<p class="fm-item">B. elektr simlari kerakli bo'lsa uzunlikka kesib tashlanishi va qo'shimcha simlarga ulagichlar yoki biriktirgichlar qo'shilishi mumkin (har R609) va sof elektr qoliplari funksional jihatdan teng bo'lgan almashtirishlar bilan almashtirilishi mumkin;</p>
+<p class="fm-item">C. servos ishlab chiqaruvchi tomonidan ko'rsatilgan tarzda o'zgartirilishi mumkin (masalan, yumshoq chegaralarni o'rnatish yoki uzluksiz aylanish uchun o'zgartirish);</p>
+<p class="fm-item">D. uskunaning maqsadi, ulanish xususiyati, funktsional xususiyati va hokazolarni ko'rsatadigan yorliq qo'llanilishi mumkin, agar guruh tomonidan qo'llanilgan yorliq uskunani aniqlashda ishlatiladigan belgilarga to'sqinlik qilmasa;</p>
+<p class="fm-item">E. elektr terminallariga izolyatsiya qo'llanilishi mumkin,</p>
+<p class="fm-item">F. tuzatishlar, agar dastlabki ishlash xususiyatlari va texnik xususiyatlari o'zgarmagan bo'lsa; va</p>
+<p class="fm-item">G. ishlab chiqaruvchi tavsiya etgan texnik xizmat ko'rsatish.</p>
+<p id="R505" class="fm-rule"><strong>R505 *Barcha harakatlantiruvchi qismlar tasdiqlangan moslamalar orqali boshqariladi va quvvatlanadi.</strong> R501da ruxsat etilgan COTS hisoblash qurilmalarining sensorlariga integratsiyalashgan servo, ventilyator yoki motorlar bundan mustasno. <strong>Barcha aktuatorni boshqarish signallari quvvatni tartibga soluvchi qurilmadan kelib chiqishi kerak. </strong> ROBOT-da ruxsat etilgan aktuatorlar uchun quvvatni tartibga soluvchi yagona qurilmalar quyidagilardir:</p>
+<p class="fm-caption">12-3-jadval: Kuchni tartibga soluvchilar va cheklovlar</p>
+<div class="fm-table"><table> <tr><th><strong>Kuchni tartibga soluvchi qurilma</strong></th><th><strong>Qismaning raqami</strong></th><th><strong>Qurilma boʻyicha yuklanish chegarasi</strong></th></tr> <tr><td><strong>goBILDA 6 V servo quvvat injektori</strong></td><td>3125-0001-0001</td><td>Port boʻyicha 2 servo</td></tr> <tr><td><strong>REV Control Hub yoki Expansion Hub motor portlari</strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>2 Port bo'yicha motorlar</td></tr> <tr><td><strong>REV Control Hub yoki Expansion Hub servo portlari</strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>Port boʻyicha 2 servo</td></tr> <tr><td><strong>REV servo quvvat moduli</strong></td><td>REV - 11-1144</td><td>Port boʻyicha 2 servo</td></tr> <tr><td><strong>REV Robotics Servo Hub</strong></td><td>REV - 11-1855</td><td>Port boʻyicha 2 servo</td></tr> <tr><td><strong>REV SPARKmini</strong></td><td>REV - 31-1230</td><td>2 moslama boʻyicha dvigatellar</td></tr> <tr><td><strong>Studica Servo quvvat bloki</strong></td><td>75005</td><td>Port boʻyicha 2 servo</td></tr> </table></div>
+<p id="R506" class="fm-rule"><strong>R506 *Relelar, elektromagnitlar va elektr solenoid harakatlantirgichlaridan foydalanish taqiqlangan.</strong> Elektromexanik harakatlanishni qo'shimcha relalar, elektromagnitlar, elektr solenoid harakatlantirgichlari yoki shu bilan bog'liq tizimlardan foydalanish orqali qo'llash taqiqlanadi. Bundan tashqari, relalar va elektromagnitlardan foydalanish ham taqiqlanadi.</p>
+<h2 id="sec-12-6">12.6 Elektr taʼminotini taqsimlash</h2>
+<p id="R601" class="fm-rule"><strong>R601 * ROBOTS faqat 1 asosiy batareyasini oʻz ichiga olishi mumkin .</strong> ROBOTS 1 va faqat 1 tasdiqlangan 12 V NiMH asosiy batareyasini o'z ichiga olishi kerak. Ushbu batareya faqat musobaqa paytida ROBOT boshqaruv tizimi va harakatlanish uchun elektr energiyasining qonuniy manbai bo'lib, batareya ishlab chiqaruvchisi davlatidan o'zgartirilmagan bo'lishi kerak, quyidagilardan tashqari:</p>
+<p class="fm-item">A. sigir COTS ekvivalenti bo'lgan 20 A ATM mini bargli chiziqli sigir bilan almashtirilishi mumkin va R610</p>
+<p class="fm-item">B. o'rnatilgan ulagichlar boshqa mashhur ulagichlar bilan almashtirilishi mumkin, masalan, Anderson Powerpole, XT30 yoki teng quvvatga ega har qanday ulagich.</p>
+<p>Faqatgina ruxsat etilgan ROBOT asosiy quvvat batareyasi paketlari:</p>
+<p class="fm-caption">12-4-jadval: Legal ROBOT asosiy quvvat batareyasi</p>
+<div class="fm-table"><table> <tr><th><strong>Batareya toʻplami</strong></th><th><strong>Qismaning raqami</strong></th><th><strong>Izohlar</strong></th></tr> <tr><td><strong>AndyMark Flat Pack batareyasi DC 12 V</strong></td><td>am- 5290</td><td></td></tr> <tr><td><strong>goBILDA 12 V NiMH batareyasi </strong></td><td>3100-0012-0020</td><td></td></tr> <tr><td><strong>Matrix 12 V 3000 mAh NiMH</strong></td><td>14-0014</td><td>Modern robotika deb belgilab qoʻyilishi mumkin</td></tr> <tr><td><strong>REV 12 V slim batareyasi</strong></td><td>REV - 31-1302</td><td></td></tr> <tr><td><strong>Studica 12 V 3000 mAh NiMH</strong></td><td>70025</td><td></td></tr> <tr><td><strong>TETRIX MAX 12V 3000mAh NiMH</strong></td><td>W39057</td><td>Ilgari 739023</td></tr> <tr><td><strong>WATTOS 12 V batareyasi</strong></td><td>WT-NMH1230</td><td></td></tr> </table></div>
+<div class="fm-box">
+<p>Bir nechta VENDORS-dan ko'plab boshqa shunga o'xshash uslubdagi batareyalar mavjud, ammo faqat ro'yxatga olingan ishlab chiqaruvchilar va qism raqamlari <em>FIRST</em> Tech Challenge tadbirlarida foydalanish uchun qonuniy hisoblanadi.</p>
+<p>R602 bo'limida ko'rsatilgan o'z-o'zidan yopiq qurilmalar uchun boshqa batareyalardan foydalanish mumkin.</p>
+</div>
+<p id="R602" class="fm-rule"><strong>R602 *Boshqa batareyalar faqat o'z-o'zidan ajralib turadigan periferik qurilmalar uchun va faqat LEDs uchun ruxsat etiladi. </strong> COTS USB batareya paketlari 100 Wh yoki undan kam quvvatga ega (3.7 V- da 27,000 mAh), 5 V/ 5 A maksimal chiqishi yoki 12 V/ 5 A maksimal chiqishi bo ' lgan USB - PD portlari bo ' lgan batareya paketlari va kamera (masalan, GoPro uslubidagi kamera) kabi mustaqil qurilmalarga integratsiyalashgan batareyalar ishlatilishi mumkin, agar ular:</p>
+<p class="fm-item">A. ROBOT harakatlantirgichlarining hech biriga quvvat etkazib bermaydi va</p>
+<p class="fm-item">B. ROBOT boshqaruv tizimidan boshqaruv signallarini qabul qiladigan hech qanday qurilmalar tomonidan ishlatilmaydi (ya'ni COTS USB batareya paketlari ROBOT quvvat tizimlaridan elektr bilan ajratilgan bo'lishi kerak). Ushbu qoida B qismidan quyidagilar istisno qilinadi:</p>
+<p class="fm-subitem">i. elektr ta'minoti bilan ta'minlangan USB Hublari va</p>
+<p class="fm-subitem">ii. ROBOT CONTROLLER smartfonlari.</p>
+<div class="fm-box">
+<p>REV Boshqaruvchidan yoki Expansion Hub Boshqaruvchidan signallarni qabul qiladigan har qanday qurilma ROBOT asosiy batareyasidan quvvatlanishi kerak.</p>
+</div>
+<p id="R603" class="fm-rule"><strong>R603 * ROBOT batareyasini asosiy quvvat moslamasi orqali ulang.</strong> ROBOT batareyasidan ROBOT-ning barcha quvvatni tartibga soluvchi qurilmalariga (R602-da ko'rsatilmagan holatlar bundan mustasno) yetkazib beriladigan barcha quvvatni to'g'ridan-to'g'ri bitta asosiy quvvat o'tkazgich boshqarishi kerak, shunday qilib, quyidagi shartlarning barchasi bajarilishi kerak:</p>
+<p class="fm-item">A. quyidagi tasdiqlangan quvvat ulagichlaridan biri bo'lishi kerak:</p>
+<p class="fm-caption">12-5-jadval: Qonuniy quvvat almashinuvlari</p>
+<div class="fm-table"><table> <tr><th><strong>Kuchni oʻchirish</strong></th><th><strong>Qismaning raqami</strong></th></tr> <tr><td><strong>AndyMark FTC quvvat moslamasi</strong></td><td>am- 4969</td></tr> <tr><td><strong>goBILDA toʻlqin qopqogʻi kuchini oʻzgartiruvchi</strong></td><td>3103-0005-0001</td></tr> <tr><td><strong>REV Chiqargichli kabel va tutqich</strong></td><td>REV - 31-1387</td></tr> <tr><td><strong>Studica Kuchni yoqish-o'chirish moslamalari to'plami</strong></td><td>70182</td></tr> <tr><td><strong>TETRIX R/C oʻzgaruvchi toʻplami</strong></td><td>W39129</td></tr> <tr><td><strong>WATTOS quvvat moslamasi toʻplami</strong></td><td>WTS-SW1220</td></tr> </table></div>
+<p class="fm-item">B. yuqori tezlikda harakatlanayotgan qismlardan va siqilish xavfi bo'lgan joylardan uzoq bo'lgan joyga o'rnatilishi yoki joylashtirilishi kerak va</p>
+<p class="fm-item">C. 12 V liniyasida asosiy quvvat tugmachasidan pastda ikkinchi darajali quvvat tugmachalari ishlatilishi mumkin.</p>
+<div class="fm-box">
+<p>Asosiy quvvat tugmachasi uchun aniq joylashish talablari yo'q, ammo u yuqori tezlikda harakatlanayotgan qismlar va chilangish xavfi bo'lmagan joyda joylashgan bo'lishi kerak. Jamoalarga asosiy quvvat moslamasini olib tashlanadigan panellar orqasida o'rnatish ruxsat etiladi.</p>
+<p>Asosiy quvvat tugmachasi ROBOT-ga tasodifan ishga tushirilmasligi yoki shikastlanmasligi uchun ROBOT-dan ROBOT-ga tegishdan himoyalangan holda o'rnatilishi kerak.</p>
+</div>
+<p id="R604" class="fm-rule"><strong>R604 *Fyuslarni yoʻl-yoʻriqlarga muvofiq ishlatish kerak va ularni oʻzgartirish mumkin emas</strong>. Ushbu qoidaga ko'ra, jamoalar qurilma ishlab chiqaruvchisi ko'rsatmalariga ko'ra zaxiralardan foydalanadilar va zaxiralarni o'zgartirish, zaxiralarni yuqori uchish nuqtasiga ega bo'lganlar bilan almashtirish yoki ularni o'z-o'zini qayta o'rnatadigan zaxiralar bilan almashtirish orqali raqobatbardosh afzallikka ega bo'lishga harakat qilmaydilar.</p>
+<p id="R605" class="fm-rule"><strong>R605 * ROBOT ramkasidan joriy yoʻl sifatida foydalanish mumkin emas.</strong> Barcha simlar va elektr qurilmalari ROBOT ramkasidan elektr bilan ajratilgan bo'lishi kerak. ROBOT ramkasi elektr tokini olib o'tish uchun ishlatilmasligi kerak. Boshqaruv tizimining elektron qismlarini ROBOT ramkasiga elektr yo'li bilan uzish faqat quyidagi shartlarning barchasi bajarilgan taqdirda ruxsat etiladi:</p>
+<p class="fm-item">A. foydalanilgan tasmalar/kabellar quyidagi tasdiqlangan qismlardan tayyorlanishi kerak:</p>
+<p class="fm-caption">12-6-jadval: Qonuniy ROBOT yerga qoʻyish kamarlari</p>
+<div class="fm-table"><table> <tr><th><strong>Yerga qo'yish tasmasi</strong></th><th><strong>Qismaning raqami</strong></th></tr> <tr><td><strong>AndyMark Resistiv yerga qo'yish tasmasi</strong></td><td>am- 4648 a</td></tr> <tr><td><strong>REV Resistiv yerga qo'yish tasmasi</strong></td><td>REV - 31-1269</td></tr> <tr><td><strong>Swyft Yerga qoʻyiladigan kabel</strong></td><td>SR - Yer- 01</td></tr> </table></div>
+<p class="fm-item">B. tasma/kabel to'g'ridan-to'g'ri to'liq COTS COMPONENTga XT30 ulagichi bilan ulanadi, shuningdek to'g'ridan-to'g'ri ROBOT-ning ramkasiga (rezistiv terminal orqali) ulanadi va</p>
+<p class="fm-item">C. hech bir ROBOT COMPONENTS yoki MECHANISMS ROBOT ramkasini FIELD ga elektr bilan uzish uchun mo'ljallangan emas.</p>
+<div class="fm-box">
+<p>Yerga qo'yish tasmasini o'rnatish bo'yicha qo'shimcha ma'lumot olish uchun, iltimos, <a href="https://ftc-docs.firstinspires.org/en/latest/robot_building/wiring_guide/wiring-guide.html">ROBOT simlash qoʻllanmasi</a>-ga qarang.</p>
+</div>
+<p id="R606" class="fm-rule"><strong>R606 * ROBOT CONTROLLER va ROBOT elektr tizimi tekshiriladigan bo'lishi kerak.</strong> ROBOT elektrli COMPONENTS moslashuvchanlik nuqtai nazaridan quyidagicha o'rnatilishi kerak:</p>
+<p class="fm-item">A. barcha quvvatni tartibga soluvchi qurilmalar (R505 bo'yicha), u bilan bog'liq simlar va barcha xavfsizliklar tekshiruv uchun ko'rinadigan bo'lishi kerak va</p>
+<p class="fm-item">B. ROBOT CONTROLLER qurilmasi ROBOT-ga diagnostika chiroqlari yoki agar kerak bo'lsa, qurilmaning ekranini tekshirish uchun ko'rinishi mumkin bo'lgan tarzda o'rnatilgan bo'lishi kerak.</p>
+<div class="fm-box">
+<p>Tekshiruv uchun ko'rinadigan ROBOT STARTING CONFIGURATION-da bo'lganda yoki odatda MATCH-da bo'lganda elementlar ko'rinadigan bo'lishi shart emas, basharti guruh kerak bo'lsa, tekshirish jarayonida elementlarni ko'rinadigan qilishi mumkin bo'lsa.</p>
+<p>Jamoalarga diagnostika chiroqlarini normal MATCH o'yinida ishlatiladigan barcha ROBOT konfiguratsiyalarida ko'rinadigan qilib qo'yish tavsiya etiladi. Agar diagnostika LEDs MATCH jarayonida koʻrinmasa, FIELD STAFF guruhga keng koʻlamli yordam koʻrsatolmasligi mumkin.</p>
+</div>
+<p id="R607" class="fm-rule"><strong>R607 *O'ziga xos ob'ektlar faqat LEDs quvvatini ta'minlayotgan bo'lsa, 5 V dan yuqori tartibga solinadigan quvvatni ta'minlamasligi kerak.</strong> R501-bandda ko'rsatilgan harakatlantirgich yoki quvvatni tartibga soluvchi qurilma (R505-bandda ko'rsatilgan) bo'lmagan har qanday faol elektr buyumlari CUSTOM CIRCUIT-buyum deb hisoblanadi. CUSTOM CIRCUITS 5 V dan ortiq tartibga solinadigan chiqish kuchlanishini ta'minlamasligi kerak, xolos, agar u faqat LEDs ni quvvat bilan ta'minlash uchun ishlatilsa. CUSTOM CIRCUITS batareya kuchlanmasidan o'tishi mumkin.</p>
+<p id="R608" class="fm-rule"><strong>R608 *Barcha quvvatni tartibga soluvchi qurilmalar tasdiqlangan portlar orqali ulangan va quvvat bilan ta'minlangan bo'lishi kerak.</strong> Barcha quvvatni tartibga soluvchi qurilmalar (R505) ishlab chiqaruvchining ko'rsatmalariga muvofiq quvvatlanishi kerak va quyidagi jadval to'g'ri bo'lishi kerak:</p>
+<p class="fm-caption">12-7-jadval: Quvvatni tartibga solish uskunasining quvvatga bo'lgan talablari</p>
+<div class="fm-table"><table> <tr><th><strong>Kuchni tartibga soluvchi qurilma</strong></th><th><strong>Qismaning raqami</strong></th><th><strong>Elektr taʼminoti usuli</strong></th></tr> <tr><td><strong>goBILDA 6 V servo quvvat injektori</strong></td><td>3125-0001-0001</td><td>Faqat qurilmadagi XT30 ulagichlaridan foydalanib, ROBOT asosiy batareyasi bilan quvvatlanadi</td></tr> <tr><td><strong>REV Control Hub / </strong> <br> <strong>REV Expansion Hub </strong></td><td>REV - 31-1153 / <br> REV - 31-1595</td><td>Faqat qurilmadagi XT30 ulagichlaridan foydalanib, ROBOT asosiy batareyasi bilan quvvatlanadi</td></tr> <tr><td><strong>REV servo quvvat moduli</strong></td><td>REV - 11-1144</td><td>Faqat viska terminallaridan foydalanib quvvatlanadi va faqat ROBOT asosiy batareyasidan quvvatlanishi kerak</td></tr> <tr><td><strong>REV Robotics Servo Hub</strong></td><td>REV - 11-1855</td><td>Faqat quvvat terminallaridan foydalanib quvvatlanadi va faqat ROBOT asosiy batareyasidan quvvatlanishi kerak</td></tr> <tr><td><strong>REV SPARKmini</strong></td><td>REV - 31-1230</td><td>Faqat quvvat manbai bilan ta'minlangan va faqat ROBOT asosiy batareyasi bilan ta'minlangan bo'lishi kerak</td></tr> <tr><td><strong>Studica Servo quvvat bloki</strong></td><td>75005</td><td>Faqat JST-VH quvvat ulagichidan quvvatlanadi va faqat ROBOT asosiy batareyasidan quvvatlanishi kerak</td></tr> </table></div>
+<p id="R609" class="fm-rule"><strong>R609 *To'g'ri o'lchamdagi simdan foydalaning.</strong> Barcha ob'ektlar tegishli o'lchamdagi izolyatsiyali simlar bilan o'rnatilgan bo'lishi kerak:</p>
+<p class="fm-caption">12-8-jadval: Simning o'lchami bo'yicha talablar</p>
+<div class="fm-table"><table id="SIGNAL_LEVEL"> <tr><th><strong>Qo'llash</strong></th><th><strong>Simning minimal oʻlchami</strong></th></tr> <tr><td><strong>12 V asosiy batareya quvvati</strong></td><td rowspan="3">18 AWG <br> (19 SWG yoki 1 mm <sup>2</sup>)</td></tr> <tr><td><strong>Motor quvvati (agar boshqacha ko'rsatilmagan bo'lsa)</strong></td></tr> <tr><td><strong>11-20 Sigirdan himoyalangan sxema</strong></td></tr> <tr><td><strong>Dvigatel quvvati - TETRIX MAX 12 V DC Dvigatellar, REV Robotics Asosiy oltinburchak (REV - 14-1300)</strong></td><td rowspan="4">22 AWG <br> (22 SWG yoki 0.5 mm <sup>2</sup>)</td></tr> <tr><td><strong>PWM / Servo</strong></td></tr> <tr><td><strong>LEDs (5V / 12V)</strong></td></tr> <tr><td><strong>≤10 Sigirdan himoyalangan sxema</strong></td></tr> <tr><td><strong>Signal darajasidagi sxemalar (ya'ni ≤1 A uzluksiz chizadigan va &gt; 1 A uzatishga qodir bo'lmagan manbaga ega bo'lgan sxemalar), shu jumladan, lekin ular bilan cheklanmagan: I2C, DIO, analog, kodlovchi va RS485 ulanishlari)</strong></td><td>28 AWG <br> (29 SWG yoki. 08 mm <sup>2</sup>)</td></tr> </table></div>
+<p>Aslida qonuniy COTS qurilmalariga biriktirilgan integratsiyalashgan simlar yoki ishlab chiqaruvchi tomonidan qo'shilgan/sotilgan simlar qurilmaning bir qismi deb hisoblanadi va andoza bo'yicha qonuniy hisoblanadi. Bunday simlar ushbu qoidaga kirmaydi.</p>
+<div class="fm-box">
+<p>Ushbu qoidalarga rioya etilganligini ko'rsatish uchun, jamoalar iloji bo'lsa, aniq belgilab qo'yilgan o'lchamlarga ega simlardan foydalanishlari kerak. Agar yorliqsiz simlar ishlatilsa, guruhlar ishlatilgan sim ushbu qoida talablariga javob berishini isbotlashga tayyor bo'lishlari kerak (masalan, sim namunalari va ular kerakli o'lchamga egaligini isbotlash).</p>
+<p>Bir nechta kichik simlarni parallel ravishda birlashtirib, simning minimal kesim talablariga javob beradigan teng katta simni yaratish uchun foydalanish mumkin emas.</p>
+</div>
+<p id="R610" class="fm-rule"><strong>R610 *Muayyan avtobuslar uchun aniqlangan sim ranglaridan foydalaning. </strong> 12 V asosiy quvvat qutisi va + 5 V yordamchi quvvat qutisi simlari ularning butun uzunligi bo'ylab rangli kodlangan bo'lishi kerak. Quyidagi ranglardan foydalanish kerak:</p>
+<p class="fm-item">A. ijobiy (masalan, + 12 VDC / + 5 V Aux): qizil, sariq, oq, jigarrang yoki qora chiziqli va</p>
+<p class="fm-item">B. salbiy (masalan, keng tarqalgan/ GND): qora yoki koʻk.</p>
+<div class="fm-box">
+<p>Izoh: ushbu qoida boshqa turdagi simlarga, shu jumladan, lekin ular bilan cheklanmagan holda: motor simlari, signal darajasidagi simlar (masalan, kodlovchi va sensor simlari), servo simlar va kengaytmalar yoki ularning ishlab chiqaruvchisi tomonidan qonuniy qurilmalarga aslida ulangan simlarga nisbatan qo'llanilmaydi.</p>
+</div>
+<p id="R611" class="fm-rule"><strong>R611 *Quduqlangan USB navlari tasdiqlangan manbalardan energiya olishlari kerak. ROBOTda ishlatiladigan quvvat bilan ta'minlangan USB markazlari faqat quyidagi usullardan biri bilan quvvatlanishi mumkin: </strong></p>
+<p class="fm-item">A. har bir R602 uchun tasdiqlangan COTS USB batareya to'plami; yoki</p>
+<p class="fm-item">B. REV Expansion Hub yoki REV Control Hub-ning 5 V yordamchi quvvat portini;</p>
+<p id="R612" class="fm-rule"><strong>R612 *Qiziqarli quvvat yo'nalishlarini o'zgartirmang.</strong> CUSTOM CIRCUITS quyidagilar orasidagi quvvat va boshqaruv yo'llarini bevosita o'zgartirmasligi kerak:</p>
+<p class="fm-item">A. ROBOT batareyasi va asosiy quvvat tugmachasi,</p>
+<p class="fm-item">B. asosiy quvvat tugmachasi va quvvatni tartibga soluvchi qurilma (har R603);</p>
+<p class="fm-item">C. har qanday ikkita quvvatni tartibga soluvchi qurilma (har R607 uchun); yoki</p>
+<p class="fm-item">D. quvvatni tartibga soluvchi qurilmalar va aktuatorlar.</p>
+<div class="fm-box">
+<p>ROBOT’S elektr tizimiga ulangan yuqori impedansiyali kuchlanishni kuzatish yoki past impedansiyali oqimni kuzatishning maxsus sxemasi, agar quvvat yo'nalishlariga ta'sir ahamiyatsiz bo'lsa, qabul qilinadi.</p>
+<p>Elektr ta'minoti yo'lini o'zgartirish, shu jumladan, lekin shu bilan cheklanmagan holda, elektr ta'minoti yo'lining kuchlanishini kuchaytiruvchi (DC kuchlanishni pasaytirish) yoki buck (DC kuchlanishni pasaytirish) konverteridan foydalangan holda o'zgartirish yoki ROBOT batareyasi tomonidan taqdim etiladigan tabiiy o'zgaruvchan DC kuchlanishini DC doimiy kuchlanishni yaratish uchun boshqacha tarzda o'zgartirishni o'z ichiga oladi.</p>
+<p><strong>Qo'zg'atuvchining boshqaruv signallarini yoki quvvatini o'zgartiradigan qurilmalar (bu qoidaga ko'ra ruxsat etilganlari bundan mustasno) </strong> R505 <strong>) taqiqlanadi, masalan, goBILDA Servo Travel Tuner.</strong></p>
+</div>
+<p id="R613" class="fm-rule"><strong>R613 * quvvatni boshqarish qurilmalarida yoki ularning o'rtasida quvvatni aralashtirmang va moslashtirmang.</strong> Har qanday quvvatni tartibga solish qurilmasida (R505 bo'yicha) quvvatni ishlatishda quyidagi qoidalarga rioya qilinishi kerak:</p>
+<p class="fm-item">A. sensorlar, kodlovchilar va boshqa qurilmalar faqat ular ulangan quvvatni tartibga soluvchi qurilmadan quvvat olishi kerak. Ularni quvvatlantirish uchun tashqi quvvat manbalaridan (masalan, maxsus sxemalar yoki ikkinchi markaz) foydalanmang.</p>
+<p class="fm-item">B. ma'lum bir portdan faqat shu portga ulangan qurilmalarga quvvat berish mumkin. Boshqa portlarga elektr ta'minotini uzatmang va bir nechta portlardan energiyani bitta quvvat liniyasiga qo'shmang.</p>
+<p class="fm-item">C. tasdiqlangan servo quvvat modullari/injektorlaridan 6 V quvvat faqat servo quvvatlarini quvvatlash uchun ishlatilishi mumkin; va</p>
+<p class="fm-item">D. REV uzbidagi + 5 V Aux porti boshqa quvvatni tartibga solish qurilmalariga faqat USB orqali ulangan qurilmalarni quvvatlantirish uchun ishlatilishi mumkin.</p>
+<h2 id="sec-12-7">12.7 Boshqaruv, buyruq va signallar tizimi</h2>
+<p id="R701" class="fm-rule"><strong>R701 *ROBOT ni bitta ROBOT CONTROLLER bilan boshqaring.</strong> ROBOTS 1 dasturlanadigan ROBOT CONTROLLER orqali boshqariladi. ROBOT CONTROLLER - ROBOT harakatlantirgichlarining yagona boshqaruv manbai bo'lib, quyidagilardan iborat bo'lishi kerak:</p>
+<p id="ROBOT_CONTROLLER1" class="fm-item">A. REV Control Hub (REV - 31-1595) yoki</p>
+<p id="ROBOT_CONTROLLER2" class="fm-item">B. REV Expansion Hub (REV - 31-1153) bilan ulangan smartfon Android qurilmasi;</p>
+<p>A yoki B-dan tashqari, ROBOT-da quyidagilar ham bo'lishi mumkin:</p>
+<p class="fm-item">C. qo'shimcha REV Expansion Hub (REV - 31-1153) dan ortiq bo'lmasligi;</p>
+<div class="fm-box">
+<p>Biz guruhlarga har doim barcha boshqaruv tizimi qurilmalari dasturiy ta'minotini yangilashni tavsiya etamiz. Yangilanish xabarlari va so'nggi dasturiy ta'minot versiyalari uchun <a href="https://ftc-docs.firstinspires.org/en/latest/ftc_sdk/updating/index.html"><em>FIRST</em> Tech Challenge dasturiy taʼminotni yangilash sahifasi</a>-ni tekshiring.</p>
+<p>Android dasturiy ta'minotining turli ishlab chiqaruvchilar va yangilanishlar bo'yicha kutilmagan o'zgarishlari tufayli REV Control Hub yagona rasmiy qo'llab-quvvatlanadigan ROBOT CONTROLLER qurilmasi hisoblanadi. Boshqa qo'llab-quvvatlanmaydigan qurilmadan (masalan, smartfonlardan) foydalanishni tanlagan jamoalar uning moslashuvchanligi, funktsionalligi va ishlashini sinovdan o'tkazish va tekshirish uchun javobgardirlar.</p>
+</div>
+<p id="R702" class="fm-rule">12 - 9 jadvalidagi <strong>R702 * jamoalar koprosessor dasturiy ta'minotini o'zgartirishlari mumkin emas. Koprosessorlardagi dasturiy ta'minotni o'zgartirish, agar ushbu qoidada aniq ruxsat etilmagan bo'lsa, guruhlar tomonidan ruxsat etilmaydi. Ishlab chiqaruvchi tomonidan taqdim etilgan firmware yangilanishlari ishlab chiqaruvchining ko'rsatmalari bo'yicha qo'llanilishi mumkin. FTC SDK tomonidan qo'llab-quvvatlanadigan dasturlanishi mumkin bo'lgan ko'rish koprosessorlari ushbu qoidadan istisno hisoblanadi va ularni qayta dasturlash mumkin. Dasturlash mumkin boʻlgan koʻrish koprosessorlari roʻyxati topildi </strong>.</p>
+<p id="Ref235387571" class="fm-caption">12-9-jadval: Qo'llab-quvvatlanadigan dasturlanishi mumkin bo'lgan ko'rish koprosessorlari</p>
+<div class="fm-table"><table> <tr><th><strong>Qurilma</strong></th><th><strong>Qismaning raqami</strong></th></tr> <tr><td><strong>Limelight Vision Limelight 3 A</strong></td><td><strong>LL_3A</strong></td></tr> </table></div>
+<div class="fm-box">
+<p id="Ref172836607"><strong>Quyidagilar ruxsat etilgan va ruxsat etilmagan qurilmalarning misollaridir:</strong></p>
+<p><strong>1 misoli: Adafruit BNO055 Absolute Orientation Sensor - bu sensor ma'lumotlarini qayta ishlash va kompozit chiqishni ishlab chiqarish uchun o'rnatilgan ARM Cortex-M0 asosidagi koprosessor bilan IMU paketi. Uning koprosessorida ishlab chiqaruvchi tomonidan foydalanuvchilar tomonidan o'zgartirish uchun mo'ljallanmagan dasturiy ta'minot mavjud. Ushbu qurilma ruxsat etilgan.</strong></p>
+<p><strong>2 misoli: SparkFun Optical Tracking Odometry Sensor - bu lazer va IMU kuzatuv qurilmasi bo'lib, u murakkab hisob-kitoblarni bajarish va soddalashtirilgan natijalarni olish uchun o'rnatilgan mikrokontrolyerdan foydalanadi. SparkFun dasturiy ta'minotni o'zgartirish / yangilash uchun ilg'or foydalanuvchilar uchun manbali kod va vositalar zanjirini taqdim etadi, bu qoidaga ruxsat berilmaydi. Qurilmaga SparkFun tomonidan taqdim etilgan dasturiy ta'minot yangilanishlarini qo'llash mumkin. Ushbu qurilma ruxsat etilgan.</strong></p>
+<p><strong>3 misoli: Digital Chicken Labs OctoQuad FTC Edition 8 kanalli kodlovchi / PWM interfeysi boʻlib, Raspberry Pi Pico koprosessoridan foydalanadi. Jamoalarga qurilmada ishlayotgan dasturiy ta'minotni o'zgartirish, shu jumladan dasturiy ta'minotni o'zlariga almashtirish mumkin emas. Ishlab chiqaruvchi tomonidan ikkilik shaklda taqdim etilgan yangilanishlar (Digital Chicken Labs) qurilmaga qo'llanilishi mumkin. Ushbu qurilma ruxsat etilgan.</strong></p>
+<p><strong>4 misoli: Optik oqim sensorlari ko'rish koprosessoridan foydalanadigan sensorga misol bo'lib, u boshqa koprosessorlardan farq qilmaydi. </strong> R702 <strong>. Ushbu qurilmalar ruxsat etilgan.</strong></p>
+<p><strong>5 misoli: DFRobot HuskyLens va Charmed Labs Pixy2 koʻrish koprocessorlarining namunalari boʻlib, ular sozlanishi mumkin, ammo dasturlanishi mumkin emas va boshqa koprocessorlardan farq qilmaydi. </strong> R702 <strong>. Ushbu qurilmalar ruxsat etilgan.</strong></p>
+<p><strong>6 misoli: OpenMV Cam, Luxonis OAK-1 va LimeLight Vision Limelight 3 G dasturlash mumkin bo'lgan ko'rish koprosessorlarining misollari. </strong></p>
+</div>
+<p id="R703" class="fm-rule"><strong>R703 *ROBOT CONTROLLER sifatida ishlatiladigan smartfon Android qurilmalari USB yordamida REV Expansion Hub-ga ulanishlari kerak. </strong> Agar ROBOT CONTROLLER sifatida ishlatilgan bo'lsa, smartfon Android qurilmasi o'z ichiga kiritilgan USB porti orqali REV Expansion Hub qurilmasiga USB kabellari (shu jumladan USB OTG kabellari) va/yoki USB uglevodlarining har qanday kombinatsiyasi bilan (energiya bilan ta'minlangan yoki ta'minlanmagan, uglevodga OTG integratsiya qilingan yoki yo'q) ulangan bo'lishi kerak.</p>
+<p id="R704" class="fm-rule"><strong>R704 * Tarmoqlardan va band kengligidan yoʻl-yoʻriqlar boʻyicha foydalaning. </strong> jamoalari va ROBOTS jamoalari Wi-Fi tarmoqlari va tarmog'idan halol o'yinni ta'minlaydigan va boshqa jamoalar yoki ARENA operatsiyalariga xalaqit bermaydigan tarzda foydalanishlari kerak. Guruhlar quyidagi koʻrsatmalarga rioya qilishlari kerak:</p>
+<p class="fm-item">A. Jamoalar ROBOT-ga, undan yoki uning ichida muloqot qilish uchun taqdim etilgan rasmiy vositalardan tashqari simsiz aloqaning boshqa hech qanday shaklidan foydalanishlari mumkin emas.</p>
+<p class="fm-item">B. Guruhlar ROBOT tarmoqlariga aralashishlari mumkin emas. Barcha aloqa signallari faqat ROBOT CONTROLLER qurilmasidan yoki ROBOT CONTROLLER Wi-Fi tarmog'idan foydalanuvchi DRIVER STATION qurilmasidan kelib chiqishi kerak. Boshqa hech qanday qurilma ROBOT CONTROLLER Wi-Fi tarmog'iga ulanish, unga xalaqit berish yoki uni o'zgartirishga urinishi mumkin emas.</p>
+<p class="fm-item">C. MATCH o'yini davomida barcha dasturlash noutbuklari va boshqa qurilmalar (DRIVER STATION qurilmasidan tashqari) ROBOT CONTROLLER Wi-Fi tarmog'idan uzilganligini ta'minlash.</p>
+<p class="fm-item">D. ROBOT CONTROLLER Wi-Fi tarmog'iga kirish huquqiga ega bo'lgan dasturiy ta'minot Wi-Fi orqali uzatilgan ma'lumotlar miqdorini (ya'ni ma'lumotlarning uzluksiz uzatilishini) cheklashi kerak. Dasturiy ta'minot faqat robotni boshqarish ma'lumotlarini, tuzatish ma'lumotlarini va telemetriyani ROBOTga va undan FTC haydovchisi stantsiyasi dasturidan foydalangan holda uzatishi mumkin. Qo'shimcha ro'yxatdan o'tish / oqim xizmatlari, masalan, uchinchi tomon plaginlari va FTC Dashboard, FTControl Panel va boshqalar kabi vositalar tomonidan joylashtirilganlar taqiqlanadi. To'xtovsiz video oqimiga ruxsat berilmaydi.</p>
+<p class="fm-item">E. Ba'zi hodisalar Wi-Fi tarmog'ini va/yoki kanallarni guruhlarga ajratishi mumkin. Agar musobaqa xodimlari tomonidan so'ralsa, jamoalar musobaqa kuni ma'lum bir chastota tarmog'idan yoki kanalidan foydalanishlari kerak.</p>
+<p id="R705" class="fm-rule"><strong>R705 *O'zingizning guruh raqamingiz uchun qurilmalarni sozlang. </strong> ROBOT CONTROLLER, DRIVER STATION va ishlatiladigan har qanday ehtiyot qismlar to'g'ri guruh raqamiga mos ravishda quyidagicha sozlanishi/nomiga ega bo'lishi kerak:</p>
+<p class="fm-item">A. ROBOT CONTROLLER nomi &lt; jamoa raqami&gt; - RC boʻlishi kerak (masalan, 12345 - RC),</p>
+<p class="fm-item">B. DRIVER STATION &lt; jamoa raqami&gt; - DS (masalan, 12345 - DS) deb nomlanishi kerak va</p>
+<p class="fm-item">C. Agar ehtiyot ROBOT CONTROLLER yoki DRIVER STATION konfiguratsiyalangan bo'lsa, &lt; jamoa raqami&gt;-&lt; harf&gt;- RC/DS harflari qo'shilishi mumkin (masalan, 12345 - A-DS, 12345 - B-DS)</p>
+<div class="fm-box">
+<p id="Hlt173213789">DRIVER STATION va ROBOT CONTROLLER nomlarini yangilash bo'yicha batafsil tartib-taomil uchun <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_smartphone_ds/Managing-a-Smartphone-Driver-Station.html?highlight=12345-DS#changing-the-name-of-a-driver-station-instructions">DRIVER STATION Koʻrsatmalar</a> va <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_control_hub/Managing-a-Control-Hub.html#changing-the-name-of-a-control-hub">ROBOT CONTROLLER Koʻrsatmalar</a> nomlariga qarang.</p>
+</div>
+<p id="R706" class="fm-rule"><strong>R706 *Asosiy boshqaruv tizimi qurilmalariga faqat belgilangan o'zgartirishlar kiritilishi mumkin.</strong> DRIVER STATION qurilmasiga va dasturiy ta'minotga, Android-ga asoslangan ROBOT CONTROLLER qurilmasiga, asosiy va ikkinchi darajali quvvat tugmachalariga, quvvatni tartibga soluvchi qurilmalarga, zaxiralarga va batareyalarga hech qanday ta'sir ko'rsatilishi, o'zgartirilishi yoki sozlanishi mumkin emas (ta'sir ko'rsatish uchun burg'ulash, kesish, ishlov berish, qayta o'rnatish, ajratish, bo'yash, qoliplarni olib tashlash va ularni maxsus qoliplar bilan almashtirish va hokazolar kiradi), quyidagi istisnolar bilan:</p>
+<p class="fm-item">A. simlar, kabellar va signal liniyalari qurilmalarda ko'rsatilgan standart ulanish nuqtalari orqali ulangan bo'lishi mumkin;</p>
+<p class="fm-item">B. uskunalarni OPERATOR CONSOLE yoki ROBOT uskunalariga bog'lash yoki uskunaga kabellarni o'rnatish uchun bog'lovchi uskunalar (jumladan, yopishqoqlar) ishlatilishi mumkin,</p>
+<p class="fm-item">C. issiqlik o'tkazishni yaxshilash uchun issiqlik interfeysi materialidan foydalanish mumkin,</p>
+<p class="fm-item">D. mahsulotning identifikatsiyasi, maqsadi, ulanish xususiyati, funksional xususiyatlari va boshqalar ko'rsatilishi uchun yorliq qo'llanilishi mumkin, agar ular mahsulotni identifikatsiyalash uchun ishlatiladigan yorliqlar yoki belgilarni o'z ichiga olmagan bo'lsa;</p>
+<p class="fm-item">E. ishlab chiqaruvchining qo'llanmasiga ko'ra qurilmalarni sozlash uchun jumpers yoki kalitlarni ko'chirish mumkin,</p>
+<p class="fm-item">F. qurilma firmverini ishlab chiqaruvchi tomonidan taqdim etilgan firmver bilan yangilash mumkin;</p>
+<p class="fm-item">G. motor boshqaruvchilari va batareyalardagi integratsiyalashgan simlar kesilishi, chiqarib tashlanishi va/yoki ulanishlari mumkin,</p>
+<p class="fm-item">H. batareyalardan tashqari qurilmalarni ta'mirlash mumkin bo'lsa, ta'mirlashdan keyingi qurilmaning ishlashi va xususiyatlari ta'mirlashdan oldingi bilan bir xil bo'lsa,</p>
+<p class="fm-item">I. ochiq o'tkazgichlarga izolyatsiya materiallari qo'shilishi mumkin;</p>
+<p class="fm-item">J. chiqindilardan himoya qilish uchun tasma qo'llanilishi mumkin va</p>
+<p class="fm-item">K. quvvat ulagichining o'rnatish tutqichlari o'zgartirilishi yoki almashtirilishi mumkin.</p>
+<div class="fm-box">
+<p>Iltimos, ta'mirlashga ruxsat berilgan bo'lsa-da, to'lov ishlab chiqaruvchining kafolatidan mustaqil ekanligini unutmang. Jamoalar ta'mirlashni o'z xavfi bilan amalga oshiradilar va har qanday kafolat yoki qaytarib berish imkoniyatlari yo'qolgan deb taxmin qilishlari kerak. Ta'mirlashlar qurilmaning asl holatiga funksional jihatdan teng bo'lishi kerak.</p>
+<p>Shuni yodda tutingki, bunday COMPONENTS-ni tashxislash va tuzatish qiyin bo'lishi mumkin.</p>
+<p>Masalan, ulagich turlarini o'zgartiradigan, qurilma izini o'zgartiradigan yoki mexanik yaxshilanishlarni ta'minlaydigan "ta'mirlashlar" taqiqlanadi.</p>
+</div>
+<p id="R707" class="fm-rule"><strong>R707 * USB koʻrish uchun.</strong> Faqat quyidagi qurilmalar USBdan foydalangan holda ROBOT boshqaruv tizimiga ulangan bo'lishi mumkin:</p>
+<p class="fm-item">A. R708 uchun veb-kameralar va optik ko'rish sensorlari,</p>
+<p class="fm-item">B. USB uglevodi yoki USB uzatuvchisi va</p>
+<p class="fm-item">C. a REV Expansion Hub.</p>
+<p id="R708" class="fm-rule"><strong>R708 * Faqat USB koʻrinishini qoʻllab - quvvatlash uchun foydalaning.</strong> Faqat ROBOT CONTROLLER ilovasi tomonidan qo'llab-quvvatlanadigan bitta tasvir sensori ko'rish qurilmalari USB-ga ulanishlari mumkin (stereoskopik kameralarga ruxsat berilmaydi). Bunga quyidagilar kiradi:</p>
+<p class="fm-item">A. barcha UVC bilan mos keladigan USB veb-kameralari (Logitech C270 va shu bilan bog'liq) va</p>
+<p class="fm-item">B. R702 uchun ko'rish koprosessorlari ruxsat etilgan.</p>
+<div class="fm-box">
+<p>UVC bilan mos keladigan USB veb-kameralari faqat UVC tomonidan taqdim etilgan oqim / ma'lumotlardan foydalanishlari mumkin. Veb-kameraning boshqa interfeyslari yoki ma'lumotlaridan foydalanish mumkin emas.</p>
+<p>Kelajakdagi <em>FIRST</em> Tech Challenge mavsumlarida qo'shilishi uchun muqobil USB ko'rish qurilmalari uchun qo'llab-quvvatlashni so'rash (yoki namunaviy haydovchilarni taqdim etish) uchun iltimos, quyidagi ma'lumotlarni <a href="mailto:customerservice@firstinspires.org">customerservice@firstinspires.org</a>ga elektron pochta orqali yuboring:</p>
+<ul>
+<li>Elektron pochta xabarining mavzusi quyidagi boʻlishi kerak: USB Vision Kelajakdagi qo'llab-quvvatlash so'rovi</li>
+<li>Fikr bildirish yoki tushuntirishlar berish uchun aloqa ma'lumotlari</li>
+<li>Qo'llab-quvvatlash so'ragan qurilma to'g'risidagi ma'lumotlar</li>
+</ul>
+</div>
+<p id="R709" class="fm-rule"><strong>R709 *Yozuvchi qurilmalar toʻgʻri.</strong> Oʻz-oʻzidan video yozib olish qurilmalari (GoPro yoki shunga oʻxshash qurilmalar) faqat funksional boʻlmagan MATCH-dan keyingi koʻrish uchun ishlatilsa va simsiz aloqa oʻchirilgan boʻlsa ruxsat etiladi.</p>
+<p id="R710" class="fm-rule"><strong>R710 *Laserlar faqat sensorning bir qismi bo'lsa, past energiyali va ko'rinmaydigan bo'lsa ruxsat etiladi.</strong> Lazerlar quyidagi barcha mezonlarga javob bermaguncha ruxsat etilmaydi:</p>
+<p class="fm-item">A. sensorning bir qismi bo'lishi kerak,</p>
+<p class="fm-item">B. IEC/EN 60825-1 I sinf yoki IEC/EN 62471 Momlakasi bo'lmagan, va</p>
+<p class="fm-item">C. ko'rinmaydigan spektrdan foydalanishi kerak.</p>
+<p id="R711" class="fm-rule"><strong>R711 *Android qurilmalarini mos ravishda sozlang.</strong> ROBOT CONTROLLER va DRIVER STATION Android qurilmalari (aqlli telefonlar, REV Control Hub, REV Driver Hub) qo'shimcha ravishda quyidagicha sozlanishi kerak:</p>
+<p class="fm-item">A. REV Control Hub foydalanuvchilari andoza boʻlmagan parolga <a href="https://ftc-docs.firstinspires.org/en/latest/programming_resources/shared/managing_control_hub/Managing-a-Control-Hub.html#changing-the-password">Wi-Fi maxfiy soʻzini oʻzgartirish</a> qoʻyishlari kerak,</p>
+<p class="fm-item">B. smartfon foydalanuvchilari samolyot rejimini yoqishlari kerak;</p>
+<p class="fm-item">C. ROBOT CONTROLLER va DRIVER STATION Android qurilmalarida Wi-Fi yoqilgan va Bluetooth o'chirilgan bo'lishi kerak va</p>
+<p class="fm-item">D. DRIVER STATION Android qurilmalarida Wi-Fi Direct guruhlari va Wi-Fi bog'lamalarini olib tashlang va faqat ROBOT CONTROLLER Wi-Fi bog'lamasini qoldiring.</p>
+<h2 id="sec-12-8">12.8 Pnevmatik tizimlar va havo oqimi qurilmalari</h2>
+<p id="R801" class="fm-rule"><strong>R801 *Pneumatik aktuatorlar, yuqori tezlikdagi puflovchi uskunalar yoki vakuumlar yo'q.</strong> ROBOTS o'zlarining havo ishlatishlarida quyidagi yo'llar bilan cheklov qo'yilgan:</p>
+<p class="fm-item"><strong>A. ROBOTS faqat ishlab chiqaruvchi tomonidan oldindan zaryadlangan muhrlangan, COTS yopiq havo tizimlaridan foydalanishi mumkin (masalan, gaz shoklari);</strong></p>
+<p class="fm-item"><strong>B. ROBOTS saqlangan har qanday bosimdan foydalanishi mumkin emas COMPONENTS ular solenoid kabi moslama bilan harakatlanadi va/yoki o'z barqaror holatini o'zgartirishi mumkin,</strong></p>
+<p class="fm-item"><strong>C. ROBOTS bosim yoki vakuum hosil qilmasligi kerak; </strong></p>
+<p class="fm-item"><strong>D. ROBOTS gazni saqlash uchun foydalanuvchi tomonidan sozlanadigan idishlardan foydalanishi mumkin emas, faqat havo bilan to'ldirilgan (pneumatik) COTS g'ildiraklaridan tashqari; va</strong></p>
+<p class="fm-item"><strong>E. ROBOTS yuqori tezlikda havo oqimini hosil qiladigan hech qanday qurilmadan foydalanishi mumkin emas, COTS kompyuter qurilmalariga integratsiyalashgan sovutish ventilyatorlari bundan mustasno.</strong></p>
+<div class="fm-box">
+<p>Ushbu qoidaga ko'ra, ROBOTS pnevmatik aktuatorlardan, bosim yoki vakuumni saqlash qurilmalaridan, kompressorlardan, vakuum generatorlaridan yoki havo puflovchilardan foydalanishi mumkin emas, lekin ular ishlab chiqaruvchisi tomonidan muhrlangan yopilgan havo tizimlaridan foydalanishlari mumkin. Bunga gaz buloqlari va damperlar kabi buyumlar kiradi.</p>
+<p>Yuqori tezlikdagi havo oqimini yaratadigan qurilmaga misollar SCORING ELEMENTS-ni FIELD-ga ko'chirish uchun mo'ljallangan ventilyatorni o'z ichiga oladi, ammo ular shu bilan cheklanmaydi. <br> SCORING ELEMENTS bilan ishlash uchun ishlatiladigan yuqori tezlikdagi uchish g'ildiraklari yoki g'ildiraklari o'z-o'zidan yuqori tezlikdagi havo oqimi qurilmasi deb hisoblanmaydi.</p>
+</div>
+<h2 id="sec-12-9">12.9 OPERATOR CONSOLE</h2>
+<p id="R901" class="fm-rule"><strong>R901 * Faqat belgilangan DRIVER STATION qurilmasidan foydalaning.</strong> OPERATOR CONSOLE-ga faqat bitta tasdiqlangan Android-ga asoslangan DRIVER STATION qurilmasi ulangan va yoqilgan bo'lishi mumkin. OPERATOR CONSOLE kamida quyidagilardan biriga ega bo'lishi kerak:</p>
+<p class="fm-item">A. REV Driver Hub (REV - 31-1596) yoki</p>
+<p class="fm-item">B. USB kabellari (shu jumladan USB OTG kabellari) va/yoki USB xublari (energiya bilan ta'minlangan yoki ta'minlanmagan, xubga OTG integratsiya qilingan yoki bo'lmagan) bilan bir yoki bir nechta o'yin padlarini ulash uchun Android qurilmasi.</p>
+<div class="fm-box">
+<p>Android dasturiy ta'minotining turli ishlab chiqaruvchilar va yangilanishlar bo'yicha kutilmagan o'zgarishlari tufayli REV Driver Hub yagona rasmiy qo'llab-quvvatlanadigan DRIVER STATION qurilmasi hisoblanadi. Boshqa qo'llab-quvvatlanmaydigan qurilmadan (masalan, smartfonlardan) foydalanishni tanlagan jamoalar uning moslashuvchanligi, funktsionalligi va ishlashini sinovdan o'tkazish va tekshirish uchun javobgardirlar.</p>
+<p>OPERATOR CONSOLE qurilmasining bir qismi sifatida ehtiyot DRIVER STATION qurilmasiga ega bo'lishni istagan jamoalar, bir vaqtning o'zida faqat bitta DRIVER STATION qurilmasi ulanadi va yoqiladigan bo'lsa, shunday qilishlari mumkin.</p>
+</div>
+<p id="R902" class="fm-rule"><strong>R902 * OPERATOR CONSOLE sezgirlik ekranini ochiq qilishi kerak.</strong> DRIVE TEAM qurilmasidan ROBOT qurilmasiga buyruqlarni uzatish uchun foydalaniladigan OPERATOR CONSOLE, COMPONENTS va MECHANISMS to'plamlari DRIVER STATION qurilmasining sezgir ekraniga kirishni ta'minlashi kerak. DRIVER STATION qurilmasi OPERATOR CONSOLE ichida, tekshiruv paytida va MATCH ekranida ekranni aniq ko'rish uchun joylashtirilishi kerak. DRIVER STATION qurilmasining sezgirlik ekranini ishlatish uchun qo'shimcha yordamchilar (masalan, sichqoncha) kerak bo'lmasdan ishlatilishi kerak.</p>
+<p id="R903" class="fm-rule"><strong>R903 * OPERATOR CONSOLE jismoniy talablar.</strong> OPERATOR CONSOLE, shu jumladan barcha quvvat manbalari (masalan, quvvat banklari) 3 fut kenglikda, 1 fut chuqurlikda va 2 fut balandlikda (91.4 sm x 45.7 sm x 61.0 sm) bo'lgan hajmdan oshmasligi kerak, MATCH davrida DRIVERS tomonidan saqlanadigan yoki kiyiladigan har qanday buyumlar bundan mustasno. 6</p>
+<div class="fm-box">
+<p>Shuningdek, OPERATOR CONSOLESni adolatli o'yin va ARENA xavfsizligi uchun loyihalashtirishga doir cheklovlar uchun R203-ga murojaat qiling.</p>
+<p>Iltimos, shuni yodda tutingki, qattiq og'irlik chegarasi bo'lmasa-da, 20 funtdan (~9 kg) ortiq bo'lgan OPERATOR CONSOLES-lar qo'shimcha tekshiruvni talab qiladi, chunki ular ARENA-ning normal ishlashini buzishi mumkin.</p>
+<p>OPERATOR CONSOLE-ning bir qismi sifatida ehtiyot tashqi USB-hubga ega bo'lishni istagan jamoalar, har qanday vaqtda faqat bitta USB-hub ulansa, shunday qilishlari mumkin.</p>
+<p>Ushbu qoida jamoalarga DRIVER STATION qurilmasini saqlash, tashkil etish va tashish uchun konteynerdan foydalanish imkonini beradi. OPERATOR CONSOLE qoidalari ROBOT aravachasi sifatida ishlaydigan yoki musobaqada taqdim etilgan OPERATOR CONSOLE stendini, stolini va boshqalar o'rnini bosadigan tizimlarga ruxsat berishga mo'ljallanmagan.</p>
+</div>
+<p id="R904" class="fm-rule"><strong>Faqat R904 * ROBOT dasturlari uchun simsiz aloqa.</strong> ROBOT qurilmasida ishlaydigan ROBOT CONTROLLER ilovasi va DRIVER STATION qurilmasida ishlaydigan DRIVER STATION ilovasi tomonidan boshqariladigan ulanishdan tashqari, MATCH qurilmasi davomida OPERATOR CONSOLEga, undan yoki uning ichida aloqa qilish uchun simsiz aloqalarning boshqa hech qanday shaklidan foydalanilmaydi.</p>
+<div class="fm-box">
+<p>taqiqlangan simsiz tizimlarning misollariga faol simsiz tarmoq kartalari, simsiz gamepad aloqasi va Bluetooth qurilmalari kiradi, ammo ular shular bilan cheklanmaydi.</p>
+</div>
+<p><img src="../../images/image063.jpg" alt="" width="235" loading="lazy"></p>
+</div>

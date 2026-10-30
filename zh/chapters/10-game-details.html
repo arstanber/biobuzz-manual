@@ -1,0 +1,211 @@
+<div class="ftc-manual" lang="zh" dir="ltr">
+<h1 id="sec-10">10 比赛细节</h1>
+<p class="fm-caption">图 10 × 1:对于BIOBUZZ来说是FIELD</p>
+<p><img src="../../images/image041.png" alt="BIOBUZZ 球场的图像." width="700" loading="lazy"></p>
+<p id="ALLIANCE">在 BIOBUZZ,2 ALLIANCES (ALLIANCE 是 2 <em>FIRST</em> 技术挑战团队的合作社) 中,玩 MATCHES,根据下面描述的细节设置和实现.</p>
+<h2 id="sec-10-1">10.1 MATCH 概述</h2>
+<p id="MATCH">MATCHES包括MATCH设置前,30秒AUTO周期,AUTO和TELEOP之间的8秒过渡期,以及2分钟TELEOP周期,随后是MATCH后重置.</p>
+<p>在MATCH期间,ROBOTS收集POLLEN和NECTAR移动到他们的GARDEN,放置在FLOWERS中,并在LAUNCH中将它们移动到他们的CELLS中,使HIVE TIP全部获得积分.</p>
+<p>每当一个HIVE是TIPPED时,一个ALLIANCE被允许进入最初在ALLIANCE AREA中放映的五个NECTAR中的一个.在MATCH中剩下60秒,ALLIANCES可以进入所有剩下的NECTAR.</p>
+<p>ROBOTS 通过将 NECTAR 置于 FLOWERS 并返回他们的 LOADING ZONE 获得 MATCH 的所有权.</p>
+<h2 id="sec-10-2">10.2 DRIVE TEAM</h2>
+<p id="DRIVE_TEAM">一个DRIVE TEAM是来自同一<em>FIRST</em>技术挑战团队的多达4人的组,负责特定MATCH的团队表现.在DRIVE TEAM上有3特定的角色,ALLIANCES可以用来帮助ROBOTS,只有DRIVE TEAM的1成员被允许是非STUDENT.</p>
+<div class="fm-box">
+<p>关于DRIVE TEAM和DRIVE TEAM相关规则的定义的意图是,除非有减轻情况,DRIVE TEAM由与该团队相关的到达活动的人组成,并对其团队和ROBOT’S在活动中的表现负责 (这意味着一个人可能与多个1团队相关).</p>
+<p>意图是不允许球队"采用"其他球队的成员,以获得借款球队,借款球队和/或他们的ALLIANCE的STRATEGIC优势 (例如,ALLIANCE领先者认为他们的DRIVERS的1比他们的ALLIANCE合作伙伴的DRIVER有更多的经验,并且球队同意合作伙伴团队将"采用"该DRIVER并使他们成为他们的DRIVE TEAM的附加赛成员).</p>
+<p>由于2主要原因,定义并不更严格.首先,避免对团队和活动志愿者造成额外的官僚负担 (例如,要求团队提交官方名单,在允许DRIVE TEAM进入ARENA之前,排队必须检查.其次,为特殊情况提供空间,让球队有机会展示<em>Gracious Professionalism</em> (例如,一辆公共汽车延误了,DRIVE COACH没有DRIVERS,他们的坑邻居同意借用DRIVERS作为团队的临时成员,帮助他们,直到他们的公共汽车到达).</p>
+</div>
+<p class="fm-caption">图表10~1:DRIVE TEAM 角色</p>
+<div class="fm-table"><table id="DRIVE_COACH"> <tr><th><strong>职责</strong></th><th><strong>描述</strong></th><th><strong>让我们来看看.</strong> <br> <strong>DRIVE TEAM</strong></th><th><strong>标准</strong></th></tr> <tr><td><strong>DRIVE COACH</strong></td><td>导游或顾问</td><td>1</td><td>任何团队成员,可能是成年人,必须佩戴 DRIVE COACH 章</td></tr> <tr><td><strong>DRIVER</strong></td><td>一个操作员和控制器的ROBOT</td><td rowspan="2">3</td><td rowspan="2">STUDENT,必须佩戴 DRIVE TEAM 章</td></tr> <tr><td><strong>HUMAN PLAYER</strong></td><td>一个SCORING ELEMENT经理</td></tr> </table></div>
+<p id="STUDENT">一名STUDENT是截至本赛季9月1<sup>st</sup>未完成高中,中学或同等水平的学生. HOME REGION</p>
+<h2 id="sec-10-3">10.3 赛前布置</h2>
+<p id="Toc169609685">在每个MATCH开始之前,FIELD STAFF阶段SCORING ELEMENTS如10.3.1 SCORING ELEMENTS节所述.DRIVE TEAMS阶段,他们的ROBOTS阶段 (如10.3.4 ROBOTS节所述) 和OPERATOR CONSOLES阶段 (如10.3.3 OPERATOR CONSOLES节所述).然后,DRIVE TEAMS按照10.3.2 DRIVE TEAMS节所述的位置.</p>
+<h3 id="sec-10-3-1">10.3.1 SCORING ELEMENTS</h3>
+<p id="Ref236996919" class="fm-caption">图 10 × 2:SCORING ELEMENT 站点位置</p>
+<p><img src="../../images/image042.png" alt="" width="661" loading="lazy"></p>
+<p>每个HIVE都倾斜,一个CELL向下,另一个CELL向上,如图所示.(一个简单的记忆方式是CELL指向FLOWER应该是向下倾斜的) SCORING ELEMENTS在FIELD上排列如下 (图10 - 2):</p>
+<p class="fm-item">A. 40 POLLEN 在 FIELD 上是如下:</p>
+<p class="fm-subitem">i. 4 POLLEN 在每个 4 FLOWERS (16)</p>
+<p class="fm-subitem">ii. 在红色的4 POLLEN GARDEN (4)</p>
+<p class="fm-subitem">iii. 在蓝色的4 POLLEN GARDEN (4)</p>
+<p class="fm-subitem">iv. 在每个ROBOT (16) (10.3.4 ROBOTS节) 中预装4 POLLEN</p>
+<div class="fm-box">
+<p>预装 POLLEN 启动位于 ROBOT 或 上的 MATCH,或在 TILES 接触 ROBOT 上的 .对于 MATCH 不存在的 ROBOTS 则将其预装 POLLEN 放置在 LOADING ZONE 中心左右的周围墙上.</p>
+<p>在GARDEN中的POLLEN放在一个从ALLIANCE AREA最接近的角落开始的线上,接触观众或后围墙.可能会出现一些较小的位置差异.</p>
+</div>
+<p class="fm-item">B. 8红色和8蓝色,NECTAR在FIELD上是如下:</p>
+<p class="fm-subitem">i. 3 NECTAR 在相应颜色的每个向上面 CELL 中 (6)</p>
+<p class="fm-subitem">ii. 5 NECTAR 在每个ALLIANCE AREA相应的颜色 (10)</p>
+<div class="fm-box">
+<p>在CELL中的NECTAR与CELL的后壁接触,并与相应颜色的ALLIANCE AREA最接近的一边保持直线.志愿者放置NECTAR的位置可能有所不同,但一般都会像图所示一样放置.</p>
+</div>
+<p>如15.2游戏修改所述:SCORING ELEMENTS的数量,类型和分布可能适用于<em>FIRST</em>锦标赛和<em>FIRST</em>高级赛事.对于<em>FIRST</em>锦标赛,任何游戏修改都将在1.7.3 Team Updates节中描述的最后一个定期计划的Team Update或之前发布.对于<em>FIRST</em> Premier Events,游戏修改将在活动之前由活动组织者发布.</p>
+<h3 id="sec-10-3-2">10.3.2 DRIVE TEAMS</h3>
+<p>在前一个MATCH的DRIVE TEAM离开后,在ALLIANCE AREA中进行MATCH的准备.下面列出了DRIVE TEAM的起始条件,并且阻碍或延迟任何条件的DRIVE TEAM有违反G301的风险. DRIVE TEAMS</p>
+<p class="fm-item">A. 只有被分配到即将到来的MATCH的DRIVE TEAM成员才会出席.</p>
+<p class="fm-item">B. 只有DRIVE TEAM成员的ROBOTS通过了初步,完整的检查.</p>
+<p class="fm-item">C. DRIVE TEAM成员在所指定的ALLIANCE AREA中进行演出.如果ALLIANCE成员无法达成一致,他们的DRIVE TEAM成员将在哪里上演,则MATCH时间表上列出的红1或蓝1队将在观众最接近的舞台上上演.</p>
+<p class="fm-item">D. DRIVE TEAM成员在腰部上方清楚地显示他们的指定DRIVE TEAM章.</p>
+<p class="fm-item">E. 如果是季后赛MATCH,则ALLIANCE CAPTAIN清楚地显示其指定ALLIANCE CAPTAIN标识符 (例如帽子,手).</p>
+<h3 id="sec-10-3-3">10.3.3 OPERATOR CONSOLES</h3>
+<p>在ALLIANCE AREA中,DRIVE TEAMS即将在OPERATOR CONSOLES中设置.OPERATOR CONSOLES必须符合所有相关规则,特别是12.9 OPERATOR CONSOLE节中的规则.一个阻碍或延迟OPERATOR CONSOLE设置的DRIVE TEAM有可能违反G301.</p>
+<p class="fm-item">A. 在 AUTO 期间打算运行 OpMode 的 DRIVE TEAMS,必须在 DRIVER STATION 应用程序中选择 OpMode,并启用 30 秒计时器.</p>
+<p class="fm-item">B. 否则,DRIVE TEAMS必须在DRIVER STATION应用程序中选择TELEOP OpMode.</p>
+<p class="fm-item">C. 选择的 OpMode 必须通过按下 DRIVER STATION 应用程序上的 INIT 按进行初始化.</p>
+<h3 id="sec-10-3-4">10.3.4 ROBOTS</h3>
+<p>根据G304进行DRIVE TEAMS阶段的ROBOT.阻碍或延迟 ROBOT 设置要求的 DRIVE TEAM 存在违反 G301 的风险.</p>
+<p>ROBOTS必须启动 MATCH 接触 4 预装 POLLEN.POLLEN可以放在 ROBOT 中或 上,或者放在 TILES 上,完全包含在 FIELD 的 ALLIANCE 侧面,与 ROBOT 在起点位置接触.</p>
+<p>如果一个ROBOT是DISABLED在MATCH开始之前,它可以在与FIELD STAFF协调下从FIELD中移除.一个ROBOT是DISABLED或没有参加的球队有资格获得排位赛MATCH积分或季后赛MATCH积分,前提是其ROBOT通过了3.3.1部分检查,并且至少有一个STUDENT DRIVE TEAM成员在ALLIANCE AREA中</p>
+<p>如果位置顺序对ALLIANCES或两者都很重要,则ALLIANCE在设置MATCH之前通知REFEREE负责人或其指定的人员,而REFEREE负责人则指示ALLIANCES替代ROBOTS的位置.REFEREE的指令是,ROBOTS按下面的顺序放置:</p>
+<p>1. 第一个红色ROBOT</p>
+<p>2. 第一个蓝色ROBOT</p>
+<p>3. 第二个红色ROBOT</p>
+<p id="GAME_PIECES">4. 第二个蓝色ROBOT</p>
+<p id="GAME_PIECES_2">在资格MATCHES中,分配给红色1或蓝色1的ROBOT在他们的ALLIANCE中排名第一.在季后赛MATCHES中,ALLIANCE领先者决定哪个ROBOT在他们的ALLIANCE中排名第一.</p>
+<h2 id="sec-10-4">10.4 MATCH 阶段</h2>
+<p>每个MATCH的第一个周期为30秒 (0:30) 长,称为自主周期 (AUTO).在AUTO期间,ROBOTS操作没有任何DRIVER控制或输入.</p>
+<p>在AUTO和TELEOP之间有一个8秒的过渡期,用于评分,正如10.5节评分所述.</p>
+<p id="TELEOP">每个MATCH的第三个周期为2分钟 (2:00) 长,称为远程操作周期 (TELEOP).在TELEOP期间,DRIVERS远程操作ROBOTS以得分.详细的MATCH时间请参见表9~1.</p>
+<h2 id="sec-10-5">10.5 计分</h2>
+<p>根据表 10 ‐ 2 所示,ALLIANCES 在 MATCH 中完成各种操作后得到奖励.</p>
+<p>ALLIANCES队在MATCHES赛季的表现通过MATCH分和RANKING POINTS (RP) 得到奖励,这些奖励增加了根据13.6.3部分资格排名排名的标准.</p>
+<p>所有的成就都会在MATCH中更新.评分成果的评价是如下:</p>
+<p class="fm-item">A. 评估HIVE TIPS发生在整个MATCH中,并继续直到SCORING ELEMENTS和ROBOTS都在MATCH结束时停止.</p>
+<p class="fm-item">B. 在TELEOP开始之前完成的HIVE TIPS被评估为AUTO的一部分.</p>
+<p class="fm-item">C. 在 CELL 中剩余的 POLLEN 和 NECTAR 将在 MATCH 结束时所有 SCORING ELEMENTS 和 ROBOTS 停止工作后进行评估.</p>
+<p class="fm-item">D. 在FLOWER中得分的SCORING ELEMENTS将在MATCH中进行评估,最终评估将在TELEOP结束时进行,所有SCORING ELEMENTS和ROBOTS在MATCH结束时停止.</p>
+<p class="fm-item">E. 评估GARDEN得分发生在TELEOP结束时,当所有ROBOTS和SCORING ELEMENTS在MATCH结束时停止时.</p>
+<p class="fm-item">F. 评估LEAVE和AUTO PARK发生在AUTO结束时.</p>
+<p class="fm-item">G. 评估TELEOP PARK发生在MATCH结束时.</p>
+<div class="fm-box">
+<p>评分是由人类志愿者评价和评分的.现场比分的延迟或错误不被视为ARENA FAULT (见13.2 MATCH重播).鼓励团队确保符合标准是显而易见的和明确的.</p>
+<p>在MATCH开始之前,在AUTO到TELEOP的过渡期内,以及MATCH在0:00结束后获得的成绩可能会受到处罚.</p>
+</div>
+<h3 id="sec-10-5-1">10.5.1 HIVE 计分标准</h3>
+<p><strong><u>HIVE TIP</u></strong></p>
+<p>在以下情况下,HIVE被视为TIPPED:</p>
+<p id="TIP" class="fm-item">A. 它从一个稳定的状态移动到另一个稳定的状态,向下面的CELL变成向上面的CELL,</p>
+<p id="TIP2" class="fm-item">B. 随后,HIVE上以前不接触框架的阻塞器开始接触框架.</p>
+<p class="fm-caption">图 10 × 3:HIVE 减压器和框架</p>
+<p><img src="../../images/image043.png" alt="图显示HIVE结构框架上的阻塞器接触." width="569" loading="lazy"></p>
+<div class="fm-box">
+<p>HIVES 设计为双稳定,在大多数情况下,应该很明显,HIVE 从一个稳定的状态转移到另一个.虽然已经提供了具体的HIVE TIP标准,但志愿者不需要观察阻塞器接触框架的特定时刻.</p>
+<p>团队应该意识到,在HIVE倾斜时,LAUNCHING在向下面的CELL中可能会扰乱它的运动,可能导致TIP无法实现.虽然在正常的游戏过程中不太可能发生这种情况,但在这种情况下,团队可能需要暂停LAUNCHING以确保志愿者明白并明确TIP已经实现.</p>
+<p>LAUNCHING 进入向上面的 CELL 是唯一允许取 HIVE TIP 的方法.ROBOTS必须跟随G417并且不能以其他方式破坏或引起HIVE TIP.</p>
+</div>
+<p><strong><u>在CELL中剩下的POLLEN和NECTAR</u></strong></p>
+<p>在 MATCH 结束时,任何剩下的 POLLEN 和/或 NECTAR 在向上面 CELL 中将为该 ALLIANCE 获得积分.</p>
+<h3 id="sec-10-5-2">10.5.2 FLOWER 计分标准</h3>
+<p>在NECTAR和POLLEN分数至少部分处于FLOWER分数体积内时:在紫色突出的上环和中环之间,并包含在CAD参考10 - 4中.</p>
+<p id="Ref237336949" class="fm-caption">CAD 参考 10 ‐ 4:FLOWER 评分量,<a href="https://ftc-resources.firstinspires.org/ftc/archive/2027/field/scoring-volume">点击查看更多详情</a></p>
+<p><img src="../../images/image044.png" alt="图像显示CAD FLOWER得分量." width="149" loading="lazy"></p>
+<div class="fm-box">
+<p>在MATCH每G410剩下一分钟之前,FLOWER得分不能开始.在剩余一分钟前得分的成绩仍然得分,但受到处罚.</p>
+<p>放SCORING ELEMENTS在FLOWER的顶部是唯一允许得分的方式.在与FLOWER交互时,ROBOTS必须跟随G418.</p>
+</div>
+<p id="Toc205155315"><strong><u>下面的NECTAR奖金</u></strong></p>
+<p>在FLOWER中达到得分标准的ALLIANCE具有最下面的NECTAR颜色的获得积分.</p>
+<p><strong><u>FLOWER 业主</u></strong></p>
+<p>在FLOWER中满足得分标准的NECTAR颜色最上位的ALLIANCE拥有FLOWER并且会为每个满足FLOWER得分标准的POLLEN和NECTAR积分,无论ALLIANCE在FLOWER中放置POLLEN和/或NECTAR.</p>
+<p>图 10 × 5:FLOWER 所有权</p>
+<p><img src="../../images/image045.png" alt="图表显示了花园所有权的细节." width="694" loading="lazy"></p>
+<h3 id="sec-10-5-3">10.5.3 GARDEN 计分标准</h3>
+<p>为了获得GARDEN积分,POLLEN或NECTAR必须至少部分处于GARDEN区.</p>
+<ul>
+<li>不管ALLIANCE在GARDEN中放置POLLEN或NECTAR,ALLIANCE的相应颜色都会获得积分. GARDENS ALLIANCE SPECIFIC</li>
+<li>GARDENS不是受保护的区域,而ALLIANCE可以在MATCH期间从GARDEN中移除SCORING ELEMENTS.</li>
+<li>属于ALLIANCE或POLLEN的NECTAR在GARDEN中对应于GARDEN颜色的ALLIANCE进行评分.</li>
+</ul>
+<p class="fm-caption">图 10 × 6:GARDEN 评分</p>
+<p><img src="../../images/image046.png" alt="图表显示GARDEN得分." width="432" loading="lazy"></p>
+<h3 id="sec-10-5-4">10.5.4 ROBOT 计分标准</h3>
+<p><strong><u>LEAVE</u></strong></p>
+<p id="LEAVE">为了获得LEAVE点,ROBOT必须移动,使其不再接触周围墙.</p>
+<p><strong><u>PARK</u></strong></p>
+<p id="PARK">为了获得PARK积分,ROBOT必须移动到至少部分处于LOADING ZONE中.(图 10 - 7)</p>
+<p id="Ref239287294">图 10 × 7:LOADING ZONE PARK 举例</p>
+<p><img src="../../images/image047.png" alt="图表显示LOADING ZONE PARK示例." width="577" loading="lazy"></p>
+<h3 id="sec-10-5-5">10.5.5 分值</h3>
+<p id="Ref174031617" class="fm-caption">图表10~2:BIOBUZZ 点值</p>
+<div class="fm-table"><table id="SWARM_RP"> <tr><th colspan="2" rowspan="2"></th><th colspan="2"><strong>MATCH 分</strong></th><th rowspan="2"><strong>RANKING POINTS</strong></th></tr> <tr><td><strong>AUTO</strong></td><td><strong>TELEOP</strong></td></tr> <tr><td><strong>LEAVE</strong></td><td></td><td>3</td><td></td><td>-</td></tr> <tr><td><strong>PARK</strong></td><td></td><td>5</td><td>5</td><td>-</td></tr> <tr><td rowspan="2"><strong>HIVE</strong></td><td>HIVE TIP</td><td>20</td><td>20</td><td>-</td></tr> <tr><td>在CELL中剩下的POLLEN和/或NECTAR</td><td>-</td><td>2</td><td>-</td></tr> <tr><td rowspan="2"><strong>FLOWER</strong></td><td>下面的NECTAR奖金</td><td>-</td><td>5</td><td>-</td></tr> <tr><td>在拥有的FLOWER中POLLEN和/或NECTAR</td><td>-</td><td>2</td><td>-</td></tr> <tr><td><strong>GARDEN</strong></td><td>在GARDEN中的POLLEN和/或NECTAR</td><td>-</td><td>1</td><td>-</td></tr> <tr><td colspan="4"><strong>SWARM RP – </strong> 结合 LEAVE + PARK 积分在值或以上</td><td>1</td></tr> <tr><td colspan="4"><strong>POLLINATOR 1 RP – </strong> 在值或以上的TIPS数量</td><td>1</td></tr> <tr><td colspan="4"><strong>POLLINATOR 2 RP – </strong> 在值或以上的TIPS数量</td><td>1</td></tr> <tr><td><strong>WIN</strong></td><td colspan="3">完成一个MATCH比你的对手更多的MATCH积分</td><td>3</td></tr> <tr><td><strong>TIE</strong></td><td colspan="3">完成一个MATCH与你的对手相同的MATCH积分</td><td>1</td></tr> </table></div>
+<p id="Toc169609696" class="fm-caption">图表10~3:BIOBUZZ RP 的值</p>
+<div class="fm-table"><table> <tr><th><strong>RP 型号</strong></th><th><strong><em>FIRST </em>Championship</strong></th><th><strong>区域锦标赛</strong></th><th><strong>所有其他事件*</strong></th></tr> <tr><td><strong>SWARM RP</strong></td><td>TBA</td><td>TBA</td><td>16 积分</td></tr> <tr><td><strong>POLLINATOR 1 RP</strong></td><td>TBA</td><td>TBA</td><td>4 TIPS</td></tr> <tr><td><strong>POLLINATOR 2 RP</strong></td><td>TBA</td><td>TBA</td><td>7 TIPS</td></tr> </table></div>
+<div class="fm-box">
+<p>区域锦标赛和<em>FIRST</em>锦标赛的RP门将在Team Updates公布.</p>
+<p>首级赛事将能够设置自己的门,以最好地反映他们想要为团队提供的体验.</p>
+</div>
+<h2 id="sec-10-6">10.6 违规</h2>
+<p>"<em>FIRST</em>技术挑战"在评估规则和指定的违规时段和行动的背景下使用了"3"一词.这些词汇为描述基准提供了一般指导.这不是REFEREES在时间段内提供计数的目的.</p>
+<ul>
+<li id="MOMENTARY">MOMENTARY 描述的持续时间小于大约 3 秒.</li>
+<li id="CONTINUOUS">CONTINUOUS 描述了超过大约 10 秒的持续时间.</li>
+<li id="REPEATED">REPEATED描述在 MATCH 中发生不止一次的动作.</li>
+</ul>
+<p><em>FIRST</em>科技挑战赛使用STRATEGIC这个词来描述特定类型的违规行为,这些违规行为不符合比赛精神,正如1.5节竞争诚信合同 (CIC) 中所述:</p>
+<ul>
+<li id="STRATEGIC">STRATEGIC描述了为了获得竞争优势而采取的行动.</li>
+</ul>
+<p>一些规则禁止特定的行为,如果它们被认为是STRATEGIC或为被认为是STRATEGIC的行为提供了更大的违反 (例如,阻碍或使得得分行为).这包括故意或鲁的行为,意外/不可预见的事件不能是STRATEGIC.</p>
+<div class="fm-box">
+<p>一般情况下,一个团队可能会面临REFEREES的额外审查,该团队将确定是否存在STRATEGIC违规行为,当:</p>
+<p class="fm-item">A. 在单个MATCH期间对同一违规行为发出多次警告,单独可以被认为是意外或不可预见的,或</p>
+<p class="fm-item">B. 对于同一违规行为,多个VERBAL WARNINGS被发给一个团队,多个MATCHES被发给同一团队,单独可以被认为是意外或不可预见的.</p>
+<p>然后故意利用到一个团队的优势的意外情况将被视为STRATEGIC.</p>
+</div>
+<p>除非另有说明,否则每次违反规则时都会有处罚,单个行为可能违反多项规则.处罚的描述列在表格10~4中.游戏规则部分中的所有规则都被REFEREE所感知.</p>
+<p id="Ref207223644" class="fm-caption">图表10~4:违反规则</p>
+<div class="fm-table"><table id="VERBAL_WARNING"> <tr><th><strong>处罚</strong></th><th><strong>描述</strong></th></tr> <tr><td><strong>VERBAL WARNING</strong></td><td>活动人员或REFEREE负责人发出的警告</td></tr> <tr><td><strong>MINOR FOUL</strong></td><td>对于对手的MATCH分积分,将获得5分积分.</td></tr> <tr><td><strong>MAJOR FOUL </strong></td><td>对于对手的MATCH分积分,将获得20分积分.</td></tr> <tr><td><strong>YELLOW CARD</strong></td><td>由REFEREE负责人发出警告,因为ROBOT或团队成员的行为或规则违反.在同一个比赛阶段,接下来的YELLOW CARD会导致RED CARD</td></tr> <tr><td><strong>RED CARD</strong></td><td>负责人REFEREE对ROBOT或团队成员的行为或规则违规而发行的处罚,导致一个团队为MATCH的DISQUALIFIED.</td></tr> <tr><td><strong>DISABLED</strong></td><td>REFEREE指示团队停止ROBOT,这将关闭所有输出,使ROBOT无法在剩余的MATCH中运行.</td></tr> <tr><td><strong>DISQUALIFIED</strong></td><td>一个球队在资格赛MATCH中获得0 MATCH分和0 RANKING POINTS分,或者导致他们的ALLIANCE在季后赛MATCH中获得0 MATCH分的状态.</td></tr> </table></div>
+<h3 id="sec-10-6-1">10.6.1 YELLOW CARD 与 RED CARD</h3>
+<p>除了本文本中明确列出的规则违规之外,YELLOW CARDS和RED CARDS在<em>FIRST</em>技术挑战中被用于解决团队和ROBOT行为,这些行为违反了1.5节竞争诚信合同 (CIC) 中所述的行为和道德准则.</p>
+<p>负责人REFEREE可以分配</p>
+<ul>
+<li>一个YELLOW CARD作为警告,或者</li>
+<li>一个RED CARD对于违反<a href="https://ftc-resources.firstinspires.org/ftc/event/escalation-guidelines">升级指导方针</a>规定的CIC行为.</li>
+</ul>
+<p>一个RED CARD的结果是MATCH DISQUALIFICATION.一个获得YELLOW或RED CARD的团队将YELLOW CARD带入随后的MATCHES,除下面所述情况外.</p>
+<p>如果一个导致分配YELLOW或RED CARD的动作被确定为ARENA FAULT的结果,根据13.2 MATCH重播,CARD将被取消.</p>
+<p>YELLOW CARDS是增量,这意味着第二个YELLOW CARD自动转换为RED CARD.一个团队在接下来的任何事件中都会获得RED CARD,其中包括在单个MATCH中获得第二个YELLOW CARD. YELLOW CARD</p>
+<p>在观众显示MATCH结果屏幕上显示一个YELLOW CARD,第二个YELLOW CARD或RED CARD (图10 - 8).一个YELLOW CARD显示为黄色矩形,第二个YELLOW CARD显示为黄色矩形上的红色矩形,一个RED CARD显示为红色矩形.</p>
+<p id="Ref239259060" class="fm-caption">图 10 × 8:示例MATCH结果图显示YELLOW和RED CARD指标</p>
+<p><img src="../../images/image048.jpg" alt="匹配结果图显示YELLOW和RED CARD指标." width="720" loading="lazy"></p>
+<p>如果MATCHES不顺序播放,随后的MATCH是任何时间顺序较晚的MATCH播放,无论原定时间或MATCH的编号如何.</p>
+<p>一旦一个团队获得YELLOW或RED CARD,其团队号码在所有随后的MATCHES中都会在观众显示屏上呈现黄色背景,包括任何重播,以提醒团队,REFEREES和观众他们携带YELLOW CARD.</p>
+<p id="Ref237001950" class="fm-caption">图 10 × 9:示例MATCH观众屏幕图表显示YELLOW CARD指标</p>
+<p><img src="../../images/image049.jpg" alt="示例观众屏幕图表显示YELLOW CARD指标" width="446" loading="lazy"></p>
+<p>所有YELLOW CARDS和G301 VERBAL WARNINGS在练习,资格和分区季后赛 MATCHES结束时都被清除.其他由主REFEREE发出的VERBAL WARNINGS在MATCHES练习结束后被清除,并且在MATCHES资格赛后续比赛阶段继续存在,除非另有说明.</p>
+<h3 id="sec-10-6-2">10.6.2 YELLOW CARD 与 RED CARD 的判罚</h3>
+<p>YELLOW 和 RED CARDS 的应用是基于以下情况:</p>
+<p id="Ref206703664" class="fm-caption">图表10~5:YELLOW 和 RED CARD 申请</p>
+<div class="fm-table"><table> <tr><th><strong>获得的YELLOW或RED CARDS时间:</strong></th><th><strong>适用于CARD的MATCH:</strong></th></tr> <tr><td><strong>在资格之前MATCHES</strong></td><td>在资格MATCHES开始之前,REFEREES可能会或可能不会在FIELD上.在活动工作人员的意见下,REFEREE负责人可以选择将在MATCHES资格之前获得的VERBAL WARNING或YELLOW CARD延续到第一个MATCH资格,因为特别严重的行为.</td></tr> <tr><td><strong>在资格MATCHES期间</strong></td><td>团队目前 (或刚刚完成) MATCH 它们不是 SURROGATE.对于SURROGATE MATCHES来说,该卡应用于团队之前的资格MATCH. <br></td></tr> <tr><td><strong>在资格赛 MATCHES 结束和季后赛 MATCHES 开始之间</strong></td><td>第一个季后赛 MATCH ALLIANCE’S</td></tr> <tr><td><strong>在MATCHES季后赛期间</strong></td><td>ALLIANCE’S 目前 (或刚刚完成) MATCH</td></tr> </table></div>
+<div class="fm-box">
+<p>一个MATCH不再是当前的MATCH一旦MATCH的结果已经发布或REFEREE主管或他们的指定人员表示团队可以收集他们的ROBOTS,以后的时间为准.</p>
+<p>请参阅YELLOW和RED CARDS的应用示例,如10.6.4条违规细节所示.</p>
+</div>
+<h3 id="sec-10-6-3">10.6.3 淘汰赛 MATCH 中的 YELLOW CARD 与 RED CARD</h3>
+<p>在季后赛期间,MATCHES,YELLOW和RED CARDS被分配给违规球队的全部ALLIANCE,而不是只分配给违规球队.如果 ALLIANCE 接收 2 YELLOW CARDS,则整个 ALLIANCE 发出 RED CARD,导致相关 MATCH 的 DISQUALIFICATION.</p>
+<h3 id="sec-10-6-4">10.6.4 违规详情</h3>
+<p>在本手册中使用了几种违规措辞.下面是一些违规行为示例,以及对违规行为的评估方式的澄清.所示的例子不代表所有可能的违规行为,而是代表性的组合.</p>
+<p class="fm-caption">图表10~6:违法行为示例</p>
+<div class="fm-table"><table> <tr><th><strong>违规行为</strong></th><th><strong>扩展的解释</strong></th></tr> <tr><td><strong>MINOR FOUL</strong></td><td>在违规的情况下,MINOR FOUL与违规的ALLIANCE进行评估.</td></tr> <tr><td><strong>现在,我们将把它们分成两种. MINOR FOUL SCORING ELEMENT</strong></td><td>在违反规则的情况下,MINOR FOUL对违反规则的ALLIANCE等于违反规则时使用的SCORING ELEMENTS的数量.</td></tr> <tr><td><strong>每个例子都有MAJOR FOUL.如果是REPEATED,则每个实例为MAJOR FOUL,每个实例为MATCH则为YELLOW CARD.</strong></td><td>在MATCH中的初始违规时,MAJOR FOUL对每次违规事件的违规ALLIANCE进行评估.<br> 如果满足第二语句中REPEATED的条件,即ROBOT在MATCH中重复一次违规行为,则对违规行为后的ALLIANCE进行额外的MAJOR FOUL评估,在MATCH之后,违规行为后的YELLOW CARD发给违规团队.<br> 假设 ROBOT 在 MATCH 中没有进一步违反该规则,ROBOT 在 MATCH 中对他们的团队进行两个 MAJOR FOULS 和一个 YELLOW CARD 的评估.在MATCH期间进一步违反这一规则会增加在MATCH期间评估的MAJOR FOULS的数量,但不会增加MATCH发布的YELLOW CARDS的数量.</td></tr> <tr><td><strong>情况没有纠正的每3秒,MAJOR FOUL和一个额外的MAJOR FOUL</strong></td><td>在违反时,MAJOR FOUL与违反的ALLIANCE进行评估,REFEREE开始计数.他们继续计数,直到满足停止计数的标准,并且在此时间内每3秒,额外的MAJOR FOUL被评估为违反ALLIANCE的.违反此类规则的ROBOT在15秒内被评估为总数6MAJOR FOULS (假设没有其他规则同时被违反).</td></tr> <tr><td><strong>VERBAL WARNING.每个MATCH的MAJOR FOUL和YELLOW CARD,如果是STRATEGIC.</strong></td><td>在一般违反规则时,对违反规则的球队发出VERBAL WARNING.然而,如果违规行为被REFEREES认为是STRATEGIC,那么MAJOR FOUL将对违规行为ALLIANCE进行评估,并在MATCH之后,违规行为团队将获得YELLOW CARD.</td></tr> <tr><td><strong>现在,我们将把它们分成两种.每个MATCH的MAJOR FOUL和YELLOW CARD,如果是STRATEGIC. MAJOR FOUL MATCH</strong></td><td>如果一个团队在MATCH期间发生一个或多个违规行为,则MAJOR FOUL对每个MATCH违规行为ALLIANCE进行评估.<br> 然而,如果REFEREES认为违规行为是STRATEGIC,则每组MATCH对抗违规行为ALLIANCE的MAJOR FOUL被评估.在MATCH之后,每个MATCH都会发出YELLOW CARD.<br> 只有1 MAJOR FOUL和高达1 YELLOW CARD可以由一个团队在一个MATCH中获得.</td></tr> <tr><td><strong>VERBAL WARNING.YELLOW CARD 如果事件发生后续违规行为.</strong></td><td>在第一个违规事件发生时, 违规团队将获得VERBAL WARNING.如果在赛事中稍后再次违反同一规则,即在同一赛事阶段或稍后的赛事阶段获得MATCH,然后在任何后续违规后:在MATCH之后,违规队每次获得YELLOW CARD.</td></tr> <tr><td><strong>VERBAL WARNING.如果是STRATEGIC,则每例MAJOR FOUL和YELLOW CARD.例如MAJOR FOUL和RED CARD,如果STRATEGIC和任何CONTINUOUS对手ROBOT无法驾驶.</strong></td><td>在一般违反这条规则时, 违反该规则的球队将获得VERBAL WARNING.然而,如果违规行为被REFEREES认为是STRATEGIC,那么MAJOR FOUL将被评估为违规行为ALLIANCE后,MATCH之后,球队将获得YELLOW CARD.然而,如果违规被REFEREES认为是STRATEGIC,对手ROBOT无法驾驶或纠持续10秒或更长时间,则在违规时,MAJOR FOUL与违规ALLIANCE进行评估.在MATCH之后,球队获得RED CARD.只有1 MAJOR FOUL和1 CARD可以获得单个违规实例;然而,如果在MATCH期间发生多个违规实例,则可以在单个MATCH中获得多个MAJOR FOULS和CARDS. <br> <br></td></tr> </table></div>
+<h2 id="sec-10-7">10.7 Head REFEREE</h2>
+<p>负责人REFEREE在活动期间对ARENA拥有最终权力,但可以从其他来源获得输入,例如<em>FIRST</em>人员,FTA,活动主任或其他活动人员.负责人REFEREE的裁决是最终的.任何活动工作人员,包括REFEREE主管都不会审查任何MATCH的视频,照片,艺术染等, T401</p>
+<h2 id="sec-10-8">10.8 其他后勤事项</h2>
+<h3 id="sec-10-8-1">10.8.1 参加练习赛 MATCH</h3>
+<p>FTA,LRI或Head REFEREE可以禁止一个团队参加MATCH练习,如果他们确定他们的ROBOT不安全或可能损坏ARENA.</p>
+<h3 id="sec-10-8-2">10.8.2 SCORING ELEMENT 后勤事项</h3>
+<p>退出FIELD的POLLEN将在最接近的方便位置由FIELD STAFF在最早的安全机会上重新引入FIELD.</p>
+<p>退出FIELD的NECTAR将返回该ALLIANCE’S DRIVE TEAM以重新引入每个11.4.6人.在 FIELD STAFF 中,在重新引入 POLLEN 到 FIELD 或将 NECTAR 返回 DRIVE TEAM 中存在合理延迟的情况下,不需要 MATCHES 调用 ARENA FAULT.</p>
+<p>ARENA FAULT (在 13.2 MATCH 重播节中描述的 ARENA 操作中的错误) 不被调用到偶然以: MATCHES</p>
+<ul>
+<li>有损的SCORING ELEMENTS,</li>
+<li>错误的SCORING ELEMENTS数量,或者</li>
+<li>错误放置的SCORING ELEMENTS.</li>
+</ul>
+<p>损坏的SCORING ELEMENTS不会被更换,直到下一个MATCH重置.在MATCH启动之前,DRIVE TEAMS应提醒FIELD STAFF任何缺失,错误放置或损坏的SCORING ELEMENTS.</p>
+<h3 id="sec-10-8-3">10.8.3 FIELD 问题处置</h3>
+<p>在MATCH期间,FIELD STAFF可能会遵循<a href="https://ftc-resources.firstinspires.org/ftc/field/field-mitigation-guide">实地缓解指南</a>中的步骤,以缓解MATCH期间一些FIELD问题.</p>
+<h3 id="sec-10-8-4">10.8.4 FIELD 复位</h3>
+<p>一旦MATCH完成并REFEREE负责人或他们的指定人员确定FIELD和FIELD STAFF已经准备好了,他们将发出信号,启动FIELD重置并提示DRIVE TEAMS检索ROBOTS.</p>
+<p>在FIELD重置过程中,FIELD从刚刚结束的MATCH清除了ROBOTS和OPERATOR CONSOLES,后续MATCH的ROBOTS和OPERATOR CONSOLES由DRIVE TEAMS加载到FIELD,FIELD STAFF重置ARENA元素.</p>
+<p><img src="../../images/image050.jpg" alt="" width="235" loading="lazy"></p>
+</div>

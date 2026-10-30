@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIOBUZZ — preview</title>
+<link rel="stylesheet" href="manual.css">
+<style>
+body { margin: 0; padding: 16px; background: #fff; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", "PingFang SC", sans-serif; }
+.langs { max-width: 900px; margin: 0 auto 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+.langs a { padding: 4px 10px; border: 1px solid #d0d4d9; border-radius: 14px; text-decoration: none; color: #003a49; font-size: 14px; }
+.langs a.on { background: #003a49; color: #fff; }
+</style>
+</head>
+<body>
+<!-- local check only: the site gets <lang>/manual-<lang>.html -->
+<nav class="langs" id="langs"></nav>
+<div id="frag"></div>
+<script>
+const LANGS = { ru: 'Русский', kk: 'Қазақша', ky: 'Кыргызча', uz: 'Oʻzbekcha', tr: 'Türkçe', ro: 'Română',
+  zh: '中文', es: 'Español', 'pt-BR': 'Português', fr: 'Français', ar: 'العربية' };
+const lang = new URLSearchParams(location.search).get('lang') || 'ru';
+document.getElementById('langs').innerHTML = Object.entries(LANGS)
+  .map(([k, v]) => `<a href="?lang=${k}" class="${k === lang ? 'on' : ''}">${v}</a>`).join('');
+fetch(`${lang}/manual-${lang}.html`).then(r => r.ok ? r.text() : `<p>${lang}: not built yet</p>`).then(t => {
+  // fragment image paths are relative to the <lang>/ folder
+  document.getElementById('frag').innerHTML = t.replaceAll('src="../images/', 'src="images/');
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Optional styles for the translated BIOBUZZ manual (all languages).
+   Everything is scoped to .ftc-manual so it won't touch the rest of the site. */
+.ftc-manual {
+  --fm-text: #1d1d1f;
+  --fm-muted: #5f6368;
+  --fm-accent: #003a49;
+  --fm-rule: #2e7d32;
+  --fm-violation: #b3261e;
+  --fm-box-bg: #fdeee3;
+  --fm-box-border: #ed7d31;
+  --fm-blue-bg: #e8f0fb;
+  --fm-blue-border: #4472c4;
+  --fm-line: #d0d4d9;
+  color: var(--fm-text);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
+.ftc-manual h1 { font-size: 1.9em; margin: 2em 0 .6em; padding-top: .4em; border-top: 3px solid var(--fm-accent); }
+.ftc-manual h2 { font-size: 1.4em; margin: 1.6em 0 .5em; }
+.ftc-manual h3 { font-size: 1.15em; margin: 1.3em 0 .4em; }
+.ftc-manual h1, .ftc-manual h2, .ftc-manual h3, .ftc-manual [id] { scroll-margin-top: 80px; }
+.ftc-manual img { max-width: 100%; height: auto; display: block; margin: .5em auto; }
+.ftc-manual a { color: #0b57d0; }
+
+.ftc-manual .fm-header { border: 0; }
+.ftc-manual .fm-kicker { color: var(--fm-muted); margin: 0; }
+.ftc-manual .fm-title { border: 0; margin: .2em 0 .5em; padding: 0; }
+.ftc-manual .fm-note { background: var(--fm-blue-bg); border-left: 4px solid var(--fm-blue-border); padding: .6em .9em; }
+.ftc-manual .fm-toc ol { padding-left: 1.4em; list-style: none; }
+.ftc-manual .fm-toc > ol { padding-left: 0; }
+.ftc-manual .fm-toc > ol > li { margin: .3em 0; font-weight: 600; }
+.ftc-manual .fm-toc ol ol { font-weight: 400; }
+
+.ftc-manual .fm-rule { border-left: 4px solid var(--fm-rule); padding-left: .8em; margin-top: 1.4em; }
+.ftc-manual .fm-rule > strong:first-child { color: var(--fm-rule); }
+.ftc-manual .fm-violation { color: var(--fm-violation); font-weight: 600; font-size: .95em; }
+.ftc-manual .fm-item { margin: .2em 0 .2em 1.6em; }
+.ftc-manual .fm-subitem { margin: .2em 0 .2em 3.2em; }
+.ftc-manual .fm-caption { color: var(--fm-muted); font-style: italic; font-size: .92em; text-align: center; margin-bottom: .2em; }
+.ftc-manual .fm-quote { border-left: 3px solid var(--fm-line); padding-left: 1em; font-style: italic; color: var(--fm-muted); }
+.ftc-manual .fm-box { background: var(--fm-box-bg); border: 1.5px solid var(--fm-box-border); border-radius: 6px; padding: .2em 1em; margin: 1em 0; }
+.ftc-manual .fm-box-blue { background: var(--fm-blue-bg); border-color: var(--fm-blue-border); }
+
+.ftc-manual .fm-table { overflow-x: auto; margin: 1em 0; -webkit-overflow-scrolling: touch; }
+.ftc-manual table { border-collapse: collapse; width: 100%; font-size: .93em; }
+.ftc-manual th, .ftc-manual td { border: 1px solid var(--fm-line); padding: .4em .55em; vertical-align: top; text-align: left; }
+.ftc-manual th { background: var(--fm-accent); color: #fff; }
+.ftc-manual th a { color: #fff; }
+
+/* Chinese and Arabic read better without italics */
+.ftc-manual:lang(zh) em, .ftc-manual:lang(zh) .fm-caption, .ftc-manual:lang(zh) .fm-quote,
+.ftc-manual:lang(ar) em, .ftc-manual:lang(ar) .fm-caption, .ftc-manual:lang(ar) .fm-quote { font-style: normal; }
+
+/* right-to-left languages (Arabic) */
+.ftc-manual[dir="rtl"] h1, .ftc-manual[dir="rtl"] th, .ftc-manual[dir="rtl"] td { text-align: right; }
+.ftc-manual[dir="rtl"] .fm-rule { border-left: 0; padding-left: 0; border-right: 4px solid var(--fm-rule); padding-right: .8em; }
+.ftc-manual[dir="rtl"] .fm-quote { border-left: 0; padding-left: 0; border-right: 3px solid var(--fm-line); padding-right: 1em; }
+.ftc-manual[dir="rtl"] .fm-note { border-left: 0; border-right: 4px solid var(--fm-blue-border); }
+.ftc-manual[dir="rtl"] .fm-item { margin: .2em 1.6em .2em 0; }
+.ftc-manual[dir="rtl"] .fm-subitem { margin: .2em 3.2em .2em 0; }
+.ftc-manual[dir="rtl"] .fm-toc ol { padding-left: 0; padding-right: 1.4em; }
+.ftc-manual[dir="rtl"] .fm-toc > ol { padding-right: 0; }
+
+@media (max-width: 600px) {
+  .ftc-manual { font-size: 15px; }
+  .ftc-manual h1 { font-size: 1.5em; }
+  .ftc-manual .fm-subitem { margin-left: 2em; }
+  .ftc-manual[dir="rtl"] .fm-subitem { margin-left: 0; margin-right: 2em; }
+  .ftc-manual table { font-size: .85em; }
+}
