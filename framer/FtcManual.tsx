@@ -51,7 +51,7 @@ addPropertyControls(FtcManual, {
     baseUrl: {
         type: ControlType.String,
         title: "Base URL",
-        defaultValue: "https://YOUR-HOST/biobuzz/",
+        defaultValue: "https://arstanber.github.io/biobuzz-manual/",
     },
     lang: {
         type: ControlType.Enum,

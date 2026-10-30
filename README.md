@@ -47,7 +47,7 @@ https://ftc-resources.firstinspires.org/ftc/game/cm-html
 2. Удалите шаблонный код и вставьте содержимое `framer/FtcManual.tsx`, сохраните.
 3. Создайте страницу (например `/manual/ru`), перетащите компонент **FtcManual** из Assets на страницу.
 4. Справа в свойствах:
-   - **Base URL** — адрес папки из шага 1, например `https://ЛОГИН.github.io/biobuzz/`;
+   - **Base URL** — адрес папки из шага 1, сейчас `https://arstanber.github.io/biobuzz-manual/` (стоит по умолчанию);
    - **Language** — язык.
 5. Ширину поставьте **Fill** (или фиксированную), высоту — **Fit content**: высота подстроится под текст.
 6. Для каждого языка — своя страница (`/manual/kk`, `/manual/ar`…) с тем же компонентом и другим Language.
